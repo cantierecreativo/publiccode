@@ -1,0 +1,3 @@
+## Project Publicode
+
+[License](./LICENSE)
