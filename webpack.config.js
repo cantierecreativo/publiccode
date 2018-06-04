@@ -47,7 +47,7 @@ module.exports = env => {
       rules: [
         {
           enforce: "pre",
-          test: /\.s(c|a)ss/,
+          test: /\.s(c)ss/,
           loader: "import-glob-loader"
         },
         {

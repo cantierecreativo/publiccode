@@ -62,7 +62,6 @@
     "lodash": "^4.17.10",
     "moment": "^2.22.1",
     "react": "^16.4.0",
-    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.0",
     "react-jsonschema-form": "^1.0.3",
     "react-widgets": "^4.2.6",

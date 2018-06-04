@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Home from "./home";
-import "../assets/styles/style.css";
+import Home from "./components/home";
+import "../assets/styles/app.scss";
 
 export default class App extends Component {
   render() {
-    return <Home />;
+    return <Home className='black' />;
   }
 }
 
-render(<App />, document.getElementById("app"));
+render(<App/>, document.getElementById("app"));

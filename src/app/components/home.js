@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import SampleForm from "./sampleForm";
-
-import Schema from "./schema";
+import Schema from "../contents/schema";
 import cleanDeep from "clean-deep";
-import jsyaml from "../../node_modules/js-yaml/dist/js-yaml.js";
+import jsyaml from "../../../node_modules/js-yaml/dist/js-yaml.js";
 import copy from "copy-to-clipboard";
 
 export default class Home extends Component {
@@ -51,7 +50,7 @@ export default class Home extends Component {
   render() {
     let { yaml, formData } = this.state;
     return (
-      <div className="container">
+      <div className="main container">
         <div className="split-screen">
           <div className="split-screen--child">
             <SampleForm

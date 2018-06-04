@@ -410,9 +410,9 @@ const uiSchema = {
   },
   url: {
     "ui:widget": "uri"
-  }
+  },
   // developmentStatus: { items: { "ui:widget": "checkboxes" } },
-  // softwareType: { items: { "ui:widget": "checkboxes" } }
+  softwareType: { items: { "ui:widget": "checkboxes" } }
 };
 
 export default { schema, uiSchema };
