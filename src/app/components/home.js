@@ -50,38 +50,33 @@ export default class Home extends Component {
   render() {
     let { yaml, formData } = this.state;
     return (
-      <div className="main container">
-        <div className="split-screen">
-          <div className="split-screen--child">
-            <SampleForm
-              schema={Schema.schema}
-              uiSchema={Schema.uiSchema}
-              submit={this.submit.bind(this)}
-              errors={this.log.bind(this)}
-              formData={formData}
-            />
-          </div>
-          <div className="split-screen--child">
-            <form className="form" onSubmit={e => this.load(e)}>
-              <textarea className="form-control" ref="_load_yaml" />
-              <button className="btn btn-primary" type="submit">
-                load yaml
-              </button>
-            </form>
-            <hr />
-            <button className="btn btn-info" onClick={() => copy(yaml)}>
-              Copy to clipboard
+      <div className="split-screen">
+        <div className="split-screen--child">
+          <SampleForm
+            schema={Schema.schema}
+            uiSchema={Schema.uiSchema}
+            submit={this.submit.bind(this)}
+            errors={this.log.bind(this)}
+            formData={formData}
+          />
+        </div>
+        <div className="split-screen--child">
+          <form className="form" onSubmit={e => this.load(e)}>
+            <textarea className="form-control" ref="_load_yaml" />
+            <button className="btn btn-primary" type="submit">
+              load yaml
             </button>
-            <button
-              className="btn btn-info"
-              onClick={() => this.download(yaml)}
-            >
-              Download
-            </button>
-            <pre>
-              <code>{yaml}</code>
-            </pre>
-          </div>
+          </form>
+          <hr />
+          <button className="btn btn-info" onClick={() => copy(yaml)}>
+            Copy to clipboard
+          </button>
+          <button className="btn btn-info" onClick={() => this.download(yaml)}>
+            Download
+          </button>
+          <pre>
+            <code>{yaml}</code>
+          </pre>
         </div>
       </div>
     );

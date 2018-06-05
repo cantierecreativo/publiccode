@@ -107,17 +107,18 @@ const schema = {
       title: "Roadmap"
     },
 
-    developmentStatus: {
+   developmentStatus: {
       type: "array",
-      title: "Development Status",
+      uniqueItems: true,
+      title: "developmentStatus",
       items: {
         type: "string",
         enum: developmentStatus_list
       }
     },
-
     softwareType: {
       type: "array",
+      uniqueItems: true,
       title: "softwareType",
       items: {
         type: "string",
@@ -411,8 +412,12 @@ const uiSchema = {
   url: {
     "ui:widget": "uri"
   },
-  // developmentStatus: { items: { "ui:widget": "checkboxes" } },
-  softwareType: { items: { "ui:widget": "checkboxes" } }
+  developmentStatus: {
+    "ui:widget": "checkboxes"
+  },
+  softwareType: {
+    "ui:widget": "checkboxes"
+  }
 };
 
 export default { schema, uiSchema };
