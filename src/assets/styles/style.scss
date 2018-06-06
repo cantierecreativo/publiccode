@@ -17,3 +17,13 @@ label,
   height: 100%;
   overflow-y: scroll;
 }
+
+.noscroll {
+  overflow: hidden;
+}
+.pad {
+  padding: 20px;
+}
+.scrolly {
+  overflow-y: scroll;
+}

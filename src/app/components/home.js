@@ -62,7 +62,7 @@ export default class Home extends Component {
         </div>
         <div className="split-screen--child">
           <form className="form" onSubmit={e => this.load(e)}>
-            <textarea className="form-control" ref="_load_yaml" />
+            <textarea className="form-control" ref="_load_yaml" rows="5" />
             <button className="btn btn-primary" type="submit">
               load yaml
             </button>
@@ -72,11 +72,19 @@ export default class Home extends Component {
             Copy to clipboard
           </button>
           <button className="btn btn-info" onClick={() => this.download(yaml)}>
-            Download
+            Download yaml
           </button>
+          <hr />
+          <h4>YAML</h4>
           <pre>
             <code>{yaml}</code>
           </pre>
+          <hr />
+          <h4>JSON</h4>
+          <pre>
+            <code>{JSON.stringify(formData)}</code>
+          </pre>
+          <hr />
         </div>
       </div>
     );

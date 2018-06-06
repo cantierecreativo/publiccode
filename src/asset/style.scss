@@ -1,6 +1,5 @@
 @import "./glyphicons/glyphicons.css";
 
-
 // .split-screen {
 //   border: 1px solid 333;
 //   width: 100%;
@@ -13,3 +12,13 @@
 //   padding: 20px;
 //   overflow-y: scroll;
 // }
+
+.noscroll {
+  overflow: hidden;
+}
+.pad {
+  padding: 20px;
+}
+.scrolly {
+  overflow-y: scroll;
+}

@@ -21,10 +21,27 @@ const schema = {
   title: "Public code",
   type: "object",
   definitions: {
-    legal: {},
-    dependencies: {},
-    version: {},
-    tmpfs: {}
+    person: {
+      type: "object",
+      properties: {
+        name: {
+          type: "string",
+          title: "Name"
+        },
+        email: {
+          type: "string",
+          title: "Email"
+        },
+        affiliation: {
+          type: "string",
+          title: "Affiliation"
+        },
+        phone: {
+          type: "string",
+          title: "Phone"
+        }
+      }
+    }
   },
   properties: {
     "publiccode-yaml-version": {
@@ -43,7 +60,8 @@ const schema = {
     },
     url: {
       type: "string",
-      title: "url"
+      title: "url",
+      default: "https://sampleurl.com"
     },
     landingURL: {
       type: "string",
@@ -88,7 +106,8 @@ const schema = {
         type: "string",
         enum: tag_names,
         enumNames: tag_descrs
-      }
+      },
+      default: ["email"]
     },
     _freeTags: {
       type: "array",
@@ -107,14 +126,15 @@ const schema = {
       title: "Roadmap"
     },
 
-   developmentStatus: {
+    developmentStatus: {
       type: "array",
       uniqueItems: true,
       title: "developmentStatus",
       items: {
         type: "string",
         enum: developmentStatus_list
-      }
+      },
+      default: ["development"]
     },
     softwareType: {
       type: "array",
@@ -123,7 +143,8 @@ const schema = {
       items: {
         type: "string",
         enum: softwareType_list
-      }
+      },
+      default: ["standalone"]
     },
 
     intendedAudience: {
@@ -234,54 +255,14 @@ const schema = {
         },
         contractors: {
           type: "array",
-          items: {
-            type: "object",
-            properties: {
-              name: {
-                type: "string",
-                title: "Name"
-              },
-              until: {
-                type: "string",
-                title: "Until"
-              },
-              website: {
-                type: "string",
-                title: "website"
-              },
-              phone: {
-                type: "string",
-                title: "Phone"
-              }
-            }
-          }
+          items: { $ref: "#/definitions/person" }
         },
         contacts: {
           type: "array",
-          items: {
-            type: "object",
-            properties: {
-              name: {
-                type: "string",
-                title: "Name"
-              },
-              email: {
-                type: "string",
-                title: "Email"
-              },
-              affiliation: {
-                type: "string",
-                title: "Affiliation"
-              },
-              phone: {
-                type: "string",
-                title: "Phone"
-              }
-            }
-          }
+          items: { $ref: "#/definitions/person" }
         }
       },
-      required: ["type"]
+      required: ["contacts"]
     },
 
     localisation: {
@@ -300,7 +281,7 @@ const schema = {
         }
       }
     },
-    dependencies: {
+    _dependencies: {
       type: "object",
       properties: {
         open: {
