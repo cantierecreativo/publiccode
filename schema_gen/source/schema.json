@@ -8,70 +8,101 @@
     "pub": {
       "type": "string",
       "title": "Version of specification",
-      "links": []
+      "description": "",
+      "examples": ""
     },
     "name": {
       "type": "string",
-      "title": "Name",
-      "links": []
+      "title": "The Name",
+      "description": "",
+      "examples": ["Medusa"]
     },
     "freeTag": {
+      "title": "free tag",
+      "description": "",
+      "examples": "",
       "type": "array",
       "items": {
+        "title": "tag",
+        "description": "",
+        "examples": "",
         "type": "string"
       }
     },
     "person": {
+      "title": "person",
+      "description": "",
+      "examples": "",
       "type": "object",
       "properties": {
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "Name",
+          "description": "",
+          "examples": ""
         },
         "email": {
           "type": "string",
-          "title": "Email"
+          "title": "Email",
+          "description": "",
+          "examples": ""
         },
         "affiliation": {
           "type": "string",
-          "title": "Affiliation"
+          "title": "Affiliation",
+          "description": "",
+          "examples": ""
         },
         "phone": {
           "type": "string",
-          "title": "Phone"
+          "title": "Phone",
+          "description": "",
+          "examples": ""
         }
       }
     },
-    "lib": {
+    "library": {
+      "title": "dependency",
+      "description": "",
+      "examples": "",
       "type": "object",
       "properties": {
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "Name",
+          "description": "",
+          "examples": ""
         },
         "versionMin": {
           "type": "string",
           "title": "versionMin",
-          "description": "versionMin"
+          "description": "versionMin",
+          "examples": ""
         },
         "versionMax": {
           "type": "string",
           "title": "versionMax",
-          "description": "version max"
+          "description": "version max",
+          "examples": ""
         },
         "version": {
           "type": "string",
           "title": "Version",
-          "description": "version"
+          "description": "version",
+          "examples": ""
         },
         "optional": {
           "type": "boolean",
           "title": "Optional",
-          "description": "is optional"
+          "description": "is optional",
+          "examples": ""
         }
       }
     },
     "translatedDescr": {
+      "title": "translated descr",
+      "description": "",
+      "examples": "",
       "type": "object",
       "properties": {
         "description": {
@@ -83,6 +114,9 @@
       }
     },
     "descr": {
+      "title": "Description",
+      "description": "",
+      "examples": "",
       "type": "object",
       "properties": {
         "localisedName": {
@@ -93,61 +127,73 @@
         "shortDescription": {
           "type": "string",
           "title": "-",
-          "description": "-"
+          "description": "-",
+          "examples": ""
         },
         "longDescription": {
           "type": "string",
           "title": "-",
-          "description": "-"
+          "description": "-",
+          "examples": ""
         },
         "documentation": {
           "type": "string",
           "title": "-",
-          "description": "-"
+          "description": "-",
+          "examples": ""
         },
         "apiDocumentation": {
           "type": "string",
           "title": "-",
-          "description": "-"
+          "description": "-",
+          "examples": ""
         },
         "featureList": {
           "type": "array",
           "title": "-",
           "description": "-",
+          "examples": "",
           "items": {
             "type": "string",
             "title": "-",
-            "description": "-"
+            "description": "-",
+            "examples": ""
           }
         },
         "screenshots": {
           "type": "array",
           "title": "-",
           "description": "-",
+          "examples": "",
           "items": {
             "type": "string",
             "title": "-",
-            "description": "-"
+            "description": "-",
+            "examples": ""
           }
         },
         "videos": {
           "type": "array",
           "title": "-",
           "description": "-",
+          "examples": "",
           "items": {
             "type": "string",
             "title": "-",
-            "description": "-"
+            "description": "-",
+            "examples": ""
           }
         },
         "awards": {
           "type": "array",
           "title": "-",
           "description": "-",
+          "examples": "",
           "items": {
             "type": "string",
             "title": "-",
-            "description": "-"
+            "description": "-",
+            "examples": ""
           }
         }
       },
@@ -163,50 +209,92 @@
     },
     "applicationSuite": {
       "type": "string",
-      "title": "Applicationsuite",
-      "description": "-"
+      "title": "applicationSuite",
+      "description": "the suit is part of",
+      "examples": ["MegaProductivitySuite"]
     },
     "url": {
       "type": "string",
       "title": "url",
-      "description": "url to repo"
+      "description": "url of the repo",
+      "examples": ["https://example.com/italia/repo.git"]
     },
     "landingURL": {
       "type": "string",
       "title": "landingURL",
-      "description": "url to page"
+      "description": "landing page url",
+      "examples": ["https://example.com/italia/repo.git"]
     },
     "softwareVersion": {
       "type": "string",
       "title": "Softwareversion",
-      "description": "version of software"
+      "description": "version of software",
+      "examples": "",
+      "examples": ["1.0"]
     },
     "releaseDate": {
       "type": "string",
       "title": "Releasedate",
-      "description": "-"
+      "description": "-",
+      "examples": ["2017-04-15"]
     },
     "logo": {
       "type": "string",
       "title": "Logo",
-      "description": " url to logo"
+      "description": "The software Logo",
+      "examples": ["img/logo.jpg"]
     },
     "monochromeLogo": {
       "type": "string",
       "title": "Monochrome Logo",
-      "description": " url to logo "
+      "description": " url to logo ",
+      "examples": ""
+    },
+    "platforms": {
+      "type": "array",
+      "title": "Monochrome Logo",
+      "description": " url to logo ",
+      "examples": ["android", "ios"],
+      "items": {
+        "type": "string",
+        "enum": ["web", "windows", "mac", "linux", "ios", "android"]
+      }
+    },
+    "tags": {
+      "title": "tags",
+      "description": "a collection of tags",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["art", "backend"]
+      }
+    },
+
+    "usedBy": {
+      "title": "usedBy",
+      "description": "Companies or products that uses it",
+      "examples": ["stripe"],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "roadmap": {
       "type": "string",
       "title": "Roadmap",
-      "description": "road map"
+      "description": "road map",
+      "examples": ""
     },
     "developmentStatus": {
       "type": "array",
       "uniqueItems": true,
       "title": "developmentStatus",
       "description": "status of development",
+      "examples": "",
       "items": {
+        "title": "item",
+        "description": " ",
+        "examples": "",
         "type": "string",
         "enum": ["concept", "development", "beta", "stable", "obsolete"]
       }
@@ -216,18 +304,60 @@
       "uniqueItems": true,
       "title": "softwareType",
       "description": "",
+      "examples": "",
       "items": {
+        "title": "item",
+        "description": " ",
+        "examples": "",
         "type": "string",
         "enum": ["standalone", "addon", "library", "configurationFiles"]
       }
     },
+    "intendedAudience": {
+      "title": "intended audience",
+      "type": "object",
+      "properties": {
+        "onlyFor": {
+          "title": "only for",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "countries": {
+          "title": "countries",
+          "type": "array",
+          "items": {
+            "title": "item",
+            "type": "string",
+            "title": "List of countries",
+            "description": "List of countries"
+          }
+        },
+        "unsupportedCountries": {
+          "title": "unsupportedCountries",
+          "type": "array",
+          "items": {
+            "title": "item",
+            "type": "string",
+            "title": "List of countries",
+            "description": "List of countries"
+          }
+        }
+      }
+    },
     "description": {
+      "title": "Descriptions",
+      "description": " ",
+      "examples": "",
       "type": "array",
       "items": {
         "anyOf": [
           {
             "type": "object",
             "title": "ita",
+            "description": " ",
+            "examples": "",
             "properties": {
               "ita": {
                 "$ref": "#/definitions/translatedDescr"
@@ -237,6 +367,8 @@
           {
             "type": "object",
             "title": "eng",
+            "description": " ",
+            "examples": "",
             "properties": {
               "eng": {
                 "$ref": "#/definitions/translatedDescr"
@@ -244,6 +376,69 @@
             }
           }
         ]
+      }
+    },
+    "maintenance": {
+      "title": "maintenance",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "array",
+          "title": "Type",
+          "items": {
+            "type": "string",
+            "enum": ["internal", "contract", "community", "none"]
+          }
+        },
+        "contractors": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/person" }
+        },
+        "contacts": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/person" }
+        }
+      },
+      "required": ["contacts"]
+    },
+
+    "localisation": {
+      "title": "localisation",
+      "type": "object",
+      "properties": {
+        "localisationReady": {
+          "title": "localisationReady",
+          "type": "boolean",
+          "title": "Localization Ready"
+        },
+        "availableLanguages": {
+          "title": "availableLanguages",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "dependsOn": {
+      "title": "depends on",
+      "type": "object",
+      "properties": {
+        "open": {
+          "title": "open",
+          "type": "array",
+          "items": { "$ref": "#/definitions/library" }
+        },
+        "proprietary": {
+          "title": "propietary",
+          "type": "array",
+          "items": { "$ref": "#/definitions/library" }
+        },
+        "hardware": {
+          "title": "hardware",
+          "type": "array",
+          "items": { "$ref": "#/definitions/library" }
+        }
       }
     }
   },

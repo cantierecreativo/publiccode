@@ -6,6 +6,7 @@ require "redcarpet"
 require 'rouge'
 require 'byebug'
 require 'rouge/plugins/redcarpet'
+require 'active_support/core_ext/string'
 require_relative "./json_schema_external_ref"
 
 class RougeRender < Redcarpet::Render::HTML
@@ -36,7 +37,6 @@ def generate_docs_from(name)
     exit(1)
   end
 
-=begin
 
   Prmd::CLI::Doc.execute(
     argv: [json_schema_path],
@@ -44,6 +44,7 @@ def generate_docs_from(name)
   )
 
   markdown_content = File.read(markdown_path)
+
 
   html_toc = Redcarpet::Markdown.new(
     Redcarpet::Render::HTML_TOC.new
@@ -58,8 +59,6 @@ def generate_docs_from(name)
   File.open(html_path, "w") do |file|
     file.write ERB.new(File.read("#{source}/template.html"), nil, "<>").result(binding)
   end
-
-=end
 
 end
 generate_docs_from("schema")
