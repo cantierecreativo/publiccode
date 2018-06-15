@@ -15,7 +15,12 @@
       "title": "Name",
       "links": []
     },
-
+    "freeTag": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "person": {
       "type": "object",
       "properties": {
@@ -63,6 +68,17 @@
           "type": "boolean",
           "title": "Optional",
           "description": "is optional"
+        }
+      }
+    },
+    "translatedDescr": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "$ref": "#/definitions/descr"
+        },
+        "freeTags": {
+          "$ref": "#/definitions/freeTag"
         }
       }
     },
@@ -205,12 +221,30 @@
         "enum": ["standalone", "addon", "library", "configurationFiles"]
       }
     },
-    "locales": {
+    "description": {
       "type": "array",
-      "description": "Available locales",
-      "items": { "type": "string" },
-      "minItems": 1,
-      "example": ["en"]
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "title": "ita",
+            "properties": {
+              "ita": {
+                "$ref": "#/definitions/translatedDescr"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "title": "eng",
+            "properties": {
+              "eng": {
+                "$ref": "#/definitions/translatedDescr"
+              }
+            }
+          }
+        ]
+      }
     }
   },
   "required": [

@@ -21,10 +21,35 @@ const schema = {
   title: "Public code",
   type: "object",
   definitions: {
+    legal: {
+      type: "object",
+      properties: {
+        license: {
+          type: "string",
+          title: "License",
+          default: "MIT"
+        },
+        mainCopyrightOwner: {
+          type: "string",
+          title: "Main Copyright Owner"
+        },
+        repoOwner: {
+          type: "string",
+          title: "Repo Owner",
+          default: "owner"
+        },
+        authorsFile: {
+          type: "string",
+          title: "Author's File"
+        }
+      },
+      required: ["license", "repoOwner"]
+    },
+
     list: {
       type: "array",
       items: {
-        type: "string",
+        type: "string"
       }
     },
     person: {
@@ -74,6 +99,19 @@ const schema = {
         }
       }
     },
+    description_lang: {
+      type: "object",
+      required: ["description"],
+      properties: {
+        description: {
+          $ref: "#/definitions/description"
+        },
+        freeTags: {
+          $ref: "#/definitions/list"
+        }
+      }
+    },
+
     description: {
       type: "object",
       properties: {
@@ -149,7 +187,7 @@ const schema = {
     isBasedOn: {
       type: "array",
       items: {
-        type: "string",
+        type: "string"
       }
     },
     softwareVersion: {
@@ -187,12 +225,7 @@ const schema = {
       },
       default: ["email"]
     },
-    _freeTags: {
-      type: "array",
-      items: {
-        type: "string"
-      }
-    },
+
     usedBy: {
       type: "array",
       items: {
@@ -251,31 +284,35 @@ const schema = {
       }
     },
 
-    description: {
-      type: "array",
-      uniqueItems: true,
-      items: {
-        type: "object",
-        properties: {
-          language: {
-            type: "string",
-            title: "Language",
-            enum: ["ENG","DEU", "ARA", "ITA", "ZHO"]
-          },
-          description: { $ref: "#/definitions/description" }
-        },
-        required: ["language", "description"]
-      }
-    },
-
-    // _description: {
-    //   type: "object",
-    //   properties: {
-    //     ENG: { $ref: "#/definitions/descr" },
-    //     ITA: { $ref: "#/definitions/descr" },
-    //     ZHO: { $ref: "#/definitions/descr" }
+    // wrong_description: {
+    //   type: "array",
+    //   uniqueItems: true,
+    //   items: {
+    //     type: "object",
+    //     properties: {
+    //       language: {
+    //         type: "string",
+    //         title: "Language",
+    //         enum: ["ENG","DEU", "ARA", "ITA", "ZHO"]
+    //       },
+    //       description: { $ref: "#/definitions/description" }
+    //     },
+    //     required: ["language", "description"]
     //   }
     // },
+
+    description: {
+      type: "object",
+      uniqueItems: true,
+      properties: {
+        ita: {
+          $ref: "#/definitions/description_lang"
+        },
+        en: {
+          $ref: "#/definitions/description_lang"
+        }
+      }
+    },
 
     legal: {
       type: "object",
@@ -346,15 +383,15 @@ const schema = {
       properties: {
         open: {
           type: "array",
-          items: { $ref: "#/definitions/lib" }
+          items: { $ref: "#/definitions/library" }
         },
         proprietary: {
           type: "array",
-          items: { $ref: "#/definitions/lib" }
+          items: { $ref: "#/definitions/library" }
         },
         hardware: {
           type: "array",
-          items: { $ref: "#/definitions/lib" }
+          items: { $ref: "#/definitions/library" }
         }
       }
     }

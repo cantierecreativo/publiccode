@@ -36,6 +36,8 @@ def generate_docs_from(name)
     exit(1)
   end
 
+=begin
+
   Prmd::CLI::Doc.execute(
     argv: [json_schema_path],
     output_file: markdown_path
@@ -56,5 +58,8 @@ def generate_docs_from(name)
   File.open(html_path, "w") do |file|
     file.write ERB.new(File.read("#{source}/template.html"), nil, "<>").result(binding)
   end
+
+=end
+
 end
 generate_docs_from("schema")

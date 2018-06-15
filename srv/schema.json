@@ -8,16 +8,12 @@
     "pub": {
       "type": "string",
       "title": "Version of specification",
-      "links": [
-
-      ]
+      "links": []
     },
     "name": {
       "type": "string",
       "title": "Name",
-      "links": [
-
-      ]
+      "links": []
     },
     "freeTag": {
       "type": "array",
@@ -71,6 +67,17 @@
         }
       }
     },
+    "translatedDescr": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "$ref": "#/definitions/descr"
+        },
+        "freeTags": {
+          "$ref": "#/definitions/freeTag"
+        }
+      }
+    },
     "descr": {
       "type": "object",
       "properties": {
@@ -114,11 +121,7 @@
           }
         }
       },
-      "required": [
-        "longDescription",
-        "shortDescription",
-        "featureList"
-      ]
+      "required": ["longDescription", "shortDescription", "featureList"]
     }
   },
   "properties": {
@@ -166,13 +169,7 @@
       "title": "developmentStatus",
       "items": {
         "type": "string",
-        "enum": [
-          "concept",
-          "development",
-          "beta",
-          "stable",
-          "obsolete"
-        ]
+        "enum": ["concept", "development", "beta", "stable", "obsolete"]
       }
     },
     "softwareType": {
@@ -181,11 +178,44 @@
       "title": "softwareType",
       "items": {
         "type": "string",
-        "enum": [
-          "standalone",
-          "addon",
-          "library",
-          "configurationFiles"
+        "enum": ["standalone", "addon", "library", "configurationFiles"]
+      }
+    },
+    "description": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "title": "ita",
+            "properties": {
+              "ita": {
+                "$ref": "#/definitions/translatedDescr"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "title": "ita",
+            "properties": {
+              "ita": {
+                "$ref": "#/definitions/translatedDescr"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "title": "Select",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Name"
+              },
+              "fields": {
+                "$ref": "#/definitions/select_fields"
+              }
+            }
+          }
         ]
       }
     }
