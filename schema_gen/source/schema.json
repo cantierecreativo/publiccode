@@ -1,0 +1,225 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema",
+  "title": "Publiccode definition schema",
+  "description": "",
+  "type": "object",
+  "id": "publiccode-scehma",
+  "definitions": {
+    "pub": {
+      "type": "string",
+      "title": "Version of specification",
+      "links": []
+    },
+    "name": {
+      "type": "string",
+      "title": "Name",
+      "links": []
+    },
+
+    "person": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "email": {
+          "type": "string",
+          "title": "Email"
+        },
+        "affiliation": {
+          "type": "string",
+          "title": "Affiliation"
+        },
+        "phone": {
+          "type": "string",
+          "title": "Phone"
+        }
+      }
+    },
+    "lib": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "versionMin": {
+          "type": "string",
+          "title": "versionMin",
+          "description": "versionMin"
+        },
+        "versionMax": {
+          "type": "string",
+          "title": "versionMax",
+          "description": "version max"
+        },
+        "version": {
+          "type": "string",
+          "title": "Version",
+          "description": "version"
+        },
+        "optional": {
+          "type": "boolean",
+          "title": "Optional",
+          "description": "is optional"
+        }
+      }
+    },
+    "descr": {
+      "type": "object",
+      "properties": {
+        "localisedName": {
+          "type": "string",
+          "title": "localisedName",
+          "description": "localisedName"
+        },
+        "shortDescription": {
+          "type": "string",
+          "title": "-",
+          "description": "-"
+        },
+        "longDescription": {
+          "type": "string",
+          "title": "-",
+          "description": "-"
+        },
+        "documentation": {
+          "type": "string",
+          "title": "-",
+          "description": "-"
+        },
+        "apiDocumentation": {
+          "type": "string",
+          "title": "-",
+          "description": "-"
+        },
+        "featureList": {
+          "type": "array",
+          "title": "-",
+          "description": "-",
+          "items": {
+            "type": "string",
+            "title": "-",
+            "description": "-"
+          }
+        },
+        "screenshots": {
+          "type": "array",
+          "title": "-",
+          "description": "-",
+          "items": {
+            "type": "string",
+            "title": "-",
+            "description": "-"
+          }
+        },
+        "videos": {
+          "type": "array",
+          "title": "-",
+          "description": "-",
+          "items": {
+            "type": "string",
+            "title": "-",
+            "description": "-"
+          }
+        },
+        "awards": {
+          "type": "array",
+          "title": "-",
+          "description": "-",
+          "items": {
+            "type": "string",
+            "title": "-",
+            "description": "-"
+          }
+        }
+      },
+      "required": ["longDescription", "shortDescription", "featureList"]
+    }
+  },
+  "properties": {
+    "publiccode-yaml-version": {
+      "$ref": "#/definitions/pub"
+    },
+    "name": {
+      "$ref": "#/definitions/name"
+    },
+    "applicationSuite": {
+      "type": "string",
+      "title": "Applicationsuite",
+      "description": "-"
+    },
+    "url": {
+      "type": "string",
+      "title": "url",
+      "description": "url to repo"
+    },
+    "landingURL": {
+      "type": "string",
+      "title": "landingURL",
+      "description": "url to page"
+    },
+    "softwareVersion": {
+      "type": "string",
+      "title": "Softwareversion",
+      "description": "version of software"
+    },
+    "releaseDate": {
+      "type": "string",
+      "title": "Releasedate",
+      "description": "-"
+    },
+    "logo": {
+      "type": "string",
+      "title": "Logo",
+      "description": " url to logo"
+    },
+    "monochromeLogo": {
+      "type": "string",
+      "title": "Monochrome Logo",
+      "description": " url to logo "
+    },
+    "roadmap": {
+      "type": "string",
+      "title": "Roadmap",
+      "description": "road map"
+    },
+    "developmentStatus": {
+      "type": "array",
+      "uniqueItems": true,
+      "title": "developmentStatus",
+      "description": "status of development",
+      "items": {
+        "type": "string",
+        "enum": ["concept", "development", "beta", "stable", "obsolete"]
+      }
+    },
+    "softwareType": {
+      "type": "array",
+      "uniqueItems": true,
+      "title": "softwareType",
+      "description": "",
+      "items": {
+        "type": "string",
+        "enum": ["standalone", "addon", "library", "configurationFiles"]
+      }
+    },
+    "locales": {
+      "type": "array",
+      "description": "Available locales",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "example": ["en"]
+    }
+  },
+  "required": [
+    "publiccode-yaml-version",
+    "name",
+    "url",
+    "releaseDate",
+    "tags",
+    "developmentStatus",
+    "softwareType"
+  ]
+}

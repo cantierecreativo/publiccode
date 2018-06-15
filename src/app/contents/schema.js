@@ -21,6 +21,12 @@ const schema = {
   title: "Public code",
   type: "object",
   definitions: {
+    list: {
+      type: "array",
+      items: {
+        type: "string",
+      }
+    },
     person: {
       type: "object",
       properties: {
@@ -41,6 +47,79 @@ const schema = {
           title: "Phone"
         }
       }
+    },
+    library: {
+      type: "object",
+      properties: {
+        name: {
+          type: "string",
+          title: "Name"
+        },
+        versionMin: {
+          type: "string",
+          title: "versionMin"
+        },
+        versionMax: {
+          type: "string",
+          title: "versionMax"
+        },
+        version: {
+          type: "string",
+          title: "Version"
+        },
+        optional: {
+          type: "boolean",
+          title: "Optional",
+          default: false
+        }
+      }
+    },
+    description: {
+      type: "object",
+      properties: {
+        localisedName: {
+          type: "string"
+        },
+        shortDescription: {
+          type: "string",
+          default: "short desc"
+        },
+        longDescription: {
+          type: "string",
+          default: "long description"
+        },
+        documentation: {
+          type: "string"
+        },
+        apiDocumentation: {
+          type: "string"
+        },
+        featureList: {
+          type: "array",
+          items: {
+            type: "string"
+          }
+        },
+        screenshots: {
+          type: "array",
+          items: {
+            type: "string"
+          }
+        },
+        videos: {
+          type: "array",
+          items: {
+            type: "string"
+          }
+        },
+        awards: {
+          type: "array",
+          items: {
+            type: "string"
+          }
+        }
+      },
+      required: ["longDescription", "shortDescription", "featureList"]
     }
   },
   properties: {
@@ -71,7 +150,6 @@ const schema = {
       type: "array",
       items: {
         type: "string",
-        default: " "
       }
     },
     softwareVersion: {
@@ -173,58 +251,39 @@ const schema = {
       }
     },
 
-    _description: {
-      type: "object",
-      properties: {
-        localisedName: {
-          type: "string"
+    description: {
+      type: "array",
+      uniqueItems: true,
+      items: {
+        type: "object",
+        properties: {
+          language: {
+            type: "string",
+            title: "Language",
+            enum: ["ENG","DEU", "ARA", "ITA", "ZHO"]
+          },
+          description: { $ref: "#/definitions/description" }
         },
-        shortDescription: {
-          type: "string"
-        },
-        longDescription: {
-          type: "string"
-        },
-        documentation: {
-          type: "string"
-        },
-        apiDocumentation: {
-          type: "string"
-        },
-        featureList: {
-          type: "array",
-          items: {
-            type: "string"
-          }
-        },
-        screenshots: {
-          type: "array",
-          items: {
-            type: "string"
-          }
-        },
-        videos: {
-          type: "array",
-          items: {
-            type: "string"
-          }
-        },
-        awards: {
-          type: "array",
-          items: {
-            type: "string"
-          }
-        }
-      },
-      required: ["longDescription", "shortDescription", "featureList"]
+        required: ["language", "description"]
+      }
     },
+
+    // _description: {
+    //   type: "object",
+    //   properties: {
+    //     ENG: { $ref: "#/definitions/descr" },
+    //     ITA: { $ref: "#/definitions/descr" },
+    //     ZHO: { $ref: "#/definitions/descr" }
+    //   }
+    // },
 
     legal: {
       type: "object",
       properties: {
         license: {
           type: "string",
-          title: "License"
+          title: "License",
+          default: "MIT"
         },
         mainCopyrightOwner: {
           type: "string",
@@ -232,7 +291,8 @@ const schema = {
         },
         repoOwner: {
           type: "string",
-          title: "Repo Owner"
+          title: "Repo Owner",
+          default: "owner"
         },
         authorsFile: {
           type: "string",
@@ -281,95 +341,20 @@ const schema = {
         }
       }
     },
-    _dependencies: {
+    dependsOn: {
       type: "object",
       properties: {
         open: {
           type: "array",
-          items: {
-            type: "object",
-            properties: {
-              name: {
-                type: "string",
-                title: "Name"
-              },
-              versionMin: {
-                type: "string",
-                title: "versionMin"
-              },
-              versionMax: {
-                type: "string",
-                title: "versionMax"
-              },
-              version: {
-                type: "string",
-                title: "Version"
-              },
-              optional: {
-                type: "boolean",
-                title: "Optional",
-                default: false
-              }
-            }
-          }
+          items: { $ref: "#/definitions/lib" }
         },
         proprietary: {
           type: "array",
-          items: {
-            type: "object",
-            properties: {
-              name: {
-                type: "string",
-                title: "Name"
-              },
-              versionMin: {
-                type: "string",
-                title: "versionMin"
-              },
-              versionMax: {
-                type: "string",
-                title: "versionMax"
-              },
-              version: {
-                type: "string",
-                title: "Version"
-              },
-              optional: {
-                type: "boolean",
-                title: "Optional",
-                default: false
-              }
-            }
-          }
+          items: { $ref: "#/definitions/lib" }
         },
         hardware: {
           type: "array",
-          items: {
-            type: "object",
-            properties: {
-              name: {
-                type: "string",
-                title: "Name"
-              },
-              versionMin: {
-                type: "string",
-                title: "versionMin"
-              },
-              versionMax: {
-                type: "string",
-                title: "versionMax"
-              },
-              version: {
-                type: "string",
-                title: "Version"
-              },
-              optional: {
-                type: "boolean",
-                title: "Optional",
-                default: false
-              }
-            }
-          }
+          items: { $ref: "#/definitions/lib" }
         }
       }
     }
@@ -382,6 +367,7 @@ const schema = {
     "tags",
     "developmentStatus",
     "softwareType",
+    "_description",
     "legal"
   ]
 };

@@ -11,7 +11,7 @@ import "../assets/styles/app.scss";
 export default class App extends Component {
   render() {
     return (
-      <div >
+      <div>
         <header>
           <nav className="navbar navbar-md fixed-top white">
             <div className="container">
@@ -22,7 +22,9 @@ export default class App extends Component {
           </nav>
         </header>
 
-        <Home  className="zzz" />
+        <div className="home">
+          <Home />
+        </div>
 
         <footer className="black pos-rlt">
           <div className="footer dk">

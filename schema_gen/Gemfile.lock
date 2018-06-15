@@ -1,0 +1,29 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (10.0.2)
+    erubis (2.7.0)
+    json (2.1.0)
+    json_schema (0.19.1)
+    prmd (0.13.0)
+      erubis (~> 2.7)
+      json_schema (~> 0.3, >= 0.3.1)
+    redcarpet (3.4.0)
+    rouge (3.1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  byebug
+  json
+  json_schema
+  prmd
+  redcarpet
+  rouge
+
+RUBY VERSION
+   ruby 2.5.1p57
+
+BUNDLED WITH
+   1.16.2

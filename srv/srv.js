@@ -23,6 +23,9 @@ const parse = filename => {
   }
 };
 
+
+
+
 const generate = (obj, name) => {
   var stream = fs.createWriteStream(`${name}.yml`);
   var buffer = yaml.dump(obj);

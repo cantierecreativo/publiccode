@@ -10,7 +10,8 @@ export default class Home extends Component {
     super(props);
     this.state = {
       yaml: null,
-      formData: null
+      formData: null,
+      show: false
     };
   }
 
@@ -47,8 +48,30 @@ export default class Home extends Component {
     tempLink.click();
   }
 
+  download_schema(data) {
+    const blob = new Blob([data], {
+      type: "text/json;charset=utf-8;"
+    });
+    var blobURL = window.URL.createObjectURL(blob);
+    let tempLink = document.createElement("a");
+    tempLink.href = blobURL;
+    tempLink.setAttribute("schema", "schema.json");
+    tempLink.click();
+  }
+
+  show(message) {
+    this.setState({ show: true });
+    setTimeout(function() {
+      this.setState({ show: false });
+    }, 3000);
+  }
+
   render() {
-    let { yaml, formData } = this.state;
+    let { yaml, formData, show_message } = this.state;
+    let cn = "";
+    if (show_message) {
+      cn = "show";
+    }
     return (
       <div className="split-screen">
         <div className="split-screen--child">
@@ -59,6 +82,7 @@ export default class Home extends Component {
             errors={this.log.bind(this)}
             formData={formData}
           />
+          <div className="spacer">&nbsp;</div>
         </div>
         <div className="split-screen--child">
           <form className="form" onSubmit={e => this.load(e)}>
@@ -68,9 +92,17 @@ export default class Home extends Component {
             </button>
           </form>
           <hr />
+          <button
+            className="btn btn-info"
+            onClick={() => this.download_schema(JSON.stringify(Schema.schema))}
+          >
+            Download schema
+          </button>
+
           <button className="btn btn-info" onClick={() => copy(yaml)}>
             Copy to clipboard
           </button>
+
           <button className="btn btn-info" onClick={() => this.download(yaml)}>
             Download yaml
           </button>
@@ -82,9 +114,12 @@ export default class Home extends Component {
           <hr />
           <h4>JSON</h4>
           <pre>
-            <code>{JSON.stringify(formData)}</code>
+            <code>{formData && JSON.stringify(formData)}</code>
           </pre>
           <hr />
+        </div>
+        <div id="snackbar" className={cn}>
+          submitted
         </div>
       </div>
     );
