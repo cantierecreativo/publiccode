@@ -11,12 +11,12 @@ import "../assets/styles/app.scss";
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className="black">
         <header>
           <nav className="navbar navbar-md fixed-top white">
             <div className="container">
               <a className="navbar-brand md">
-                <span className="inline">Pubblicode</span>
+                <span className="inline">Public Code Editor</span>
               </a>
             </div>
           </nav>

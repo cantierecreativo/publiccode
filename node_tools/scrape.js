@@ -27,7 +27,7 @@ const getTD2 = $ => {
   });
 };
 
-const getCodes = $ => {
+const getLangCodes = $ => {
   let obj = [];
   $("tr > td:nth-child(1) > p > span > a:first-child ").map((i, el) => {
     let s =
@@ -40,7 +40,7 @@ const getCodes = $ => {
   fs.writeFileSync("./lang_codes.json", JSON.stringify(obj));
 };
 
-const genObjs = $ => {
+const genLangObjs = $ => {
   let obj = [];
   $("tr > td:nth-child(1) > p > span > a:first-child ").map((i, el) => {
     let s =
@@ -67,7 +67,7 @@ const genObjs = $ => {
   fs.writeFileSync("./gen.json", JSON.stringify(values));
 };
 
-const getCodesWithDescr = $ => {
+const getLangCodesWithDescr = $ => {
   var tr = $("tr");
   console.log(tr.length);
   let obj = [];
@@ -86,6 +86,30 @@ const getCodesWithDescr = $ => {
   fs.writeFileSync("./lang_codes_n_descrs.json", JSON.stringify(obj));
 };
 
+
+const getCountriesCodesWithDescr = () => {
+  let data = fs.readFileSync("./country-codes.html", "utf8");
+const $ = cheerio.load(data);
+  var tr = $("tr");
+  console.log(tr.length);
+  let obj = [];
+  tr.each(function(i, el) {
+    var c = $(el)
+      .find("td:nth-child(2) > p > span > b:first-child ")
+      .text();
+    var d = $(el)
+      .find("td:nth-child(3) > p > span > a:first-child ")
+      .text();
+
+    obj.push({ code: c, descr: d ? d : c });
+  });
+
+  console.log(obj.length);
+  fs.writeFileSync("./countries_codes_n_descrs.json", JSON.stringify(obj));
+};
+
 //getCodes($);
 //getCodesWithDescr($);
-genObjs($);
+//genLangObjs($);
+getCountriesCodesWithDescr();
+

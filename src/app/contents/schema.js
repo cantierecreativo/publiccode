@@ -404,7 +404,7 @@ const schema = {
     "tags",
     "developmentStatus",
     "softwareType",
-    "_description",
+    "description",
     "legal"
   ]
 };

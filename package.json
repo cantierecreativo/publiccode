@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "webpack-dev-server --port 3000",
     "build": "webpack",
-    "validate": "yaml-validator srv/dump.yml",
-    "parse": "nodemon srv/srv.js",
+    "validate": "yaml-validator node_tools/yml/dump1.yml",
+    "parse": "nodemon node_tools/srv.js",
     "test": "jest --watch"
   },
   "repository": {

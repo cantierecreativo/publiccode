@@ -5,7 +5,7 @@
   "type": "object",
   "id": "publiccode-scehma",
   "definitions": {
-    "pub": {
+    "publicodeYamlVersion": {
       "type": "string",
       "title": "Version of specification",
       "description": "",
@@ -106,14 +106,14 @@
       "type": "object",
       "properties": {
         "description": {
-          "$ref": "#/definitions/descr"
+          "$ref": "#/definitions/description"
         },
         "freeTags": {
           "$ref": "#/definitions/freeTag"
         }
       }
     },
-    "descr": {
+    "description": {
       "title": "Description",
       "description": "",
       "examples": "",
@@ -202,7 +202,7 @@
   },
   "properties": {
     "publiccode-yaml-version": {
-      "$ref": "#/definitions/pub"
+      "$ref": "#/definitions/publicodeYamlVersion"
     },
     "name": {
       "$ref": "#/definitions/name"
@@ -269,7 +269,6 @@
         "enum": ["art", "backend"]
       }
     },
-
     "usedBy": {
       "title": "usedBy",
       "description": "Companies or products that uses it",
@@ -346,38 +345,7 @@
         }
       }
     },
-    "description": {
-      "title": "Descriptions",
-      "description": " ",
-      "examples": "",
-      "type": "array",
-      "items": {
-        "anyOf": [
-          {
-            "type": "object",
-            "title": "ita",
-            "description": " ",
-            "examples": "",
-            "properties": {
-              "ita": {
-                "$ref": "#/definitions/translatedDescr"
-              }
-            }
-          },
-          {
-            "type": "object",
-            "title": "eng",
-            "description": " ",
-            "examples": "",
-            "properties": {
-              "eng": {
-                "$ref": "#/definitions/translatedDescr"
-              }
-            }
-          }
-        ]
-      }
-    },
+
     "maintenance": {
       "title": "maintenance",
       "type": "object",
@@ -401,7 +369,6 @@
       },
       "required": ["contacts"]
     },
-
     "localisation": {
       "title": "localisation",
       "type": "object",
