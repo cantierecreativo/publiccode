@@ -4,9 +4,11 @@ import Home from "./components/home";
 
 // import '../asset/style.scss';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap';
+ //import 'bootstrap-italia/dist/css/bootstrap.min.css';
 
-import "../assets/styles/app.scss";
+
+
+//import "../assets/styles/app.scss";
 
 export default class App extends Component {
   render() {
