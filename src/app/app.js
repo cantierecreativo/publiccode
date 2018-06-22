@@ -11,7 +11,7 @@ import "../assets/styles/app.scss";
 export default class App extends Component {
   render() {
     return (
-      <div className="black">
+      <div >
         <header>
           <nav className="navbar navbar-md fixed-top white">
             <div className="container">

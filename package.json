@@ -58,6 +58,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.1",
+    "bootstrap-italia": "^0.9.3",
     "clean-deep": "^3.0.2",
     "copy-to-clipboard": "^3.0.8",
     "js-yaml": "^3.11.0",

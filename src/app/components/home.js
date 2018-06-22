@@ -41,7 +41,7 @@ export default class Home extends Component {
     const blob = new Blob([data], {
       type: "text/yaml;charset=utf-8;"
     });
-    var blobURL = window.URL.createObjectURL(blob);
+    let blobURL = window.URL.createObjectURL(blob);
     let tempLink = document.createElement("a");
     tempLink.href = blobURL;
     tempLink.setAttribute("download", "pubbliccode.yml");
@@ -52,7 +52,7 @@ export default class Home extends Component {
     const blob = new Blob([data], {
       type: "text/json;charset=utf-8;"
     });
-    var blobURL = window.URL.createObjectURL(blob);
+    let blobURL = window.URL.createObjectURL(blob);
     let tempLink = document.createElement("a");
     tempLink.href = blobURL;
     tempLink.setAttribute("schema", "schema.json");
