@@ -1,4 +1,5 @@
 import moment from "moment";
+import langs from "./langs";
 import tags from "./tags";
 const date_format = "YYYY-MM-DD";
 let tag_names = tags.map(t => t.tag);
@@ -124,7 +125,8 @@ const schema = {
         },
         longDescription: {
           type: "string",
-          default: "long description"
+          default: "long description",
+          widget:"textarea"
         },
         documentation: {
           type: "string"
@@ -157,7 +159,7 @@ const schema = {
           }
         }
       },
-      required: ["longDescription", "shortDescription", "featureList"]
+      required: ["longDescription", "shortDescription"]
     }
   },
   properties: {
@@ -182,7 +184,8 @@ const schema = {
     },
     landingURL: {
       type: "string",
-      title: "landingURL"
+      title: "landingURL",
+      widget: "url"
     },
     isBasedOn: {
       type: "array",
@@ -198,7 +201,8 @@ const schema = {
     releaseDate: {
       type: "string",
       title: "Releasedate",
-      default: moment().format(date_format)
+      default: moment().format(date_format),
+      widget: "date"
     },
     logo: {
       type: "string",
@@ -284,35 +288,35 @@ const schema = {
       }
     },
 
-    // wrong_description: {
-    //   type: "array",
-    //   uniqueItems: true,
-    //   items: {
-    //     type: "object",
-    //     properties: {
-    //       language: {
-    //         type: "string",
-    //         title: "Language",
-    //         enum: ["ENG","DEU", "ARA", "ITA", "ZHO"]
-    //       },
-    //       description: { $ref: "#/definitions/description" }
-    //     },
-    //     required: ["language", "description"]
-    //   }
-    // },
-
     description: {
-      type: "object",
+      type: "array",
       uniqueItems: true,
-      properties: {
-        ita: {
-          $ref: "#/definitions/description_lang"
+      items: {
+        type: "object",
+        properties: {
+          language: {
+            type: "string",
+            title: "Language",
+            enum: langs
+          },
+          description: { $ref: "#/definitions/description_lang" }
         },
-        en: {
-          $ref: "#/definitions/description_lang"
-        }
+        required: ["language", "description"]
       }
     },
+
+    // description: {
+    //   type: "object",
+    //   uniqueItems: true,
+    //   properties: {
+    //     ita: {
+    //       $ref: "#/definitions/description_lang"
+    //     },
+    //     en: {
+    //       $ref: "#/definitions/description_lang"
+    //     }
+    //   }
+    // },
 
     legal: {
       type: "object",

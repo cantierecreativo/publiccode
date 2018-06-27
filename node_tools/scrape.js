@@ -2,6 +2,18 @@ const cheerio = require("cheerio");
 const fs = require("fs");
 let data = fs.readFileSync("./langs-code.html", "utf8");
 const $ = cheerio.load(data);
+require("isomorphic-fetch");
+
+const getReleases = () => {
+  const url =
+    "https://api.github.com/repos/publiccodenet/publiccode.yml/contents/version";
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      let versions = data.map(d => d.name);
+      console.log("VERSIONS", versions);
+    });
+};
 
 const fetchPage = () => {
   let url = "https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes";
@@ -11,7 +23,9 @@ const fetchPage = () => {
       console.log("ok");
       const $ = cheerio.load(data);
       $("#Table td:first-child").each((i, el) => {
-        let item = $(this).text();
+        let item = el && el.children[0] && el.children[0].data
+            ? el.children[0].data
+            : null;
         console.log(item);
       });
     });
@@ -20,9 +34,7 @@ const fetchPage = () => {
 const getTD2 = $ => {
   $("tr > td:nth-child(1) td:nth-child(4) > p > span ").each((i, el) => {
     let s =
-      el && elem.children[0] && elem.children[0].data
-        ? elem.children[0].data
-        : null;
+      el && el.children[0] && el.children[0].data ? el.children[0].data : null;
     console.log(i, s);
   });
 };
@@ -86,10 +98,9 @@ const getLangCodesWithDescr = $ => {
   fs.writeFileSync("./lang_codes_n_descrs.json", JSON.stringify(obj));
 };
 
-
 const getCountriesCodesWithDescr = () => {
   let data = fs.readFileSync("./country-codes.html", "utf8");
-const $ = cheerio.load(data);
+  const $ = cheerio.load(data);
   var tr = $("tr");
   console.log(tr.length);
   let obj = [];
@@ -111,5 +122,7 @@ const $ = cheerio.load(data);
 //getCodes($);
 //getCodesWithDescr($);
 //genLangObjs($);
-getCountriesCodesWithDescr();
+//getCountriesCodesWithDescr();
 
+//getReleases();
+fetchPage();
