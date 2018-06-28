@@ -2,22 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Field } from "redux-form";
-import { Editor } from "react-draft-wysiwyg";
-import "../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import MyEditor from './MyEditor';
+
 const renderInput = field => {
   const className = classNames([
     "form-group",
     { "has-error": field.meta.touched && field.meta.error }
   ]);
 
-
-
   return (
     <div className={className}>
       <label className="control-label" htmlFor={"field-" + field.name}>
         {field.label}
       </label>
-      <Editor
+
+      <MyEditor
         {...field.input}
         className="form-control"
         id={"field-" + field.fieldName}

@@ -28,12 +28,13 @@ export default class Index extends Component {
     console.log.bind(console, JSON.stringify(data));
   }
 
-  submit(obj) {
-    //console.log(data)
-    //let obj = cleanDeep(data);
-    console.log(obj);
+  submit(data) {
+    this.notify();
+    console.log("SUBMIT");
+    data = cleanDeep(data);
+    console.log(data);
     try {
-      let yaml = jsyaml.dump(obj);
+      let yaml = jsyaml.dump(data);
       this.setState({ yaml, formData: data, error: null });
     } catch (e) {
       console.error(e);
@@ -64,8 +65,6 @@ export default class Index extends Component {
   }
 
   download_schema(data) {
-    this.notify();
-    /*
     const blob = new Blob([data], {
       type: "text/json;charset=utf-8;"
     });
@@ -74,10 +73,9 @@ export default class Index extends Component {
     tempLink.href = blobURL;
     tempLink.setAttribute("schema", "schema.json");
     tempLink.click();
-    */
   }
 
-  show(message) {
+  showError(error) {
     this.setState({ show: true });
     setTimeout(function() {
       this.setState({ show: false });
@@ -100,17 +98,24 @@ export default class Index extends Component {
     if (show_message) {
       cn = "show";
     }
+
+    console.log("FORMDATA", formData);
+
+    let initialValues = formData ? formData : Schema.initialValues;
+    console.log("INITIAL VALUES", initialValues);
     return (
       <div className="split-screen">
-        <div id="snackbar" ref="snackbar" className={cn}>
+        <ReactNotify ref="notificator" />
+        <div id="snackbar" ref="snackbar">
           ciaooo
         </div>
         <div className="split-screen--child">
           <Liform
             schema={Schema.schema}
             theme={myTheme}
-            initialValues={formData}
+            initialValues={initialValues}
             onSubmit={this.submit.bind(this)}
+            onError={this.showError.bind(this)}
           />
           <div className="spacer">&nbsp;</div>
         </div>
@@ -151,8 +156,6 @@ export default class Index extends Component {
           </pre>
           <hr />
         </div>
-
-        <ReactNotify ref="notificator" />
       </div>
     );
   }

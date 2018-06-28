@@ -7,8 +7,8 @@ import { Provider } from "react-redux";
 //import Home from "./components/home";
 import Home from "./components/index";
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
-//import 'bootstrap-italia/dist/css/bootstrap.min.css';
+ import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap-italia/dist/css/bootstrap.min.css';
 
 //import "../assets/styles/app.scss";
 import "../asset/style.scss";
@@ -25,7 +25,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="black">
+        <div>
           <header>
             <nav className="navbar navbar-md fixed-top white">
               <div className="container">

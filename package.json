@@ -78,6 +78,7 @@
     "react-jsonschema-form": "^1.0.3",
     "react-notify": "^3.0.0",
     "react-redux": "^5.0.7",
+    "react-rte": "^0.16.1",
     "react-widgets": "^4.2.6",
     "redux": "^4.0.0",
     "redux-form": "^7.4.2",

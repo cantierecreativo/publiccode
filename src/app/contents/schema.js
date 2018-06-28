@@ -18,6 +18,13 @@ let softwareType_list = [
   "configurationFiles"
 ];
 
+const initialValues = {
+  name: "PROOOOVAAAA",
+  license: "MIT",
+  optional: false,
+  releaseDate: moment().format(date_format)
+};
+
 const schema = {
   title: "Public code",
   type: "object",
@@ -27,8 +34,7 @@ const schema = {
       properties: {
         license: {
           type: "string",
-          title: "License",
-          default: "MIT"
+          title: "License"
         },
         mainCopyrightOwner: {
           type: "string",
@@ -36,8 +42,7 @@ const schema = {
         },
         repoOwner: {
           type: "string",
-          title: "Repo Owner",
-          default: "owner"
+          title: "Repo Owner"
         },
         authorsFile: {
           type: "string",
@@ -95,8 +100,7 @@ const schema = {
         },
         optional: {
           type: "boolean",
-          title: "Optional",
-          default: false
+          title: "Optional"
         }
       }
     },
@@ -120,13 +124,11 @@ const schema = {
           type: "string"
         },
         shortDescription: {
-          type: "string",
-          default: "short desc"
+          type: "string"
         },
         longDescription: {
           type: "string",
-          default: "long description",
-          widget:"textarea"
+          widget: "textarea"
         },
         documentation: {
           type: "string"
@@ -159,19 +161,17 @@ const schema = {
           }
         }
       },
-      required: ["longDescription", "shortDescription"]
+      required: ["shortDescription"]
     }
   },
   properties: {
     "publiccode-yaml-version": {
       type: "string",
-      title: "Version of specification",
-      default: "http://w3id.org/publiccode/version/0.1"
+      title: "Version of specification"
     },
     name: {
       type: "string",
-      title: "Name",
-      default: " - "
+      title: "Name"
     },
     applicationSuite: {
       type: "string",
@@ -179,8 +179,7 @@ const schema = {
     },
     url: {
       type: "string",
-      title: "url",
-      default: "https://sampleurl.com"
+      title: "url"
     },
     landingURL: {
       type: "string",
@@ -195,13 +194,12 @@ const schema = {
     },
     softwareVersion: {
       type: "string",
-      title: "Softwareversion",
-      default: "1.0"
+      title: "Softwareversion"
     },
     releaseDate: {
       type: "string",
       title: "Releasedate",
-      default: moment().format(date_format),
+
       widget: "date"
     },
     logo: {
@@ -216,7 +214,6 @@ const schema = {
       type: "array",
       items: {
         type: "string",
-        default: "web",
         enum: ["web", "windows", "mac", "linux", "ios", "android"]
       }
     },
@@ -226,8 +223,7 @@ const schema = {
         type: "string",
         enum: tag_names,
         enumNames: tag_descrs
-      },
-      default: ["email"]
+      }
     },
 
     usedBy: {
@@ -244,12 +240,12 @@ const schema = {
     developmentStatus: {
       type: "array",
       uniqueItems: true,
+
       title: "developmentStatus",
       items: {
         type: "string",
         enum: developmentStatus_list
-      },
-      default: ["development"]
+      }
     },
     softwareType: {
       type: "array",
@@ -258,8 +254,7 @@ const schema = {
       items: {
         type: "string",
         enum: softwareType_list
-      },
-      default: ["standalone"]
+      }
     },
 
     intendedAudience: {
@@ -323,8 +318,7 @@ const schema = {
       properties: {
         license: {
           type: "string",
-          title: "License",
-          default: "MIT"
+          title: "License"
         },
         mainCopyrightOwner: {
           type: "string",
@@ -332,8 +326,7 @@ const schema = {
         },
         repoOwner: {
           type: "string",
-          title: "Repo Owner",
-          default: "owner"
+          title: "Repo Owner"
         },
         authorsFile: {
           type: "string",
@@ -371,8 +364,7 @@ const schema = {
       properties: {
         localisationReady: {
           type: "boolean",
-          title: "Localization Ready",
-          default: false
+          title: "Localization Ready"
         },
         availableLanguages: {
           type: "array",
@@ -428,4 +420,4 @@ const uiSchema = {
   }
 };
 
-export default { schema, uiSchema };
+export default { schema, uiSchema, initialValues };
