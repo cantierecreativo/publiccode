@@ -3,9 +3,11 @@
 @import "./transitions.scss";
 @import "./snackbar.scss";
 @import "./notify.scss";
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
 
+html,
 body {
-  font-family: "system";
+  font-family: "Titillium Web", "system", sans-serif;
 }
 
 input,
@@ -29,7 +31,6 @@ label,
   overflow-y: auto;
 }
 
-
 .spacer {
   height: 2rem;
 }
@@ -38,3 +39,37 @@ label,
   padding: 20px;
 }
 
+.btn,
+.btn-lg,
+.btn-md,
+.btn-sm,
+.btn-xs,
+.btn-sml {
+  padding: 5px !important;
+  font-size: 0.9rem !important;
+}
+
+.objectType legend {
+  margin-left: 0;
+}
+
+.objectType {
+  border: 1px dashed #ddd;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+
+.RichTextEditor{
+  margin: 0;
+}
+legend,
+.control-label {
+  font-size: 0.8rem !important;
+  color: #5c6f82;
+}
+
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}

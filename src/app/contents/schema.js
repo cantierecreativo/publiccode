@@ -26,7 +26,7 @@ const initialValues = {
 };
 
 const schema = {
-  title: "Public code",
+  title: "publiccode",
   type: "object",
   definitions: {
     legal: {
@@ -128,7 +128,7 @@ const schema = {
         },
         longDescription: {
           type: "string",
-          widget: "textarea"
+          widget: "editor"
         },
         documentation: {
           type: "string"
@@ -240,7 +240,7 @@ const schema = {
     developmentStatus: {
       type: "array",
       uniqueItems: true,
-
+      widget: "choice-multiple-expanded",
       title: "developmentStatus",
       items: {
         type: "string",
@@ -251,6 +251,7 @@ const schema = {
       type: "array",
       uniqueItems: true,
       title: "softwareType",
+      widget: "choice-multiple-expanded",
       items: {
         type: "string",
         enum: softwareType_list

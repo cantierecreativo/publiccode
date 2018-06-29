@@ -11,15 +11,13 @@ export default class MyEditor extends Component {
   }
 
   onChange(value) {
-    console.log(value);
     this.setState({ value });
     if (this.props.onChange) {
-      console.log(".");
       this.props.onChange(value.toString("html"));
     }
   }
 
   render() {
-    return <RichTextEditor value={this.state.value} onChange={this.onChange} />;
+    return <RichTextEditor className="RichTextEditor" value={this.state.value} onChange={this.onChange} />;
   }
 }

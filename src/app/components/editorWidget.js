@@ -18,7 +18,7 @@ const renderInput = field => {
 
       <MyEditor
         {...field.input}
-        className="form-control"
+        className="form-control RichTextEditor"
         id={"field-" + field.fieldName}
         required={field.required}
         placeholder={field.placeholder}

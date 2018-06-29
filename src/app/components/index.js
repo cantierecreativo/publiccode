@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 import Liform from "liform-react";
 import { DefaultTheme } from "liform-react";
@@ -11,7 +12,11 @@ import copy from "copy-to-clipboard";
 
 import ReactNotify from "react-notify";
 import editorWidget from "./editorWidget";
-const myTheme = { ...DefaultTheme, textarea: editorWidget };
+
+import Display from "./display";
+
+const myTheme = { ...DefaultTheme, editor: editorWidget };
+const jsonData = require("../schema.json");
 
 export default class Index extends Component {
   constructor(props) {
@@ -24,8 +29,23 @@ export default class Index extends Component {
     };
   }
 
+  componentDidMount() {
+    this.getSchema();
+  }
+
   log(data) {
     console.log.bind(console, JSON.stringify(data));
+  }
+
+  getSchema() {
+
+     console.log(jsonData);
+
+    let obj = jsyaml.load(JSON.stringify(jsonData));
+
+    console.log( obj);
+
+    return obj;
   }
 
   submit(data) {
@@ -83,8 +103,8 @@ export default class Index extends Component {
   }
 
   notify() {
-    //this.refs.notificator.error("Title.", "Msg - body.", duration);
-    //this.refs.notificator.info("Title.", "Msg - body.", duration);
+    //.error("Title.", "Msg - body.", duration);
+    //.info("Title.", "Msg - body.", duration);
     this.refs.notificator.success("Title.", "Msg - body.", 4000);
   }
 
@@ -104,57 +124,56 @@ export default class Index extends Component {
     let initialValues = formData ? formData : Schema.initialValues;
     console.log("INITIAL VALUES", initialValues);
     return (
-      <div className="split-screen">
+      <div>
         <ReactNotify ref="notificator" />
-        <div id="snackbar" ref="snackbar">
-          ciaooo
-        </div>
-        <div className="split-screen--child">
-          <Liform
-            schema={Schema.schema}
-            theme={myTheme}
-            initialValues={initialValues}
-            onSubmit={this.submit.bind(this)}
-            onError={this.showError.bind(this)}
-          />
-          <div className="spacer">&nbsp;</div>
-        </div>
-        <div className="split-screen--child">
-          <div>{JSON.stringify(error)}</div>
-          <form className="form" onSubmit={e => this.load(e)}>
-            <textarea ref="_load_yaml" />
-            <button className="btn btn-primary" type="submit">
-              load yaml
+
+        <Display />
+        <div className="split-screen">
+          <div className="split-screen--child">
+            <Liform
+              className="form-inline"
+              schema={Schema.schema}
+              theme={myTheme}
+              initialValues={initialValues}
+              onSubmit={this.submit.bind(this)}
+              onError={this.showError.bind(this)}
+            />
+            <div className="spacer">&nbsp;</div>
+          </div>
+          <div className="toolbar">
+            <h3>Toolbar</h3>
+
+            <form className="form from-group" onSubmit={e => this.load(e)}>
+              <label>Load yaml</label>
+              <input type="file" className="form-control btn btn-info" />
+            </form>
+            <hr />
+            <button
+              className="btn btn-info"
+              onClick={() =>
+                this.download_schema(JSON.stringify(Schema.schema))
+              }
+            >
+              Download schema
             </button>
-          </form>
-          <hr />
-          <button
-            className="btn btn-info"
-            onClick={() => this.download_schema(JSON.stringify(Schema.schema))}
-          >
-            Download schema
-          </button>
 
-          <button className="btn btn-info" onClick={() => copy(yaml)}>
-            Copy to clipboard
-          </button>
+            <button className="btn btn-info" onClick={() => copy(yaml)}>
+              Copy to clipboard
+            </button>
 
-          <button className="btn btn-info" onClick={() => this.download(yaml)}>
-            Download yaml
-          </button>
-          <hr />
-          <h4>YAML</h4>
-          <pre style={{ color: "black" }}>
-            <code style={{ color: "black" }}>{yaml}</code>
-          </pre>
-          <hr />
-          <h4>JSON</h4>
-          <pre style={{ color: "black" }}>
-            <code style={{ color: "black" }}>
-              {formData && JSON.stringify(formData)}
-            </code>
-          </pre>
-          <hr />
+            <button
+              className="btn btn-info"
+              onClick={() => this.download(yaml)}
+            >
+              Download yaml
+            </button>
+            <hr />
+            <h4>YAML</h4>
+            <pre style={{ color: "black" }}>
+              <code style={{ color: "black" }}>{yaml}</code>
+            </pre>
+            <hr />
+          </div>
         </div>
       </div>
     );
