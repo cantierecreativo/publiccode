@@ -25,8 +25,13 @@ export default class Index extends Component {
       yaml: null,
       formData: null,
       show: true,
-      error: null
+      error: null,
+      id: 0
     };
+
+    this.load = this.load.bind(this);
+    this.submit = this.submit.bind(this);
+    this.showError = this.showError.bind(this);
   }
 
   componentDidMount() {
@@ -38,12 +43,11 @@ export default class Index extends Component {
   }
 
   getSchema() {
-
-     console.log(jsonData);
+    console.log(jsonData);
 
     let obj = jsyaml.load(JSON.stringify(jsonData));
 
-    console.log( obj);
+    console.log(obj);
 
     return obj;
   }
@@ -51,18 +55,20 @@ export default class Index extends Component {
   submit(data) {
     this.notify();
     console.log("SUBMIT");
+    const id = this.state.id + 1;
     data = cleanDeep(data);
     console.log(data);
     try {
       let yaml = jsyaml.dump(data);
-      this.setState({ yaml, formData: data, error: null });
+      this.setState({ id, yaml, formData: data, error: null });
     } catch (e) {
       console.error(e);
     }
   }
 
-  load(e) {
+  old_load(e) {
     e.preventDefault();
+    console.log("FORM LOAD", e);
     let yaml = this.refs._load_yaml.value;
     try {
       let formData = jsyaml.load(yaml);
@@ -71,6 +77,21 @@ export default class Index extends Component {
       console.error(e);
       this.setState({ error: e });
     }
+  }
+
+  load(files) {
+    console.log("LOAD", files);
+    const reader = new FileReader();
+    const that = this;
+    const id = this.state.id + 1;
+    reader.onload = function() {
+      let yaml = reader.result;
+      console.log("yaml", yaml);
+      let formData = jsyaml.load(yaml);
+      console.log("formData", formData);
+      that.setState({ formData, yaml, id });
+    };
+    reader.readAsText(files[0]);
   }
 
   download(data) {
@@ -112,17 +133,29 @@ export default class Index extends Component {
     console.log("contentState", contentState);
   }
 
+  renderForm() {
+    let { formData, id } = this.state;
+    let initialValues = formData ? formData : Schema.initialValues;
+    return (
+      <Liform
+        key={id}
+        className="inline"
+        schema={Schema.schema}
+        theme={myTheme}
+        initialValues={initialValues}
+        onSubmit={this.submit}
+        onError={this.showError}
+      />
+    );
+  }
+
   render() {
-    let { yaml, formData, show_message, error } = this.state;
+    let { yaml, show_message, error } = this.state;
     let cn = "";
     if (show_message) {
       cn = "show";
     }
 
-    console.log("FORMDATA", formData);
-
-    let initialValues = formData ? formData : Schema.initialValues;
-    console.log("INITIAL VALUES", initialValues);
     return (
       <div>
         <ReactNotify ref="notificator" />
@@ -130,26 +163,28 @@ export default class Index extends Component {
         <Display />
         <div className="split-screen">
           <div className="split-screen--child">
-            <Liform
-              className="form-inline"
-              schema={Schema.schema}
-              theme={myTheme}
-              initialValues={initialValues}
-              onSubmit={this.submit.bind(this)}
-              onError={this.showError.bind(this)}
-            />
+            {this.renderForm()}
             <div className="spacer">&nbsp;</div>
           </div>
           <div className="toolbar">
             <h3>Toolbar</h3>
 
-            <form className="form from-group" onSubmit={e => this.load(e)}>
+            <form className="form from-group" onSubmit={e => this.old_load(e)}>
               <label>Load yaml</label>
-              <input type="file" className="form-control btn btn-info" />
+              <input
+                type="file"
+                className="form-control btn btn-primary"
+                onChange={e => this.load(e.target.files)}
+              />
+              <input
+                type="submit"
+                className="form-control btn btn-primary"
+                value="load"
+              />
             </form>
             <hr />
             <button
-              className="btn btn-info"
+              className="btn btn-primary"
               onClick={() =>
                 this.download_schema(JSON.stringify(Schema.schema))
               }
@@ -157,12 +192,12 @@ export default class Index extends Component {
               Download schema
             </button>
 
-            <button className="btn btn-info" onClick={() => copy(yaml)}>
+            <button className="btn btn-primary" onClick={() => copy(yaml)}>
               Copy to clipboard
             </button>
 
             <button
-              className="btn btn-info"
+              className="btn btn-primary"
               onClick={() => this.download(yaml)}
             >
               Download yaml
