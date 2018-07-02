@@ -1,24 +1,14 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import { createStore, combineReducers } from "redux";
-import { reducer as formReducer } from "redux-form";
+
+import store from "./redux_store";
 import { Provider } from "react-redux";
+
 import Index from "./components/index";
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 // import 'bootstrap-italia/dist/css/bootstrap.min.css';
-
 //import "../assets/styles/app.scss";
 import "../asset/style.scss";
-
-const reducer = combineReducers({
-  form: formReducer
-});
-
-const store = (window.devToolsExtension
-  ? window.devToolsExtension()(createStore)
-  : createStore)(reducer);
-
 export default class App extends Component {
   render() {
     return (

@@ -14,9 +14,12 @@ import ReactNotify from "react-notify";
 import editorWidget from "./editorWidget";
 
 import Display from "./display";
+import { initialize } from "redux-form";
+import store from "../redux_store";
 
 const myTheme = { ...DefaultTheme, editor: editorWidget };
 const jsonData = require("../schema.json");
+const APP_FORM = "appForm";
 
 export default class Index extends Component {
   constructor(props) {
@@ -32,23 +35,17 @@ export default class Index extends Component {
     this.load = this.load.bind(this);
     this.submit = this.submit.bind(this);
     this.showError = this.showError.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   componentDidMount() {
-    this.getSchema();
-  }
-
-  log(data) {
-    console.log.bind(console, JSON.stringify(data));
+    //this.getSchema();
   }
 
   getSchema() {
-    console.log(jsonData);
-
+    // console.log(jsonData);
     let obj = jsyaml.load(JSON.stringify(jsonData));
-
-    console.log(obj);
-
+    // console.log(obj);
     return obj;
   }
 
@@ -60,7 +57,7 @@ export default class Index extends Component {
     console.log(data);
     try {
       let yaml = jsyaml.dump(data);
-      this.setState({ id, yaml, formData: data, error: null });
+      this.setState({ id, yaml, error: null });
     } catch (e) {
       console.error(e);
     }
@@ -70,6 +67,7 @@ export default class Index extends Component {
     e.preventDefault();
     console.log("FORM LOAD", e);
     let yaml = this.refs._load_yaml.value;
+
     try {
       let formData = jsyaml.load(yaml);
       this.setState({ formData, yaml });
@@ -90,8 +88,15 @@ export default class Index extends Component {
       let formData = jsyaml.load(yaml);
       console.log("formData", formData);
       that.setState({ formData, yaml, id });
+      that.reset();
     };
     reader.readAsText(files[0]);
+  }
+
+  reset() {
+    let data = this.state.formData;
+    console.log("RESET", data);
+    store.dispatch(initialize(APP_FORM, data));
   }
 
   download(data) {
@@ -138,8 +143,7 @@ export default class Index extends Component {
     let initialValues = formData ? formData : Schema.initialValues;
     return (
       <Liform
-        key={id}
-        className="inline"
+        formKey={APP_FORM}
         schema={Schema.schema}
         theme={myTheme}
         initialValues={initialValues}
@@ -151,15 +155,11 @@ export default class Index extends Component {
 
   render() {
     let { yaml, show_message, error } = this.state;
-    let cn = "";
-    if (show_message) {
-      cn = "show";
-    }
+    let cn = show_message ? "show" : "";
 
     return (
       <div>
         <ReactNotify ref="notificator" />
-
         <Display />
         <div className="split-screen">
           <div className="split-screen--child">
@@ -168,7 +168,6 @@ export default class Index extends Component {
           </div>
           <div className="toolbar">
             <h3>Toolbar</h3>
-
             <form className="form from-group" onSubmit={e => this.old_load(e)}>
               <label>Load yaml</label>
               <input
@@ -183,6 +182,10 @@ export default class Index extends Component {
               />
             </form>
             <hr />
+            <button className="btn btn-primary" onClick={() => this.reset()}>
+              Reset
+            </button>
+
             <button
               className="btn btn-primary"
               onClick={() =>
