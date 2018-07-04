@@ -1,8 +1,35 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Field } from "redux-form";
-import MyEditor from './MyEditor';
+import RichTextEditor from "react-rte";
+
+class MyEditor extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: RichTextEditor.createEmptyValue()
+    };
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(value) {
+    this.setState({ value });
+    if (this.props.onChange) {
+      this.props.onChange(value.toString("html"));
+    }
+  }
+
+  render() {
+    return (
+      <RichTextEditor
+        className="RichTextEditor"
+        value={this.state.value}
+        onChange={this.onChange}
+      />
+    );
+  }
+}
 
 const renderInput = field => {
   const className = classNames([
@@ -22,7 +49,6 @@ const renderInput = field => {
         id={"field-" + field.fieldName}
         required={field.required}
         placeholder={field.placeholder}
-
       />
       {field.meta.touched &&
         field.meta.error && (

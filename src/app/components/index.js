@@ -1,26 +1,40 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
-import Liform from "liform-react";
-import { DefaultTheme } from "liform-react";
-
+import Liform from "../myform";
+import { DefaultTheme } from "../myform";
 import Schema from "../contents/schema";
-
 import cleanDeep from "clean-deep";
 import jsyaml from "../../../node_modules/js-yaml/dist/js-yaml.js";
 import copy from "copy-to-clipboard";
 
 import ReactNotify from "react-notify";
-import editorWidget from "./editorWidget";
 
 import Display from "./display";
 import { initialize } from "redux-form";
-import store from "../redux_store";
+import store from "../store/index";
+import { notify, clearNotifications } from "../store/notifications";
 
-const myTheme = { ...DefaultTheme, editor: editorWidget };
+const myTheme = DefaultTheme;
 const jsonData = require("../schema.json");
 const APP_FORM = "appForm";
 
+function mapStateToProps(state) {
+  return {
+    notifications: state.notifications
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    notify: (type, data) => dispatch(notify(type, data)),
+    clearNotifications: (type, data) => dispatch(clearNotifications(type, data))
+  };
+}
+
+@connect(
+  mapStateToProps,
+  mapDispatchToProps
+)
 export default class Index extends Component {
   constructor(props) {
     super(props);
@@ -38,9 +52,10 @@ export default class Index extends Component {
     this.reset = this.reset.bind(this);
   }
 
-  componentDidMount() {
-    //this.getSchema();
-  }
+  // componentDidMount() {
+  //   //this.getSchema();
+  // }
+
 
   getSchema() {
     // console.log(jsonData);
@@ -111,6 +126,8 @@ export default class Index extends Component {
   }
 
   download_schema(data) {
+    this.notify();
+
     const blob = new Blob([data], {
       type: "text/json;charset=utf-8;"
     });
@@ -128,10 +145,8 @@ export default class Index extends Component {
     }, 3000);
   }
 
-  notify() {
-    //.error("Title.", "Msg - body.", duration);
-    //.info("Title.", "Msg - body.", duration);
-    this.refs.notificator.success("Title.", "Msg - body.", 4000);
+  notify(title = "hey", msg = "ciao", millis = 3000) {
+    this.props.notify({ title, msg, millis });
   }
 
   onContentStateChange(contentState) {
@@ -159,7 +174,7 @@ export default class Index extends Component {
 
     return (
       <div>
-        <ReactNotify ref="notificator" />
+
         <Display />
         <div className="split-screen">
           <div className="split-screen--child">
@@ -189,7 +204,8 @@ export default class Index extends Component {
             <button
               className="btn btn-primary"
               onClick={() =>
-                this.download_schema(JSON.stringify(Schema.schema))
+                //this.download_schema(JSON.stringify(Schema.schema))
+                this.notify("HOLA", "QUE PASA")
               }
             >
               Download schema
