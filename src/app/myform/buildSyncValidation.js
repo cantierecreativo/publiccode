@@ -55,6 +55,7 @@ const findTypeInSchema = (schema, dataPath) => {
 };
 
 const buildSyncValidation = (schema, ajvParam = null) => {
+  console.log("SYNC VALIDATION");
   let ajv = ajvParam;
   if (ajv === null) {
     ajv = new Ajv({

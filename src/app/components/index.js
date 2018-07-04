@@ -163,7 +163,7 @@ export default class Index extends Component {
         theme={myTheme}
         initialValues={initialValues}
         onSubmit={this.submit}
-        onError={this.showError}
+
       />
     );
   }
