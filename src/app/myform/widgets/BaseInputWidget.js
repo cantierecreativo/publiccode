@@ -13,6 +13,7 @@ const renderInput = field => {
       <label className="control-label" htmlFor={field.id}>
         {field.label}
       </label>
+
       <input
         {...field.input}
         type={field.type}
@@ -25,7 +26,7 @@ const renderInput = field => {
           <span className="help-block">{field.meta.error}</span>
         )}
       {field.description && (
-        <span className="help-block">{field.description}</span>
+        <small className="form-text text-muted">{field.description}</small>
       )}
     </div>
   );
@@ -53,7 +54,8 @@ BaseInputWidget.propTypes = {
   required: PropTypes.bool,
   fieldName: PropTypes.string,
   label: PropTypes.string,
-  normalizer: PropTypes.func
+  normalizer: PropTypes.func,
+  description: PropTypes.string
 };
 
 export default BaseInputWidget;

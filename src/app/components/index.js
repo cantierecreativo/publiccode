@@ -1,20 +1,29 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Liform from "../myform";
-import { DefaultTheme } from "../myform";
+
 import Schema from "../contents/schema";
 import cleanDeep from "clean-deep";
 import jsyaml from "../../../node_modules/js-yaml/dist/js-yaml.js";
 import copy from "copy-to-clipboard";
-
-import ReactNotify from "react-notify";
-
 import Display from "./display";
+
 import { initialize } from "redux-form";
 import store from "../store/index";
 import { notify, clearNotifications } from "../store/notifications";
 
-const myTheme = DefaultTheme;
+import Liform from "../myform";
+import { DefaultTheme } from "../myform";
+
+import myTheme from "../myform/widgets/";
+import { reduxForm } from "redux-form";
+import renderFields from "../myform/renderFields";
+import renderField from "../myform/renderField";
+import processSubmitErrors from "../myform/processSubmitErrors";
+import buildSyncValidation from "../myform/buildSyncValidation";
+import { setError } from "../myform/buildSyncValidation";
+import compileSchema from "../myform/compileSchema";
+
+//const myTheme = DefaultTheme;
 const jsonData = require("../schema.json");
 const APP_FORM = "appForm";
 
@@ -27,7 +36,9 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     notify: (type, data) => dispatch(notify(type, data)),
-    clearNotifications: (type, data) => dispatch(clearNotifications(type, data))
+    clearNotifications: (type, data) =>
+      dispatch(clearNotifications(type, data)),
+    initialize: (name, data) => dispatch(initialize(name, data))
   };
 }
 
@@ -55,7 +66,6 @@ export default class Index extends Component {
   // componentDidMount() {
   //   //this.getSchema();
   // }
-
 
   getSchema() {
     // console.log(jsonData);
@@ -102,16 +112,19 @@ export default class Index extends Component {
       console.log("yaml", yaml);
       let formData = jsyaml.load(yaml);
       console.log("formData", formData);
+      // that.props.initialize(APP_FORM, formData);
       that.setState({ formData, yaml, id });
-      that.reset();
+      that.reset(formData);
     };
     reader.readAsText(files[0]);
   }
 
-  reset() {
-    let data = this.state.formData;
+  reset(data) {
+    if (!data) {
+      data = Schema.initialValues;
+    }
     console.log("RESET", data);
-    store.dispatch(initialize(APP_FORM, data));
+    this.props.initialize(APP_FORM, data);
   }
 
   download(data) {
@@ -126,8 +139,6 @@ export default class Index extends Component {
   }
 
   download_schema(data) {
-    this.notify();
-
     const blob = new Blob([data], {
       type: "text/json;charset=utf-8;"
     });
@@ -153,17 +164,55 @@ export default class Index extends Component {
     console.log("contentState", contentState);
   }
 
-  renderForm() {
-    let { formData, id } = this.state;
-    let initialValues = formData ? formData : Schema.initialValues;
+  // renderForm() {
+  //   let { formData, id } = this.state;
+  //   let initialValues = formData ? formData : Schema.initialValues;
+  //   return (
+  //     <Liform
+  //       formKey={APP_FORM}
+  //       schema={Schema.schema}
+  //       theme={myTheme}
+  //       initialValues={initialValues}
+  //       onSubmit={this.submit}
+  //     />
+  //   );
+  // }
+
+  BaseForm(props) {
+    const { schema, handleSubmit, theme, error, submitting, context } = props;
     return (
-      <Liform
+      <form className="form" onSubmit={handleSubmit}>
+        {renderField(schema, null, theme || DefaultTheme, "", context)}
+        <div>{error && <strong>{error}</strong>}</div>
+        <button className="btn btn-primary" type="submit" disabled={submitting}>
+          Submit
+        </button>
+      </form>
+    );
+  }
+
+  renderForm() {
+    const { formData, id } = this.state;
+    const schema = compileSchema(Schema.schema);
+
+    console.log("COMPILED SCHEMA", schema);
+    const initialValues = Schema.initialValues;
+
+    const MyForm = reduxForm({
+      form: APP_FORM,
+      validate: buildSyncValidation(schema),
+      initialValues: initialValues,
+      context: { formName: APP_FORM }
+    })(this.BaseForm);
+
+    return (
+      <MyForm
+        renderFields={renderField.bind(this)}
         formKey={APP_FORM}
-        schema={Schema.schema}
+        schema={schema}
         theme={myTheme}
         initialValues={initialValues}
         onSubmit={this.submit}
-
       />
     );
   }
@@ -174,59 +223,56 @@ export default class Index extends Component {
 
     return (
       <div>
-
-        <Display />
         <div className="split-screen">
-          <div className="split-screen--child">
+          <div className="split-screen--form">
             {this.renderForm()}
             <div className="spacer">&nbsp;</div>
           </div>
-          <div className="toolbar">
-            <h3>Toolbar</h3>
-            <form className="form from-group" onSubmit={e => this.old_load(e)}>
-              <label>Load yaml</label>
-              <input
-                type="file"
-                className="form-control btn btn-primary"
-                onChange={e => this.load(e.target.files)}
-              />
-              <input
-                type="submit"
-                className="form-control btn btn-primary"
-                value="load"
-              />
-            </form>
-            <hr />
-            <button className="btn btn-primary" onClick={() => this.reset()}>
-              Reset
-            </button>
 
-            <button
-              className="btn btn-primary"
-              onClick={() =>
-                //this.download_schema(JSON.stringify(Schema.schema))
-                this.notify("HOLA", "QUE PASA")
-              }
-            >
-              Download schema
-            </button>
+          <div className="split-screen--toolbar">
+            <div className="toolbar">
+              <h3>Toolbar</h3>
+              <Display />
+              <div className="form from-group">
+                <label>Load yaml</label>
+                <input
+                  type="file"
+                  className="form-control btn btn-primary"
+                  onChange={e => this.load(e.target.files)}
+                />
+              </div>
+              <hr />
+              <button className="btn btn-primary" onClick={() => this.reset()}>
+                Reset
+              </button>
 
-            <button className="btn btn-primary" onClick={() => copy(yaml)}>
-              Copy to clipboard
-            </button>
+              <button
+                className="btn btn-primary"
+                onClick={() =>
+                  //this.download_schema(JSON.stringify(Schema.schema))
+                  this.notify("ciao", "ciccio", 1000)
+                }
+              >
+                Download schema
+              </button>
 
-            <button
-              className="btn btn-primary"
-              onClick={() => this.download(yaml)}
-            >
-              Download yaml
-            </button>
-            <hr />
-            <h4>YAML</h4>
-            <pre style={{ color: "black" }}>
-              <code style={{ color: "black" }}>{yaml}</code>
-            </pre>
-            <hr />
+              <button className="btn btn-primary" onClick={() => copy(yaml)}>
+                Copy to clipboard
+              </button>
+
+              <button
+                className="btn btn-primary"
+                onClick={() => this.download(yaml)}
+              >
+                Download yaml
+              </button>
+              <hr />
+              <h4>YAML</h4>
+              <pre style={{ color: "black" }}>
+                <code style={{ color: "black" }}>{yaml}</code>
+              </pre>
+              <hr />
+            </div>
           </div>
         </div>
       </div>

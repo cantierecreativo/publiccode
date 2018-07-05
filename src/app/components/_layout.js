@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../../asset/style.scss";
 import ReactNotify from "react-notify";
 import { connect } from "react-redux";
+import Header from "./_header";
+import Footer from "./_footer";
 
 @connect(state => {
   return {
@@ -27,34 +29,9 @@ export default class Layout extends Component {
     return (
       <div>
         <ReactNotify ref="notificator" />
-        <header>
-          <nav className="navbar navbar-md fixed-top white">
-            <div className="container">
-              <a className="navbar-brand md">
-                <span className="inline">PUBLIC-CODE</span>
-              </a>
-            </div>
-          </nav>
-        </header>
-
+        <Header />
         <div className="home">{this.props.children}</div>
-
-        <footer className="black pos-rlt">
-          <div className="footer dk">
-            <div className="p-a-md">
-              <div className="row footer-bottom">
-                <div className="col-sm-8">
-                  <small className="text-muted" />
-                </div>
-                <div className="col-sm-4">
-                  <div className="text-sm-right text-xs-left">
-                    <strong />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     );
   }

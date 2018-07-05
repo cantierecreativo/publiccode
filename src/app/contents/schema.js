@@ -29,28 +29,7 @@ const schema = {
   title: "publiccode",
   type: "object",
   definitions: {
-    legal: {
-      type: "object",
-      properties: {
-        license: {
-          type: "string",
-          title: "License"
-        },
-        mainCopyrightOwner: {
-          type: "string",
-          title: "Main Copyright Owner"
-        },
-        repoOwner: {
-          type: "string",
-          title: "Repo Owner"
-        },
-        authorsFile: {
-          type: "string",
-          title: "Author's File"
-        }
-      },
-      required: ["license", "repoOwner"]
-    },
+
 
     list: {
       type: "array",
@@ -316,16 +295,20 @@ const schema = {
 
     legal: {
       type: "object",
+       description: "jajajajjajajajjajajja",
       properties: {
         license: {
+          description: "jajajajjajajajjajajja",
           type: "string",
           title: "License"
         },
         mainCopyrightOwner: {
+          description: "jajajajjajajajjajajja",
           type: "string",
           title: "Main Copyright Owner"
         },
         repoOwner: {
+          description: "jajajajjajajajjajajja",
           type: "string",
           title: "Repo Owner"
         },
@@ -421,4 +404,19 @@ const uiSchema = {
   }
 };
 
-export default { schema, uiSchema, initialValues };
+const metaSchema = {
+  releaseDate: {
+    "ui:widget": "date"
+  },
+  url: {
+    "ui:widget": "uri"
+  },
+  developmentStatus: {
+    "ui:widget": "checkboxes"
+  },
+  softwareType: {
+    "ui:widget": "checkboxes"
+  }
+};
+
+export default { schema, uiSchema, initialValues, metaSchema };

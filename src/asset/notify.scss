@@ -5,9 +5,9 @@
   justify-content: flex-end;
   align-items: flex-start;
   align-content: flex-start;
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  top: 60px;
+  left: 60px;
   z-index: 9000;
 }
 
