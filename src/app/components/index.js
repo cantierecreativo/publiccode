@@ -8,7 +8,6 @@ import copy from "copy-to-clipboard";
 import Display from "./display";
 
 import { initialize } from "redux-form";
-import store from "../store/index";
 import { notify, clearNotifications } from "../store/notifications";
 
 import Liform from "../myform";
@@ -22,6 +21,8 @@ import processSubmitErrors from "../myform/processSubmitErrors";
 import buildSyncValidation from "../myform/buildSyncValidation";
 import { setError } from "../myform/buildSyncValidation";
 import compileSchema from "../myform/compileSchema";
+
+//import Toolbar from "../toolbar";
 
 //const myTheme = DefaultTheme;
 const jsonData = require("../schema.json");
@@ -51,10 +52,7 @@ export default class Index extends Component {
     super(props);
     this.state = {
       yaml: null,
-      formData: null,
-      show: true,
-      error: null,
-      id: 0
+      formData: null
     };
 
     this.load = this.load.bind(this);
@@ -77,76 +75,15 @@ export default class Index extends Component {
   submit(data) {
     this.notify();
     console.log("SUBMIT");
-    const id = this.state.id + 1;
+
     data = cleanDeep(data);
     console.log(data);
     try {
       let yaml = jsyaml.dump(data);
-      this.setState({ id, yaml, error: null });
+      this.setState({ yaml, error: null });
     } catch (e) {
       console.error(e);
     }
-  }
-
-  old_load(e) {
-    e.preventDefault();
-    console.log("FORM LOAD", e);
-    let yaml = this.refs._load_yaml.value;
-
-    try {
-      let formData = jsyaml.load(yaml);
-      this.setState({ formData, yaml });
-    } catch (e) {
-      console.error(e);
-      this.setState({ error: e });
-    }
-  }
-
-  load(files) {
-    console.log("LOAD", files);
-    const reader = new FileReader();
-    const that = this;
-    const id = this.state.id + 1;
-    reader.onload = function() {
-      let yaml = reader.result;
-      console.log("yaml", yaml);
-      let formData = jsyaml.load(yaml);
-      console.log("formData", formData);
-      // that.props.initialize(APP_FORM, formData);
-      that.setState({ formData, yaml, id });
-      that.reset(formData);
-    };
-    reader.readAsText(files[0]);
-  }
-
-  reset(data) {
-    if (!data) {
-      data = Schema.initialValues;
-    }
-    console.log("RESET", data);
-    this.props.initialize(APP_FORM, data);
-  }
-
-  download(data) {
-    const blob = new Blob([data], {
-      type: "text/yaml;charset=utf-8;"
-    });
-    let blobURL = window.URL.createObjectURL(blob);
-    let tempLink = document.createElement("a");
-    tempLink.href = blobURL;
-    tempLink.setAttribute("download", "pubbliccode.yml");
-    tempLink.click();
-  }
-
-  download_schema(data) {
-    const blob = new Blob([data], {
-      type: "text/json;charset=utf-8;"
-    });
-    let blobURL = window.URL.createObjectURL(blob);
-    let tempLink = document.createElement("a");
-    tempLink.href = blobURL;
-    tempLink.setAttribute("schema", "schema.json");
-    tempLink.click();
   }
 
   showError(error) {
@@ -191,6 +128,11 @@ export default class Index extends Component {
     );
   }
 
+  loaded(formData, yaml) {
+    console.log("loaded", yaml, formData);
+    this.setState({ formData, yaml });
+  }
+
   renderForm() {
     const { formData, id } = this.state;
     const schema = compileSchema(Schema.schema);
@@ -215,6 +157,67 @@ export default class Index extends Component {
         onSubmit={this.submit}
       />
     );
+  }
+
+  download(data) {
+    const blob = new Blob([data], {
+      type: "text/yaml;charset=utf-8;"
+    });
+    let blobURL = window.URL.createObjectURL(blob);
+    let tempLink = document.createElement("a");
+    tempLink.href = blobURL;
+    tempLink.setAttribute("download", "pubbliccode.yml");
+    tempLink.click();
+  }
+
+  download_schema(data) {
+    const blob = new Blob([data], {
+      type: "text/json;charset=utf-8;"
+    });
+    let blobURL = window.URL.createObjectURL(blob);
+    let tempLink = document.createElement("a");
+    tempLink.href = blobURL;
+    tempLink.setAttribute("schema", "schema.json");
+    tempLink.click();
+  }
+
+  // old_load(e) {
+  //   e.preventDefault();
+  //   console.log("FORM LOAD", e);
+  //   let yaml = this.refs._load_yaml.value;
+
+  //   try {
+  //     let formData = jsyaml.load(yaml);
+  //     this.setState({ formData, yaml });
+  //   } catch (e) {
+  //     console.error(e);
+  //     this.setState({ error: e });
+  //   }
+  // }
+
+  load(files) {
+    console.log("LOAD", files);
+    const reader = new FileReader();
+    const that = this;
+    let { onLoad } = this.props;
+    reader.onload = function() {
+      let yaml = reader.result;
+      // console.log("yaml", yaml);
+      let formData = jsyaml.load(yaml);
+      // console.log("formData", formData);
+      // that.setState({ formData, yaml, id });
+      onLoad(formData, yaml);
+      that.reset(formData);
+    };
+    reader.readAsText(files[0]);
+  }
+
+  reset(data) {
+    if (!data) {
+      data = this.props.schema.initialValues;
+    }
+    console.log("RESET", data);
+    this.props.initialize(APP_FORM, data);
   }
 
   render() {
@@ -249,8 +252,7 @@ export default class Index extends Component {
               <button
                 className="btn btn-primary"
                 onClick={() =>
-                  //this.download_schema(JSON.stringify(Schema.schema))
-                  this.notify("ciao", "ciccio", 1000)
+                  this.download_schema(JSON.stringify(Schema.schema))
                 }
               >
                 Download schema

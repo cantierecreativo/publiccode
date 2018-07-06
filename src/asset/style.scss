@@ -26,13 +26,13 @@ label,
 }
 
 .split-screen--form {
-  flex: 1;
+  flex: 1 0 70%;
   height: 100%;
   overflow-y: auto;
 }
 
 .split-screen--toolbar {
-  flex: 0 0 300px;
+  flex: 0 0 30%;
   height: 100%;
   overflow-y: auto;
 }
