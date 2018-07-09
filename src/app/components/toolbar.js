@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
+import jsyaml from "../../../node_modules/js-yaml/dist/js-yaml.js";
 import { initialize } from "redux-form";
 import { notify, clearNotifications } from "../store/notifications";
-
+import copy from "copy-to-clipboard";
+import Display from "./display";
+const APP_FORM = "appForm";
 function mapStateToProps(state) {
   return {};
 }
@@ -12,16 +14,18 @@ function mapDispatchToProps(dispatch) {
   return {
     notify: (type, data) => dispatch(notify(type, data)),
     initialize: (name, data) => dispatch(initialize(name, data))
-  }
+  };
 }
 
 @connect(
   mapStateToProps,
   mapDispatchToProps
 )
-export default class Display extends Component {
+export default class Toolbar extends Component {
   constructor(props) {
     super(props);
+    this.load = this.load.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   download(data) {
@@ -35,16 +39,16 @@ export default class Display extends Component {
     tempLink.click();
   }
 
-  download_schema(data) {
-    const blob = new Blob([data], {
-      type: "text/json;charset=utf-8;"
-    });
-    let blobURL = window.URL.createObjectURL(blob);
-    let tempLink = document.createElement("a");
-    tempLink.href = blobURL;
-    tempLink.setAttribute("schema", "schema.json");
-    tempLink.click();
-  }
+  // download_schema(data) {
+  //   const blob = new Blob([data], {
+  //     type: "text/json;charset=utf-8;"
+  //   });
+  //   let blobURL = window.URL.createObjectURL(blob);
+  //   let tempLink = document.createElement("a");
+  //   tempLink.href = blobURL;
+  //   tempLink.setAttribute("schema", "schema.json");
+  //   tempLink.click();
+  // }
 
   // old_load(e) {
   //   e.preventDefault();
@@ -59,6 +63,7 @@ export default class Display extends Component {
   //     this.setState({ error: e });
   //   }
   // }
+
 
   load(files) {
     console.log("LOAD", files);
@@ -79,17 +84,18 @@ export default class Display extends Component {
 
   reset(data) {
     if (!data) {
-      data = this.props.schema.initialValues;
+      data = this.props.initialValues;
     }
     console.log("RESET", data);
     this.props.initialize(APP_FORM, data);
   }
 
   render() {
+    let { yaml } = this.props;
     return (
       <div className="toolbar">
         <h3>Toolbar</h3>
-        <Display />
+
         <div className="form from-group">
           <label>Load yaml</label>
           <input
@@ -103,16 +109,6 @@ export default class Display extends Component {
           Reset
         </button>
 
-        <button
-          className="btn btn-primary"
-          onClick={() =>
-            this.download_schema(JSON.stringify(Schema.schema));
-             this.props.notify({ "Grazie", "Grazie per aver scaricato il nostro schcema. Siamo a disposizione per ogni evenienza. Buona Giornata", 3000 });
-          }
-        >
-          Download schema
-        </button>
-
         <button className="btn btn-primary" onClick={() => copy(yaml)}>
           Copy to clipboard
         </button>
@@ -120,6 +116,7 @@ export default class Display extends Component {
         <button className="btn btn-primary" onClick={() => this.download(yaml)}>
           Download yaml
         </button>
+
         <hr />
         <h4>YAML</h4>
         <pre style={{ color: "black" }}>

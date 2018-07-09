@@ -25,12 +25,11 @@ const initialValues = {
   releaseDate: moment().format(date_format)
 };
 
-const schema = {
+const schema = null;
+const _schema = {
   title: "publiccode",
   type: "object",
   definitions: {
-
-
     list: {
       type: "array",
       items: {
@@ -295,7 +294,7 @@ const schema = {
 
     legal: {
       type: "object",
-       description: "jajajajjajajajjajajja",
+      description: "jajajajjajajajjajajja",
       properties: {
         license: {
           description: "jajajajjajajajjajajja",
@@ -389,33 +388,39 @@ const schema = {
   ]
 };
 
-const uiSchema = {
-  releaseDate: {
-    "ui:widget": "date"
-  },
-  url: {
-    "ui:widget": "uri"
-  },
-  developmentStatus: {
-    "ui:widget": "checkboxes"
-  },
-  softwareType: {
-    "ui:widget": "checkboxes"
-  }
-};
+const uiSchema = null;
+// const uiSchema = {
+//   releaseDate: {
+//     "ui:widget": "date"
+//   },
+//   url: {
+//     "ui:widget": "uri"
+//   },
+//   developmentStatus: {
+//     "ui:widget": "checkboxes"
+//   },
+//   softwareType: {
+//     "ui:widget": "checkboxes"
+//   }
+// };
 
 const metaSchema = {
-  releaseDate: {
-    "ui:widget": "date"
+  description: {
+    longDescription: {
+      widget: "editor"
+    }
   },
-  url: {
-    "ui:widget": "uri"
+  landingURL: {
+    widget: "url"
+  },
+  releaseDate: {
+    widget: "date"
   },
   developmentStatus: {
-    "ui:widget": "checkboxes"
+    widget: "choice-multiple-expanded"
   },
   softwareType: {
-    "ui:widget": "checkboxes"
+    widget: "choice-multiple-expanded"
   }
 };
 

@@ -4,8 +4,6 @@ import { connect } from "react-redux";
 import Schema from "../contents/schema";
 import cleanDeep from "clean-deep";
 import jsyaml from "../../../node_modules/js-yaml/dist/js-yaml.js";
-import copy from "copy-to-clipboard";
-import Display from "./display";
 
 import { initialize } from "redux-form";
 import { notify, clearNotifications } from "../store/notifications";
@@ -15,18 +13,30 @@ import { DefaultTheme } from "../myform";
 
 import myTheme from "../myform/widgets/";
 import { reduxForm } from "redux-form";
-import renderFields from "../myform/renderFields";
 import renderField from "../myform/renderField";
 import processSubmitErrors from "../myform/processSubmitErrors";
 import buildSyncValidation from "../myform/buildSyncValidation";
 import { setError } from "../myform/buildSyncValidation";
 import compileSchema from "../myform/compileSchema";
 
-//import Toolbar from "../toolbar";
+import langs from "../contents/langs";
+import tags from "../contents/tags";
 
+import _ from "lodash";
+import u from "updeep";
+import { SubmissionError } from "redux-form";
+import Ajv from "ajv";
+
+import Toolbar from "./toolbar";
 //const myTheme = DefaultTheme;
+let schema = {};
 const jsonData = require("../schema.json");
 const APP_FORM = "appForm";
+let ajv = new Ajv({
+  errorDataPath: "property",
+  allErrors: true,
+  jsonPointers: false
+});
 
 function mapStateToProps(state) {
   return {
@@ -52,24 +62,80 @@ export default class Index extends Component {
     super(props);
     this.state = {
       yaml: null,
-      formData: null
+      formData: null,
+      loading: true
     };
 
-    this.load = this.load.bind(this);
     this.submit = this.submit.bind(this);
-    this.showError = this.showError.bind(this);
-    this.reset = this.reset.bind(this);
+    this.validateForm = this.validateForm.bind(this);
   }
 
-  // componentDidMount() {
-  //   //this.getSchema();
-  // }
+  componentDidMount() {
+    this.getSchema();
+  }
 
   getSchema() {
     // console.log(jsonData);
-    let obj = jsyaml.load(JSON.stringify(jsonData));
-    // console.log(obj);
-    return obj;
+    let customMeta = {
+      definitions: {
+        descriptionPerLang: {
+          properties: {
+            longDescription: {
+              widget: "editor"
+            }
+          }
+        },
+        landingURL: {
+          widget: "url"
+        },
+        releaseDate: {
+          widget: "date"
+        },
+        developmentStatus: {
+          widget: "choice-multiple-expanded"
+        },
+        softwareType: {
+          widget: "choice-multiple-expanded"
+        }
+      }
+    };
+
+    let custom_props = {
+      swDescription: {
+        type: "array",
+        uniqueItems: true,
+        items: {
+          type: "object",
+          properties: {
+            language: {
+              type: "string",
+              title: "Language",
+              enum: langs
+            },
+            description: { $ref: "#/definitions/descriptionPerLang" }
+          },
+          required: ["language", "description"]
+        }
+      }
+    };
+
+    delete jsonData.$schema;
+    delete jsonData.id;
+
+    let data = jsonData;
+    //data = Object.assign({}, custom_props, data);
+    let custom_field_keys = _.keys(custom_props);
+    custom_field_keys.map(k => {
+      data.properties[k] = custom_props[k];
+    });
+    data = u(customMeta, data);
+
+    console.log("DATA", data);
+    let obj = jsyaml.load(JSON.stringify(data));
+
+    schema = compileSchema(obj);
+    //console.log("SCHEMA", obj);
+    this.setState({ loading: false });
   }
 
   submit(data) {
@@ -86,15 +152,13 @@ export default class Index extends Component {
     }
   }
 
-  showError(error) {
-    this.setState({ show: true });
-    setTimeout(function() {
-      this.setState({ show: false });
-    }, 3000);
-  }
-
   notify(title = "hey", msg = "ciao", millis = 3000) {
     this.props.notify({ title, msg, millis });
+  }
+
+  onLoad(formData, yaml) {
+    console.log("loaded", yaml, formData);
+    this.setState({ formData, yaml });
   }
 
   onContentStateChange(contentState) {
@@ -116,33 +180,47 @@ export default class Index extends Component {
   // }
 
   BaseForm(props) {
-    const { schema, handleSubmit, theme, error, submitting, context } = props;
+    const {
+      schema,
+      handleSubmit,
+      theme,
+      error,
+      submitting,
+      context,
+      load,
+      pristine,
+      reset
+    } = props;
+
     return (
-      <form className="form" onSubmit={handleSubmit}>
-        {renderField(schema, null, theme || DefaultTheme, "", context)}
-        <div>{error && <strong>{error}</strong>}</div>
-        <button className="btn btn-primary" type="submit" disabled={submitting}>
-          Submit
-        </button>
-      </form>
+      <div>
+        <form className="form" onSubmit={handleSubmit}>
+          {renderField(schema, null, theme || DefaultTheme, "", context)}
+          <div>{error && <strong>{error}</strong>}</div>
+          <button
+            className="btn btn-primary"
+            type="submit"
+            disabled={submitting}
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     );
   }
 
-  loaded(formData, yaml) {
-    console.log("loaded", yaml, formData);
-    this.setState({ formData, yaml });
-  }
-
   renderForm() {
-    const { formData, id } = this.state;
-    const schema = compileSchema(Schema.schema);
+    const { formData, id, loading } = this.state;
+
+    if (loading) return <div>Loading...</div>;
 
     console.log("COMPILED SCHEMA", schema);
     const initialValues = Schema.initialValues;
+    const validate = this.validateForm;
 
     const MyForm = reduxForm({
       form: APP_FORM,
-      validate: buildSyncValidation(schema),
+      validate: buildSyncValidation(schema, null),
       initialValues: initialValues,
       context: { formName: APP_FORM }
     })(this.BaseForm);
@@ -159,71 +237,37 @@ export default class Index extends Component {
     );
   }
 
-  download(data) {
-    const blob = new Blob([data], {
-      type: "text/yaml;charset=utf-8;"
-    });
-    let blobURL = window.URL.createObjectURL(blob);
-    let tempLink = document.createElement("a");
-    tempLink.href = blobURL;
-    tempLink.setAttribute("download", "pubbliccode.yml");
-    tempLink.click();
-  }
+  validateForm(values) {
+    //console.log("VALIDATE ", values);
+    //
+    let valid;
+    try {
+      // valid = ajv.validate(schema, values);
+      // console.log("VALID? ", valid);
+      // const ajvErrors = ajv.errors;
+      // if (ajvErrors) {
+      //   let errors = ajvErrors.map((error, index) => {
+      //     console.log(index, error);
+      //   });
+      // }
 
-  download_schema(data) {
-    const blob = new Blob([data], {
-      type: "text/json;charset=utf-8;"
-    });
-    let blobURL = window.URL.createObjectURL(blob);
-    let tempLink = document.createElement("a");
-    tempLink.href = blobURL;
-    tempLink.setAttribute("schema", "schema.json");
-    tempLink.click();
-  }
-
-  // old_load(e) {
-  //   e.preventDefault();
-  //   console.log("FORM LOAD", e);
-  //   let yaml = this.refs._load_yaml.value;
-
-  //   try {
-  //     let formData = jsyaml.load(yaml);
-  //     this.setState({ formData, yaml });
-  //   } catch (e) {
-  //     console.error(e);
-  //     this.setState({ error: e });
-  //   }
-  // }
-
-  load(files) {
-    console.log("LOAD", files);
-    const reader = new FileReader();
-    const that = this;
-    let { onLoad } = this.props;
-    reader.onload = function() {
-      let yaml = reader.result;
-      // console.log("yaml", yaml);
-      let formData = jsyaml.load(yaml);
-      // console.log("formData", formData);
-      // that.setState({ formData, yaml, id });
-      onLoad(formData, yaml);
-      that.reset(formData);
-    };
-    reader.readAsText(files[0]);
+      valid = buildSyncValidation(schema, null, values);
+    } catch (error) {
+      console.log(error);
+    }
+    return valid;
   }
 
   reset(data) {
     if (!data) {
-      data = this.props.schema.initialValues;
+      data = Schema.initialValues;
     }
     console.log("RESET", data);
     this.props.initialize(APP_FORM, data);
   }
 
   render() {
-    let { yaml, show_message, error } = this.state;
-    let cn = show_message ? "show" : "";
-
+    let { yaml } = this.state;
     return (
       <div>
         <div className="split-screen">
@@ -233,48 +277,11 @@ export default class Index extends Component {
           </div>
 
           <div className="split-screen--toolbar">
-            <div className="toolbar">
-              <h3>Toolbar</h3>
-              <Display />
-              <div className="form from-group">
-                <label>Load yaml</label>
-                <input
-                  type="file"
-                  className="form-control btn btn-primary"
-                  onChange={e => this.load(e.target.files)}
-                />
-              </div>
-              <hr />
-              <button className="btn btn-primary" onClick={() => this.reset()}>
-                Reset
-              </button>
-
-              <button
-                className="btn btn-primary"
-                onClick={() =>
-                  this.download_schema(JSON.stringify(Schema.schema))
-                }
-              >
-                Download schema
-              </button>
-
-              <button className="btn btn-primary" onClick={() => copy(yaml)}>
-                Copy to clipboard
-              </button>
-
-              <button
-                className="btn btn-primary"
-                onClick={() => this.download(yaml)}
-              >
-                Download yaml
-              </button>
-              <hr />
-              <h4>YAML</h4>
-              <pre style={{ color: "black" }}>
-                <code style={{ color: "black" }}>{yaml}</code>
-              </pre>
-              <hr />
-            </div>
+            <Toolbar
+              yaml={yaml}
+              onLoad={this.onLoad.bind(this)}
+              initialValues={Schema.initialValues}
+            />
           </div>
         </div>
       </div>
