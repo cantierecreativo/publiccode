@@ -6,21 +6,16 @@ import { notify, clearNotifications } from "../store/notifications";
 import copy from "copy-to-clipboard";
 import Display from "./display";
 const APP_FORM = "appForm";
-function mapStateToProps(state) {
-  return {};
-}
 
-function mapDispatchToProps(dispatch) {
+const mapStateToProps = state => ({});
+const mapDispatchToProps = dispatch => {
   return {
     notify: (type, data) => dispatch(notify(type, data)),
     initialize: (name, data) => dispatch(initialize(name, data))
   };
-}
+};
 
-@connect(
-  mapStateToProps,
-  mapDispatchToProps
-)
+@connect(mapStateToProps, mapDispatchToProps)
 export default class Toolbar extends Component {
   constructor(props) {
     super(props);
@@ -54,7 +49,6 @@ export default class Toolbar extends Component {
   //   e.preventDefault();
   //   console.log("FORM LOAD", e);
   //   let yaml = this.refs._load_yaml.value;
-
   //   try {
   //     let formData = jsyaml.load(yaml);
   //     this.setState({ formData, yaml });
@@ -63,7 +57,6 @@ export default class Toolbar extends Component {
   //     this.setState({ error: e });
   //   }
   // }
-
 
   load(files) {
     console.log("LOAD", files);

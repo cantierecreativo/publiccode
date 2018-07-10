@@ -17,10 +17,47 @@ label,
   margin: 5px;
 }
 
-.has-error{
-  color:red;
-  border:1px solid red;
+.objectType legend {
+  margin-left: 0;
 }
+
+.objectType {
+  border: 1px dashed #ddd;
+  margin-top: 10px;
+  padding: 20px;
+
+
+}
+
+.has-error {
+  color: red;
+  border: 1px solid red;
+}
+
+.form_wrap {
+  display: flex;
+}
+.group_wrap {
+  padding: 10px;
+  border: 1px solid blue;
+  margin: 4px;
+  display: flex;
+  flex-direction: row;
+}
+
+.item_wrap {
+  padding: 10px;
+  border: 1px solid green;
+  margin: 4px;
+  flex-basis: 50%;
+}
+
+
+
+
+
+
+
 
 .split-screen {
   margin-top: 4.1rem;
@@ -60,15 +97,6 @@ label,
   font-size: 0.9rem !important;
 }
 
-.objectType legend {
-  margin-left: 0;
-}
-
-.objectType {
-  border: 1px dashed #ddd;
-  margin-top: 10px;
-  padding: 20px;
-}
 
 .RichTextEditor {
   margin: 0;

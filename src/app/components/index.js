@@ -5,18 +5,14 @@ import Schema from "../contents/schema";
 import cleanDeep from "clean-deep";
 import jsyaml from "../../../node_modules/js-yaml/dist/js-yaml.js";
 
+import renderField from "../myform/renderField";
+import buildSyncValidation from "../myform/buildSyncValidation";
+
 import { initialize } from "redux-form";
 import { notify, clearNotifications } from "../store/notifications";
-
-import Liform from "../myform";
 import { DefaultTheme } from "../myform";
-
 import myTheme from "../myform/widgets/";
 import { reduxForm } from "redux-form";
-import renderField from "../myform/renderField";
-import processSubmitErrors from "../myform/processSubmitErrors";
-import buildSyncValidation from "../myform/buildSyncValidation";
-import { setError } from "../myform/buildSyncValidation";
 import compileSchema from "../myform/compileSchema";
 
 import langs from "../contents/langs";
@@ -67,7 +63,6 @@ export default class Index extends Component {
     };
 
     this.submit = this.submit.bind(this);
-    this.validateForm = this.validateForm.bind(this);
   }
 
   componentDidMount() {
@@ -165,20 +160,6 @@ export default class Index extends Component {
     console.log("contentState", contentState);
   }
 
-  // renderForm() {
-  //   let { formData, id } = this.state;
-  //   let initialValues = formData ? formData : Schema.initialValues;
-  //   return (
-  //     <Liform
-  //       formKey={APP_FORM}
-  //       schema={Schema.schema}
-  //       theme={myTheme}
-  //       initialValues={initialValues}
-  //       onSubmit={this.submit}
-  //     />
-  //   );
-  // }
-
   BaseForm(props) {
     const {
       schema,
@@ -193,41 +174,30 @@ export default class Index extends Component {
     } = props;
 
     return (
-      <div>
-        <form className="form" onSubmit={handleSubmit}>
-          {renderField(schema, null, theme || DefaultTheme, "", context)}
-          <div>{error && <strong>{error}</strong>}</div>
-          <button
-            className="btn btn-primary"
-            type="submit"
-            disabled={submitting}
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+      <form className="form" onSubmit={handleSubmit}>
+        {renderField(schema, null, theme || DefaultTheme, "", context)}
+        <div>{error && <strong>{error}</strong>}</div>
+        <button className="btn btn-primary" type="submit" disabled={submitting}>
+          Submit
+        </button>
+      </form>
     );
   }
 
   renderForm() {
-    const { formData, id, loading } = this.state;
-
+    const { loading } = this.state;
     if (loading) return <div>Loading...</div>;
-
     console.log("COMPILED SCHEMA", schema);
     const initialValues = Schema.initialValues;
-    const validate = this.validateForm;
-
     const MyForm = reduxForm({
       form: APP_FORM,
-      validate: buildSyncValidation(schema, null),
-      initialValues: initialValues,
-      context: { formName: APP_FORM }
+      validate: buildSyncValidation(schema),
+      initialValues: initialValues
     })(this.BaseForm);
 
     return (
       <MyForm
-        renderFields={renderField.bind(this)}
+        renderFields={renderField}
         formKey={APP_FORM}
         schema={schema}
         theme={myTheme}
@@ -235,27 +205,6 @@ export default class Index extends Component {
         onSubmit={this.submit}
       />
     );
-  }
-
-  validateForm(values) {
-    //console.log("VALIDATE ", values);
-    //
-    let valid;
-    try {
-      // valid = ajv.validate(schema, values);
-      // console.log("VALID? ", valid);
-      // const ajvErrors = ajv.errors;
-      // if (ajvErrors) {
-      //   let errors = ajvErrors.map((error, index) => {
-      //     console.log(index, error);
-      //   });
-      // }
-
-      valid = buildSyncValidation(schema, null, values);
-    } catch (error) {
-      console.log(error);
-    }
-    return valid;
   }
 
   reset(data) {
@@ -272,7 +221,7 @@ export default class Index extends Component {
       <div>
         <div className="split-screen">
           <div className="split-screen--form">
-            {this.renderForm()}
+            <div className="form_wrap">{this.renderForm()}</div>
             <div className="spacer">&nbsp;</div>
           </div>
 

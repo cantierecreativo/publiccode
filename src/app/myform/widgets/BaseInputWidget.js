@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Field } from "redux-form";
 
+
+// required={field.required}
 const renderInput = field => {
   const className = classNames([
     "form-group",
@@ -11,13 +13,13 @@ const renderInput = field => {
   return (
     <div className={className}>
       <label className="control-label" htmlFor={field.id}>
-        {field.label}
+        {field.label} {field.required ? "*" : ""}
       </label>
 
       <input
         {...field.input}
         type={field.type}
-        required={field.required}
+       
         className="form-control"
         placeholder={field.placeholder}
       />

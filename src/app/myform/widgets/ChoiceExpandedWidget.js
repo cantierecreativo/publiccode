@@ -20,7 +20,7 @@ const renderChoice = field => {
   return (
     <div className={className}>
       <label className="control-label" htmlFor={"field-" + field.name}>
-        {field.label}
+        {field.label}  {field.required ? "*" : ""}
       </label>
       {Object.entries(selectOptions).map(([value, name]) => (
         <div className="radio" key={value}>

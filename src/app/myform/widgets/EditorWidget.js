@@ -40,7 +40,7 @@ const renderInput = field => {
   return (
     <div className={className}>
       <label className="control-label" htmlFor={"field-" + field.name}>
-        {field.label}
+        {field.label} {field.required ? "*" : ""}
       </label>
 
       <MyEditor

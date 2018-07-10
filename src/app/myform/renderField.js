@@ -35,7 +35,7 @@ const renderField = (
 
   const newFieldName = prefix ? prefix + fieldName : fieldName;
 
-  return React.createElement(theme[widget], {
+  let obj = React.createElement(theme[widget], {
     key: fieldName,
     fieldName: widget === "oneOf" ? fieldName : newFieldName,
     label:
@@ -46,6 +46,17 @@ const renderField = (
     context,
     prefix
   });
+
+  if (widget === "object" || widget==="array")
+    return (<div className="group_wrap" key={`wrap_${fieldName}`}>
+      {obj}
+    </div>)
+
+  return (
+    <div className="item_wrap" key={`wrap_${fieldName}`}>
+      {obj}
+    </div>
+  );
 };
 
 export default renderField;

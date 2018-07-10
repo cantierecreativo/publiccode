@@ -5,7 +5,7 @@
   "type": "object",
   "id": "publiccode",
   "properties": {
-    "publiccode-yaml-version": {
+    "publiccodeYamlVersion": {
       "$ref": "#/definitions/publiccodeYamlVersion"
     },
     "name": {
@@ -5154,7 +5154,7 @@
     }
   },
   "required": [
-    "publiccode-yaml-version",
+    "publiccodeYamlVersion",
     "name",
     "url",
     "releaseDate",

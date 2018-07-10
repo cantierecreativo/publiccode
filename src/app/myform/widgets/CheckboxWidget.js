@@ -18,7 +18,7 @@ const renderInput = field => {
             required={field.required}
             id={"field-" + field.name}
           />{" "}
-          {field.label}
+          {field.label}  {field.required ? "*" : ""}
         </label>
       </div>
       {field.meta.touched &&
