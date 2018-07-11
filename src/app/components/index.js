@@ -1,27 +1,26 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-
 import Schema from "../contents/schema";
 import cleanDeep from "clean-deep";
 import jsyaml from "../../../node_modules/js-yaml/dist/js-yaml.js";
-
 import renderField from "../myform/renderField";
 import buildSyncValidation from "../myform/buildSyncValidation";
 
 import { initialize, submit } from "redux-form";
 import { notify, clearNotifications } from "../store/notifications";
 import { DefaultTheme } from "../myform";
-import myTheme from "../myform/widgets/";
 import { reduxForm } from "redux-form";
+import { connect } from "react-redux";
+
+import myTheme from "../myform/widgets/";
 import compileSchema from "../myform/compileSchema";
 import langs from "../contents/langs";
 import tags from "../contents/tags";
-import _ from "lodash";
-import u from "updeep";
-import { SubmissionError } from "redux-form";
-import Ajv from "ajv";
 import validator from "validator";
 import Toolbar from "./toolbar";
+
+import _ from "lodash";
+import u from "updeep";
+import Ajv from "ajv";
 
 const jsonData = require("../schema.json");
 const APP_FORM = "appForm";
@@ -37,7 +36,6 @@ const mapStateToProps = state => {
     notifications: state.notifications
   };
 };
-
 const mapDispatchToProps = dispatch => {
   return {
     notify: (type, data) => dispatch(notify(type, data)),
@@ -47,7 +45,6 @@ const mapDispatchToProps = dispatch => {
     submit: name => dispatch(submit(name))
   };
 };
-
 const getReleases = () => {
   const url =
     "https://api.github.com/repos/publiccodenet/publiccode.yml/contents/version";
@@ -68,7 +65,6 @@ export default class Index extends Component {
       formData: null,
       loading: true
     };
-
     this.submit = this.submit.bind(this);
   }
 
@@ -107,6 +103,7 @@ export default class Index extends Component {
     let custom_props = {
       publiccodeYamlVersion: {
         type: "array",
+        uniqueItems: true,
         items: {
           type: "string",
           title: "Version",
@@ -130,7 +127,6 @@ export default class Index extends Component {
         }
       }
     };
-
     delete jsonData.$schema;
     delete jsonData.id;
 
