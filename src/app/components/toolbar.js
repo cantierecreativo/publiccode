@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import jsyaml from "../../../node_modules/js-yaml/dist/js-yaml.js";
-import { initialize } from "redux-form";
+import { initialize, submit } from "redux-form";
 import { notify, clearNotifications } from "../store/notifications";
 import copy from "copy-to-clipboard";
 import Display from "./display";
@@ -11,11 +11,15 @@ const mapStateToProps = state => ({});
 const mapDispatchToProps = dispatch => {
   return {
     notify: (type, data) => dispatch(notify(type, data)),
+    submit: name => dispatch(submit(name)),
     initialize: (name, data) => dispatch(initialize(name, data))
   };
 };
 
-@connect(mapStateToProps, mapDispatchToProps)
+@connect(
+  mapStateToProps,
+  mapDispatchToProps
+)
 export default class Toolbar extends Component {
   constructor(props) {
     super(props);
@@ -70,7 +74,11 @@ export default class Toolbar extends Component {
       // console.log("formData", formData);
       // that.setState({ formData, yaml, id });
       onLoad(formData, yaml);
+
       that.reset(formData);
+
+      //$("#load_yaml").val(null)
+      document.getElementById("load_yaml").value = "";
     };
     reader.readAsText(files[0]);
   }
@@ -87,11 +95,13 @@ export default class Toolbar extends Component {
     let { yaml } = this.props;
     return (
       <div className="toolbar">
+        <Display />
         <h3>Toolbar</h3>
 
         <div className="form from-group">
           <label>Load yaml</label>
           <input
+            id="load_yaml"
             type="file"
             className="form-control btn btn-primary"
             onChange={e => this.load(e.target.files)}
@@ -111,11 +121,12 @@ export default class Toolbar extends Component {
         </button>
 
         <hr />
-        <h4>YAML</h4>
-        <pre style={{ color: "black" }}>
-          <code style={{ color: "black" }}>{yaml}</code>
-        </pre>
-        <hr />
+        <div className="yaml">
+          <h4>YAML</h4>
+          <pre style={{ color: "black" }}>
+            <code style={{ color: "black" }}>{yaml}</code>
+          </pre>
+        </div>
       </div>
     );
   }

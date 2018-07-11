@@ -8,46 +8,53 @@ import jsyaml from "../../../node_modules/js-yaml/dist/js-yaml.js";
 import renderField from "../myform/renderField";
 import buildSyncValidation from "../myform/buildSyncValidation";
 
-import { initialize } from "redux-form";
+import { initialize, submit } from "redux-form";
 import { notify, clearNotifications } from "../store/notifications";
 import { DefaultTheme } from "../myform";
 import myTheme from "../myform/widgets/";
 import { reduxForm } from "redux-form";
 import compileSchema from "../myform/compileSchema";
-
 import langs from "../contents/langs";
 import tags from "../contents/tags";
-
 import _ from "lodash";
 import u from "updeep";
 import { SubmissionError } from "redux-form";
 import Ajv from "ajv";
-
+import validator from "validator";
 import Toolbar from "./toolbar";
-//const myTheme = DefaultTheme;
-let schema = {};
+
 const jsonData = require("../schema.json");
 const APP_FORM = "appForm";
-let ajv = new Ajv({
+const ajv = new Ajv({
   errorDataPath: "property",
   allErrors: true,
   jsonPointers: false
 });
+let schema = {};
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   return {
     notifications: state.notifications
   };
-}
+};
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
   return {
     notify: (type, data) => dispatch(notify(type, data)),
     clearNotifications: (type, data) =>
       dispatch(clearNotifications(type, data)),
-    initialize: (name, data) => dispatch(initialize(name, data))
+    initialize: (name, data) => dispatch(initialize(name, data)),
+    submit: name => dispatch(submit(name))
   };
-}
+};
+
+const getReleases = () => {
+  const url =
+    "https://api.github.com/repos/publiccodenet/publiccode.yml/contents/version";
+  return fetch(url)
+    .then(res => res.json())
+    .then(data => data.map(d => d.name));
+};
 
 @connect(
   mapStateToProps,
@@ -65,12 +72,14 @@ export default class Index extends Component {
     this.submit = this.submit.bind(this);
   }
 
-  componentDidMount() {
-    this.getSchema();
+  async componentDidMount() {
+    let versions = await getReleases();
+    console.log("VERSIONS", versions);
+    this.getSchema(versions);
   }
 
-  getSchema() {
-    // console.log(jsonData);
+  getSchema(versions) {
+    console.log(versions);
     let customMeta = {
       definitions: {
         descriptionPerLang: {
@@ -96,6 +105,14 @@ export default class Index extends Component {
     };
 
     let custom_props = {
+      publiccodeYamlVersion: {
+        type: "array",
+        items: {
+          type: "string",
+          title: "Version",
+          enum: versions
+        }
+      },
       swDescription: {
         type: "array",
         uniqueItems: true,
@@ -129,7 +146,7 @@ export default class Index extends Component {
     let obj = jsyaml.load(JSON.stringify(data));
 
     schema = compileSchema(obj);
-    //console.log("SCHEMA", obj);
+    console.log("COMPILED SCHEMA", obj);
     this.setState({ loading: false });
   }
 
@@ -139,6 +156,7 @@ export default class Index extends Component {
 
     data = cleanDeep(data);
     console.log(data);
+    //REFORMAT CUSTOM FIELDS DATA
     try {
       let yaml = jsyaml.dump(data);
       this.setState({ yaml, error: null });
@@ -147,17 +165,13 @@ export default class Index extends Component {
     }
   }
 
-  notify(title = "hey", msg = "ciao", millis = 3000) {
-    this.props.notify({ title, msg, millis });
-  }
-
   onLoad(formData, yaml) {
     console.log("loaded", yaml, formData);
     this.setState({ formData, yaml });
   }
 
-  onContentStateChange(contentState) {
-    console.log("contentState", contentState);
+  notify(title = "hey", msg = "ciao", millis = 3000) {
+    this.props.notify({ title, msg, millis });
   }
 
   BaseForm(props) {
@@ -169,17 +183,22 @@ export default class Index extends Component {
       submitting,
       context,
       load,
-      pristine,
-      reset
+      pristine
     } = props;
 
     return (
       <form className="form" onSubmit={handleSubmit}>
-        {renderField(schema, null, theme || DefaultTheme, "", context)}
         <div>{error && <strong>{error}</strong>}</div>
-        <button className="btn btn-primary" type="submit" disabled={submitting}>
-          Submit
-        </button>
+        {renderField(schema, null, theme || DefaultTheme, "", context)}
+        {/*!error && (
+          <button
+            className="btn btn-primary"
+            type="submit"
+            disabled={submitting}
+          >
+            Submit
+          </button>
+        )*/}
       </form>
     );
   }
@@ -221,11 +240,16 @@ export default class Index extends Component {
       <div>
         <div className="split-screen">
           <div className="split-screen--form">
-            <div className="form_wrap">{this.renderForm()}</div>
-            <div className="spacer">&nbsp;</div>
+            {this.renderForm()}
           </div>
 
           <div className="split-screen--toolbar">
+            <button
+              className="btn btn-primary"
+              onClick={() => this.props.submit(APP_FORM)}
+            >
+              Submit
+            </button>
             <Toolbar
               yaml={yaml}
               onLoad={this.onLoad.bind(this)}

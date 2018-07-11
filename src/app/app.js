@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-
 import store from "./store/index";
 import { Provider } from "react-redux";
-
 import Layout from "./components/_layout";
 import Index from "./components/index";
+
+import $ from "jquery";
+window.jQuery = $;
+window.$ = $;
 
 export default class App extends Component {
   render() {

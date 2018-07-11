@@ -47,16 +47,17 @@ const renderField = (
     prefix
   });
 
-  if (widget === "object" || widget==="array")
-    return (<div className="group_wrap" key={`wrap_${fieldName}`}>
-      {obj}
-    </div>)
+return obj;
+  // if (widget === "object" || widget==="array")
+  //   return (<div className="group_wrap" key={`wrap_${fieldName}`}>
+  //     {obj}
+  //   </div>)
 
-  return (
-    <div className="item_wrap" key={`wrap_${fieldName}`}>
-      {obj}
-    </div>
-  );
+  // return (
+  //   <div className="item_wrap" key={`wrap_${fieldName}`}>
+  //     {obj}
+  //   </div>
+  // );
 };
 
 export default renderField;

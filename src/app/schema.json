@@ -5161,7 +5161,8 @@
     "tags",
     "developmentStatus",
     "softwareType",
-    "swDescription"
+    "swDescription",
+    "legal"
   ],
   "definitions": {
     "publiccodeYamlVersion": {
@@ -5383,7 +5384,8 @@
           "description":
             "Some open-source softwares adopt a convention of identify the copyright holders through a file that lists all the entities that own the copyright. This is common in projects strongly backed by a community where there are many external contributors and no clear single/main copyright owner. In such cases, this key can be used to refer to the authors file, using a path relative to the root of the repository."
         }
-      }
+      },
+      "required": ["license", "repoOwner"]
     },
     "contact": {
       "title": "contact",
@@ -5415,7 +5417,8 @@
           "description":
             "This key contains an explicit affiliation information for the technical contact. In case of multiple maintainers, this can be used to create a relation between each technical contact and each maintainer entity. It can contain for instance a company name, an association name, etc."
         }
-      }
+      },
+      "required": ["email"]
     },
     "contractor": {
       "title": "contractor",
@@ -5577,7 +5580,7 @@
       }
     },
     "descriptionPerLang": {
-      "title": "Description",
+      "title": "Description per Language",
       "description":
         "A set of fields to describe in language the current software",
       "type": "object",
@@ -5590,12 +5593,12 @@
         "shortDescription": {
           "type": "string",
           "title": "shortDescription",
-          "description": "A short description required"
+          "description": "A short description is required"
         },
         "longDescription": {
           "type": "string",
           "title": "longDescription",
-          "description": "A short description required"
+          "description": "A long description is required"
         },
         "documentation": {
           "type": "string",
@@ -5654,7 +5657,7 @@
           }
         }
       },
-      "required": ["longDescription", "shortDescription", "featureList"]
+      "required": ["longDescription", "shortDescription"]
     }
   }
 }
