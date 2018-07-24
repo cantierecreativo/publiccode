@@ -62,9 +62,8 @@
     "intendedAudience": {
       "$ref": "#/definitions/intendedAudience"
     },
-
-    "swDescription": {
-      "title": "swDescription",
+    "summary": {
+      "title": "summary",
       "type": "array",
       "items": {
         "anyOf": [
@@ -73,2576 +72,2576 @@
             "title": "aar",
             "description": "language  width code: aar",
             "examples": ["eng", "ita"],
-            "properties": { "aar": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "aar": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "abk",
             "description": "language  width code: abk",
             "examples": ["eng", "ita"],
-            "properties": { "abk": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "abk": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ace",
             "description": "language  width code: ace",
             "examples": ["eng", "ita"],
-            "properties": { "ace": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ace": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ach",
             "description": "language  width code: ach",
             "examples": ["eng", "ita"],
-            "properties": { "ach": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ach": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ada",
             "description": "language  width code: ada",
             "examples": ["eng", "ita"],
-            "properties": { "ada": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ada": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ady",
             "description": "language  width code: ady",
             "examples": ["eng", "ita"],
-            "properties": { "ady": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ady": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "afa",
             "description": "language  width code: afa",
             "examples": ["eng", "ita"],
-            "properties": { "afa": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "afa": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "afh",
             "description": "language  width code: afh",
             "examples": ["eng", "ita"],
-            "properties": { "afh": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "afh": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "afr",
             "description": "language  width code: afr",
             "examples": ["eng", "ita"],
-            "properties": { "afr": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "afr": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ain",
             "description": "language  width code: ain",
             "examples": ["eng", "ita"],
-            "properties": { "ain": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ain": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "aka",
             "description": "language  width code: aka",
             "examples": ["eng", "ita"],
-            "properties": { "aka": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "aka": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "akk",
             "description": "language  width code: akk",
             "examples": ["eng", "ita"],
-            "properties": { "akk": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "akk": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "alb",
             "description": "language  width code: alb",
             "examples": ["eng", "ita"],
-            "properties": { "alb": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "alb": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ale",
             "description": "language  width code: ale",
             "examples": ["eng", "ita"],
-            "properties": { "ale": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ale": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "alg",
             "description": "language  width code: alg",
             "examples": ["eng", "ita"],
-            "properties": { "alg": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "alg": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "alt",
             "description": "language  width code: alt",
             "examples": ["eng", "ita"],
-            "properties": { "alt": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "alt": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "amh",
             "description": "language  width code: amh",
             "examples": ["eng", "ita"],
-            "properties": { "amh": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "amh": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ang",
             "description": "language  width code: ang",
             "examples": ["eng", "ita"],
-            "properties": { "ang": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ang": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "anp",
             "description": "language  width code: anp",
             "examples": ["eng", "ita"],
-            "properties": { "anp": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "anp": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "apa",
             "description": "language  width code: apa",
             "examples": ["eng", "ita"],
-            "properties": { "apa": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "apa": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ara",
             "description": "language  width code: ara",
             "examples": ["eng", "ita"],
-            "properties": { "ara": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ara": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "arc",
             "description": "language  width code: arc",
             "examples": ["eng", "ita"],
-            "properties": { "arc": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "arc": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "arg",
             "description": "language  width code: arg",
             "examples": ["eng", "ita"],
-            "properties": { "arg": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "arg": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "arm",
             "description": "language  width code: arm",
             "examples": ["eng", "ita"],
-            "properties": { "arm": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "arm": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "arn",
             "description": "language  width code: arn",
             "examples": ["eng", "ita"],
-            "properties": { "arn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "arn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "arp",
             "description": "language  width code: arp",
             "examples": ["eng", "ita"],
-            "properties": { "arp": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "arp": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "art",
             "description": "language  width code: art",
             "examples": ["eng", "ita"],
-            "properties": { "art": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "art": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "arw",
             "description": "language  width code: arw",
             "examples": ["eng", "ita"],
-            "properties": { "arw": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "arw": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "asm",
             "description": "language  width code: asm",
             "examples": ["eng", "ita"],
-            "properties": { "asm": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "asm": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ast",
             "description": "language  width code: ast",
             "examples": ["eng", "ita"],
-            "properties": { "ast": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ast": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ath",
             "description": "language  width code: ath",
             "examples": ["eng", "ita"],
-            "properties": { "ath": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ath": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "aus",
             "description": "language  width code: aus",
             "examples": ["eng", "ita"],
-            "properties": { "aus": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "aus": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ava",
             "description": "language  width code: ava",
             "examples": ["eng", "ita"],
-            "properties": { "ava": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ava": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ave",
             "description": "language  width code: ave",
             "examples": ["eng", "ita"],
-            "properties": { "ave": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ave": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "awa",
             "description": "language  width code: awa",
             "examples": ["eng", "ita"],
-            "properties": { "awa": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "awa": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "aym",
             "description": "language  width code: aym",
             "examples": ["eng", "ita"],
-            "properties": { "aym": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "aym": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "aze",
             "description": "language  width code: aze",
             "examples": ["eng", "ita"],
-            "properties": { "aze": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "aze": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bad",
             "description": "language  width code: bad",
             "examples": ["eng", "ita"],
-            "properties": { "bad": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bad": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bai",
             "description": "language  width code: bai",
             "examples": ["eng", "ita"],
-            "properties": { "bai": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bai": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bak",
             "description": "language  width code: bak",
             "examples": ["eng", "ita"],
-            "properties": { "bak": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bak": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bal",
             "description": "language  width code: bal",
             "examples": ["eng", "ita"],
-            "properties": { "bal": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bal": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bam",
             "description": "language  width code: bam",
             "examples": ["eng", "ita"],
-            "properties": { "bam": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bam": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ban",
             "description": "language  width code: ban",
             "examples": ["eng", "ita"],
-            "properties": { "ban": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ban": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "baq",
             "description": "language  width code: baq",
             "examples": ["eng", "ita"],
-            "properties": { "baq": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "baq": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bas",
             "description": "language  width code: bas",
             "examples": ["eng", "ita"],
-            "properties": { "bas": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bas": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bat",
             "description": "language  width code: bat",
             "examples": ["eng", "ita"],
-            "properties": { "bat": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bat": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bej",
             "description": "language  width code: bej",
             "examples": ["eng", "ita"],
-            "properties": { "bej": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bej": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bel",
             "description": "language  width code: bel",
             "examples": ["eng", "ita"],
-            "properties": { "bel": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bel": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bem",
             "description": "language  width code: bem",
             "examples": ["eng", "ita"],
-            "properties": { "bem": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bem": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ben",
             "description": "language  width code: ben",
             "examples": ["eng", "ita"],
-            "properties": { "ben": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ben": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ber",
             "description": "language  width code: ber",
             "examples": ["eng", "ita"],
-            "properties": { "ber": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ber": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bho",
             "description": "language  width code: bho",
             "examples": ["eng", "ita"],
-            "properties": { "bho": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bho": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bih",
             "description": "language  width code: bih",
             "examples": ["eng", "ita"],
-            "properties": { "bih": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bih": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bik",
             "description": "language  width code: bik",
             "examples": ["eng", "ita"],
-            "properties": { "bik": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bik": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bin",
             "description": "language  width code: bin",
             "examples": ["eng", "ita"],
-            "properties": { "bin": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bin": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bis",
             "description": "language  width code: bis",
             "examples": ["eng", "ita"],
-            "properties": { "bis": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bis": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bla",
             "description": "language  width code: bla",
             "examples": ["eng", "ita"],
-            "properties": { "bla": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bla": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bnt",
             "description": "language  width code: bnt",
             "examples": ["eng", "ita"],
-            "properties": { "bnt": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bnt": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bod",
             "description": "language  width code: bod",
             "examples": ["eng", "ita"],
-            "properties": { "bod": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bod": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bos",
             "description": "language  width code: bos",
             "examples": ["eng", "ita"],
-            "properties": { "bos": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bos": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bra",
             "description": "language  width code: bra",
             "examples": ["eng", "ita"],
-            "properties": { "bra": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bra": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bre",
             "description": "language  width code: bre",
             "examples": ["eng", "ita"],
-            "properties": { "bre": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bre": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "btk",
             "description": "language  width code: btk",
             "examples": ["eng", "ita"],
-            "properties": { "btk": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "btk": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bua",
             "description": "language  width code: bua",
             "examples": ["eng", "ita"],
-            "properties": { "bua": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bua": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bug",
             "description": "language  width code: bug",
             "examples": ["eng", "ita"],
-            "properties": { "bug": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bug": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bul",
             "description": "language  width code: bul",
             "examples": ["eng", "ita"],
-            "properties": { "bul": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bul": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "bur",
             "description": "language  width code: bur",
             "examples": ["eng", "ita"],
-            "properties": { "bur": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "bur": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "byn",
             "description": "language  width code: byn",
             "examples": ["eng", "ita"],
-            "properties": { "byn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "byn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cad",
             "description": "language  width code: cad",
             "examples": ["eng", "ita"],
-            "properties": { "cad": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cad": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cai",
             "description": "language  width code: cai",
             "examples": ["eng", "ita"],
-            "properties": { "cai": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cai": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "car",
             "description": "language  width code: car",
             "examples": ["eng", "ita"],
-            "properties": { "car": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "car": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cat",
             "description": "language  width code: cat",
             "examples": ["eng", "ita"],
-            "properties": { "cat": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cat": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cau",
             "description": "language  width code: cau",
             "examples": ["eng", "ita"],
-            "properties": { "cau": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cau": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ceb",
             "description": "language  width code: ceb",
             "examples": ["eng", "ita"],
-            "properties": { "ceb": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ceb": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cel",
             "description": "language  width code: cel",
             "examples": ["eng", "ita"],
-            "properties": { "cel": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cel": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ces",
             "description": "language  width code: ces",
             "examples": ["eng", "ita"],
-            "properties": { "ces": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ces": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cha",
             "description": "language  width code: cha",
             "examples": ["eng", "ita"],
-            "properties": { "cha": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cha": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "chb",
             "description": "language  width code: chb",
             "examples": ["eng", "ita"],
-            "properties": { "chb": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "chb": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "che",
             "description": "language  width code: che",
             "examples": ["eng", "ita"],
-            "properties": { "che": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "che": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "chg",
             "description": "language  width code: chg",
             "examples": ["eng", "ita"],
-            "properties": { "chg": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "chg": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "chi",
             "description": "language  width code: chi",
             "examples": ["eng", "ita"],
-            "properties": { "chi": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "chi": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "chk",
             "description": "language  width code: chk",
             "examples": ["eng", "ita"],
-            "properties": { "chk": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "chk": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "chm",
             "description": "language  width code: chm",
             "examples": ["eng", "ita"],
-            "properties": { "chm": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "chm": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "chn",
             "description": "language  width code: chn",
             "examples": ["eng", "ita"],
-            "properties": { "chn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "chn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cho",
             "description": "language  width code: cho",
             "examples": ["eng", "ita"],
-            "properties": { "cho": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cho": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "chp",
             "description": "language  width code: chp",
             "examples": ["eng", "ita"],
-            "properties": { "chp": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "chp": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "chr",
             "description": "language  width code: chr",
             "examples": ["eng", "ita"],
-            "properties": { "chr": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "chr": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "chu",
             "description": "language  width code: chu",
             "examples": ["eng", "ita"],
-            "properties": { "chu": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "chu": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "chv",
             "description": "language  width code: chv",
             "examples": ["eng", "ita"],
-            "properties": { "chv": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "chv": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "chy",
             "description": "language  width code: chy",
             "examples": ["eng", "ita"],
-            "properties": { "chy": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "chy": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cmc",
             "description": "language  width code: cmc",
             "examples": ["eng", "ita"],
-            "properties": { "cmc": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cmc": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cnr",
             "description": "language  width code: cnr",
             "examples": ["eng", "ita"],
-            "properties": { "cnr": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cnr": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cop",
             "description": "language  width code: cop",
             "examples": ["eng", "ita"],
-            "properties": { "cop": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cop": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cor",
             "description": "language  width code: cor",
             "examples": ["eng", "ita"],
-            "properties": { "cor": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cor": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cos",
             "description": "language  width code: cos",
             "examples": ["eng", "ita"],
-            "properties": { "cos": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cos": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cpe",
             "description": "language  width code: cpe",
             "examples": ["eng", "ita"],
-            "properties": { "cpe": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cpe": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cpf",
             "description": "language  width code: cpf",
             "examples": ["eng", "ita"],
-            "properties": { "cpf": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cpf": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cpp",
             "description": "language  width code: cpp",
             "examples": ["eng", "ita"],
-            "properties": { "cpp": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cpp": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cre",
             "description": "language  width code: cre",
             "examples": ["eng", "ita"],
-            "properties": { "cre": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cre": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "crh",
             "description": "language  width code: crh",
             "examples": ["eng", "ita"],
-            "properties": { "crh": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "crh": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "crp",
             "description": "language  width code: crp",
             "examples": ["eng", "ita"],
-            "properties": { "crp": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "crp": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "csb",
             "description": "language  width code: csb",
             "examples": ["eng", "ita"],
-            "properties": { "csb": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "csb": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cus",
             "description": "language  width code: cus",
             "examples": ["eng", "ita"],
-            "properties": { "cus": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cus": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cym",
             "description": "language  width code: cym",
             "examples": ["eng", "ita"],
-            "properties": { "cym": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cym": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "cze",
             "description": "language  width code: cze",
             "examples": ["eng", "ita"],
-            "properties": { "cze": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "cze": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "dak",
             "description": "language  width code: dak",
             "examples": ["eng", "ita"],
-            "properties": { "dak": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "dak": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "dan",
             "description": "language  width code: dan",
             "examples": ["eng", "ita"],
-            "properties": { "dan": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "dan": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "dar",
             "description": "language  width code: dar",
             "examples": ["eng", "ita"],
-            "properties": { "dar": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "dar": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "day",
             "description": "language  width code: day",
             "examples": ["eng", "ita"],
-            "properties": { "day": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "day": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "del",
             "description": "language  width code: del",
             "examples": ["eng", "ita"],
-            "properties": { "del": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "del": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "den",
             "description": "language  width code: den",
             "examples": ["eng", "ita"],
-            "properties": { "den": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "den": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "deu",
             "description": "language  width code: deu",
             "examples": ["eng", "ita"],
-            "properties": { "deu": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "deu": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "dgr",
             "description": "language  width code: dgr",
             "examples": ["eng", "ita"],
-            "properties": { "dgr": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "dgr": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "din",
             "description": "language  width code: din",
             "examples": ["eng", "ita"],
-            "properties": { "din": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "din": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "div",
             "description": "language  width code: div",
             "examples": ["eng", "ita"],
-            "properties": { "div": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "div": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "doi",
             "description": "language  width code: doi",
             "examples": ["eng", "ita"],
-            "properties": { "doi": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "doi": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "dra",
             "description": "language  width code: dra",
             "examples": ["eng", "ita"],
-            "properties": { "dra": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "dra": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "dsb",
             "description": "language  width code: dsb",
             "examples": ["eng", "ita"],
-            "properties": { "dsb": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "dsb": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "dua",
             "description": "language  width code: dua",
             "examples": ["eng", "ita"],
-            "properties": { "dua": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "dua": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "dum",
             "description": "language  width code: dum",
             "examples": ["eng", "ita"],
-            "properties": { "dum": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "dum": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "dut",
             "description": "language  width code: dut",
             "examples": ["eng", "ita"],
-            "properties": { "dut": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "dut": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "dyu",
             "description": "language  width code: dyu",
             "examples": ["eng", "ita"],
-            "properties": { "dyu": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "dyu": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "dzo",
             "description": "language  width code: dzo",
             "examples": ["eng", "ita"],
-            "properties": { "dzo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "dzo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "efi",
             "description": "language  width code: efi",
             "examples": ["eng", "ita"],
-            "properties": { "efi": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "efi": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "egy",
             "description": "language  width code: egy",
             "examples": ["eng", "ita"],
-            "properties": { "egy": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "egy": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "eka",
             "description": "language  width code: eka",
             "examples": ["eng", "ita"],
-            "properties": { "eka": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "eka": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ell",
             "description": "language  width code: ell",
             "examples": ["eng", "ita"],
-            "properties": { "ell": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ell": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "elx",
             "description": "language  width code: elx",
             "examples": ["eng", "ita"],
-            "properties": { "elx": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "elx": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "eng",
             "description": "language  width code: eng",
             "examples": ["eng", "ita"],
-            "properties": { "eng": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "eng": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "enm",
             "description": "language  width code: enm",
             "examples": ["eng", "ita"],
-            "properties": { "enm": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "enm": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "epo",
             "description": "language  width code: epo",
             "examples": ["eng", "ita"],
-            "properties": { "epo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "epo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "est",
             "description": "language  width code: est",
             "examples": ["eng", "ita"],
-            "properties": { "est": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "est": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "eus",
             "description": "language  width code: eus",
             "examples": ["eng", "ita"],
-            "properties": { "eus": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "eus": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ewe",
             "description": "language  width code: ewe",
             "examples": ["eng", "ita"],
-            "properties": { "ewe": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ewe": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ewo",
             "description": "language  width code: ewo",
             "examples": ["eng", "ita"],
-            "properties": { "ewo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ewo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fan",
             "description": "language  width code: fan",
             "examples": ["eng", "ita"],
-            "properties": { "fan": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fan": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fao",
             "description": "language  width code: fao",
             "examples": ["eng", "ita"],
-            "properties": { "fao": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fao": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fas",
             "description": "language  width code: fas",
             "examples": ["eng", "ita"],
-            "properties": { "fas": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fas": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fat",
             "description": "language  width code: fat",
             "examples": ["eng", "ita"],
-            "properties": { "fat": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fat": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fij",
             "description": "language  width code: fij",
             "examples": ["eng", "ita"],
-            "properties": { "fij": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fij": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fil",
             "description": "language  width code: fil",
             "examples": ["eng", "ita"],
-            "properties": { "fil": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fil": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fin",
             "description": "language  width code: fin",
             "examples": ["eng", "ita"],
-            "properties": { "fin": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fin": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fiu",
             "description": "language  width code: fiu",
             "examples": ["eng", "ita"],
-            "properties": { "fiu": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fiu": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fon",
             "description": "language  width code: fon",
             "examples": ["eng", "ita"],
-            "properties": { "fon": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fon": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fra",
             "description": "language  width code: fra",
             "examples": ["eng", "ita"],
-            "properties": { "fra": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fra": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fre",
             "description": "language  width code: fre",
             "examples": ["eng", "ita"],
-            "properties": { "fre": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fre": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "frm",
             "description": "language  width code: frm",
             "examples": ["eng", "ita"],
-            "properties": { "frm": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "frm": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fro",
             "description": "language  width code: fro",
             "examples": ["eng", "ita"],
-            "properties": { "fro": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fro": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "frr",
             "description": "language  width code: frr",
             "examples": ["eng", "ita"],
-            "properties": { "frr": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "frr": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "frs",
             "description": "language  width code: frs",
             "examples": ["eng", "ita"],
-            "properties": { "frs": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "frs": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fry",
             "description": "language  width code: fry",
             "examples": ["eng", "ita"],
-            "properties": { "fry": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fry": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ful",
             "description": "language  width code: ful",
             "examples": ["eng", "ita"],
-            "properties": { "ful": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ful": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "fur",
             "description": "language  width code: fur",
             "examples": ["eng", "ita"],
-            "properties": { "fur": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "fur": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gaa",
             "description": "language  width code: gaa",
             "examples": ["eng", "ita"],
-            "properties": { "gaa": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gaa": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gay",
             "description": "language  width code: gay",
             "examples": ["eng", "ita"],
-            "properties": { "gay": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gay": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gba",
             "description": "language  width code: gba",
             "examples": ["eng", "ita"],
-            "properties": { "gba": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gba": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gem",
             "description": "language  width code: gem",
             "examples": ["eng", "ita"],
-            "properties": { "gem": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gem": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "geo",
             "description": "language  width code: geo",
             "examples": ["eng", "ita"],
-            "properties": { "geo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "geo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ger",
             "description": "language  width code: ger",
             "examples": ["eng", "ita"],
-            "properties": { "ger": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ger": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gez",
             "description": "language  width code: gez",
             "examples": ["eng", "ita"],
-            "properties": { "gez": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gez": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gil",
             "description": "language  width code: gil",
             "examples": ["eng", "ita"],
-            "properties": { "gil": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gil": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gla",
             "description": "language  width code: gla",
             "examples": ["eng", "ita"],
-            "properties": { "gla": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gla": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gle",
             "description": "language  width code: gle",
             "examples": ["eng", "ita"],
-            "properties": { "gle": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gle": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "glg",
             "description": "language  width code: glg",
             "examples": ["eng", "ita"],
-            "properties": { "glg": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "glg": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "glv",
             "description": "language  width code: glv",
             "examples": ["eng", "ita"],
-            "properties": { "glv": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "glv": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gmh",
             "description": "language  width code: gmh",
             "examples": ["eng", "ita"],
-            "properties": { "gmh": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gmh": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "goh",
             "description": "language  width code: goh",
             "examples": ["eng", "ita"],
-            "properties": { "goh": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "goh": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gon",
             "description": "language  width code: gon",
             "examples": ["eng", "ita"],
-            "properties": { "gon": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gon": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gor",
             "description": "language  width code: gor",
             "examples": ["eng", "ita"],
-            "properties": { "gor": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gor": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "got",
             "description": "language  width code: got",
             "examples": ["eng", "ita"],
-            "properties": { "got": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "got": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "grb",
             "description": "language  width code: grb",
             "examples": ["eng", "ita"],
-            "properties": { "grb": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "grb": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "grc",
             "description": "language  width code: grc",
             "examples": ["eng", "ita"],
-            "properties": { "grc": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "grc": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gre",
             "description": "language  width code: gre",
             "examples": ["eng", "ita"],
-            "properties": { "gre": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gre": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "grn",
             "description": "language  width code: grn",
             "examples": ["eng", "ita"],
-            "properties": { "grn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "grn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gsw",
             "description": "language  width code: gsw",
             "examples": ["eng", "ita"],
-            "properties": { "gsw": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gsw": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "guj",
             "description": "language  width code: guj",
             "examples": ["eng", "ita"],
-            "properties": { "guj": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "guj": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "gwi",
             "description": "language  width code: gwi",
             "examples": ["eng", "ita"],
-            "properties": { "gwi": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "gwi": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hai",
             "description": "language  width code: hai",
             "examples": ["eng", "ita"],
-            "properties": { "hai": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hai": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hat",
             "description": "language  width code: hat",
             "examples": ["eng", "ita"],
-            "properties": { "hat": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hat": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hau",
             "description": "language  width code: hau",
             "examples": ["eng", "ita"],
-            "properties": { "hau": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hau": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "haw",
             "description": "language  width code: haw",
             "examples": ["eng", "ita"],
-            "properties": { "haw": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "haw": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "heb",
             "description": "language  width code: heb",
             "examples": ["eng", "ita"],
-            "properties": { "heb": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "heb": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "her",
             "description": "language  width code: her",
             "examples": ["eng", "ita"],
-            "properties": { "her": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "her": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hil",
             "description": "language  width code: hil",
             "examples": ["eng", "ita"],
-            "properties": { "hil": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hil": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "him",
             "description": "language  width code: him",
             "examples": ["eng", "ita"],
-            "properties": { "him": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "him": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hin",
             "description": "language  width code: hin",
             "examples": ["eng", "ita"],
-            "properties": { "hin": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hin": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hit",
             "description": "language  width code: hit",
             "examples": ["eng", "ita"],
-            "properties": { "hit": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hit": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hmn",
             "description": "language  width code: hmn",
             "examples": ["eng", "ita"],
-            "properties": { "hmn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hmn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hmo",
             "description": "language  width code: hmo",
             "examples": ["eng", "ita"],
-            "properties": { "hmo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hmo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hrv",
             "description": "language  width code: hrv",
             "examples": ["eng", "ita"],
-            "properties": { "hrv": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hrv": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hsb",
             "description": "language  width code: hsb",
             "examples": ["eng", "ita"],
-            "properties": { "hsb": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hsb": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hun",
             "description": "language  width code: hun",
             "examples": ["eng", "ita"],
-            "properties": { "hun": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hun": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hup",
             "description": "language  width code: hup",
             "examples": ["eng", "ita"],
-            "properties": { "hup": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hup": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "hye",
             "description": "language  width code: hye",
             "examples": ["eng", "ita"],
-            "properties": { "hye": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "hye": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "iba",
             "description": "language  width code: iba",
             "examples": ["eng", "ita"],
-            "properties": { "iba": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "iba": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ibo",
             "description": "language  width code: ibo",
             "examples": ["eng", "ita"],
-            "properties": { "ibo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ibo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ice",
             "description": "language  width code: ice",
             "examples": ["eng", "ita"],
-            "properties": { "ice": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ice": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ido",
             "description": "language  width code: ido",
             "examples": ["eng", "ita"],
-            "properties": { "ido": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ido": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "iii",
             "description": "language  width code: iii",
             "examples": ["eng", "ita"],
-            "properties": { "iii": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "iii": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ijo",
             "description": "language  width code: ijo",
             "examples": ["eng", "ita"],
-            "properties": { "ijo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ijo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "iku",
             "description": "language  width code: iku",
             "examples": ["eng", "ita"],
-            "properties": { "iku": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "iku": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ile",
             "description": "language  width code: ile",
             "examples": ["eng", "ita"],
-            "properties": { "ile": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ile": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ilo",
             "description": "language  width code: ilo",
             "examples": ["eng", "ita"],
-            "properties": { "ilo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ilo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ina",
             "description": "language  width code: ina",
             "examples": ["eng", "ita"],
-            "properties": { "ina": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ina": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "inc",
             "description": "language  width code: inc",
             "examples": ["eng", "ita"],
-            "properties": { "inc": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "inc": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ind",
             "description": "language  width code: ind",
             "examples": ["eng", "ita"],
-            "properties": { "ind": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ind": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ine",
             "description": "language  width code: ine",
             "examples": ["eng", "ita"],
-            "properties": { "ine": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ine": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "inh",
             "description": "language  width code: inh",
             "examples": ["eng", "ita"],
-            "properties": { "inh": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "inh": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ipk",
             "description": "language  width code: ipk",
             "examples": ["eng", "ita"],
-            "properties": { "ipk": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ipk": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ira",
             "description": "language  width code: ira",
             "examples": ["eng", "ita"],
-            "properties": { "ira": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ira": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "iro",
             "description": "language  width code: iro",
             "examples": ["eng", "ita"],
-            "properties": { "iro": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "iro": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "isl",
             "description": "language  width code: isl",
             "examples": ["eng", "ita"],
-            "properties": { "isl": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "isl": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ita",
             "description": "language  width code: ita",
             "examples": ["eng", "ita"],
-            "properties": { "ita": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ita": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "jav",
             "description": "language  width code: jav",
             "examples": ["eng", "ita"],
-            "properties": { "jav": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "jav": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "jbo",
             "description": "language  width code: jbo",
             "examples": ["eng", "ita"],
-            "properties": { "jbo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "jbo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "jpn",
             "description": "language  width code: jpn",
             "examples": ["eng", "ita"],
-            "properties": { "jpn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "jpn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "jpr",
             "description": "language  width code: jpr",
             "examples": ["eng", "ita"],
-            "properties": { "jpr": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "jpr": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "jrb",
             "description": "language  width code: jrb",
             "examples": ["eng", "ita"],
-            "properties": { "jrb": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "jrb": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kaa",
             "description": "language  width code: kaa",
             "examples": ["eng", "ita"],
-            "properties": { "kaa": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kaa": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kab",
             "description": "language  width code: kab",
             "examples": ["eng", "ita"],
-            "properties": { "kab": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kab": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kac",
             "description": "language  width code: kac",
             "examples": ["eng", "ita"],
-            "properties": { "kac": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kac": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kal",
             "description": "language  width code: kal",
             "examples": ["eng", "ita"],
-            "properties": { "kal": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kal": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kam",
             "description": "language  width code: kam",
             "examples": ["eng", "ita"],
-            "properties": { "kam": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kam": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kan",
             "description": "language  width code: kan",
             "examples": ["eng", "ita"],
-            "properties": { "kan": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kan": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kar",
             "description": "language  width code: kar",
             "examples": ["eng", "ita"],
-            "properties": { "kar": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kar": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kas",
             "description": "language  width code: kas",
             "examples": ["eng", "ita"],
-            "properties": { "kas": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kas": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kat",
             "description": "language  width code: kat",
             "examples": ["eng", "ita"],
-            "properties": { "kat": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kat": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kau",
             "description": "language  width code: kau",
             "examples": ["eng", "ita"],
-            "properties": { "kau": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kau": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kaw",
             "description": "language  width code: kaw",
             "examples": ["eng", "ita"],
-            "properties": { "kaw": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kaw": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kaz",
             "description": "language  width code: kaz",
             "examples": ["eng", "ita"],
-            "properties": { "kaz": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kaz": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kbd",
             "description": "language  width code: kbd",
             "examples": ["eng", "ita"],
-            "properties": { "kbd": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kbd": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kha",
             "description": "language  width code: kha",
             "examples": ["eng", "ita"],
-            "properties": { "kha": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kha": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "khi",
             "description": "language  width code: khi",
             "examples": ["eng", "ita"],
-            "properties": { "khi": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "khi": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "khm",
             "description": "language  width code: khm",
             "examples": ["eng", "ita"],
-            "properties": { "khm": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "khm": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kho",
             "description": "language  width code: kho",
             "examples": ["eng", "ita"],
-            "properties": { "kho": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kho": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kik",
             "description": "language  width code: kik",
             "examples": ["eng", "ita"],
-            "properties": { "kik": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kik": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kin",
             "description": "language  width code: kin",
             "examples": ["eng", "ita"],
-            "properties": { "kin": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kin": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kir",
             "description": "language  width code: kir",
             "examples": ["eng", "ita"],
-            "properties": { "kir": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kir": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kmb",
             "description": "language  width code: kmb",
             "examples": ["eng", "ita"],
-            "properties": { "kmb": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kmb": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kok",
             "description": "language  width code: kok",
             "examples": ["eng", "ita"],
-            "properties": { "kok": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kok": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kom",
             "description": "language  width code: kom",
             "examples": ["eng", "ita"],
-            "properties": { "kom": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kom": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kon",
             "description": "language  width code: kon",
             "examples": ["eng", "ita"],
-            "properties": { "kon": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kon": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kor",
             "description": "language  width code: kor",
             "examples": ["eng", "ita"],
-            "properties": { "kor": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kor": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kos",
             "description": "language  width code: kos",
             "examples": ["eng", "ita"],
-            "properties": { "kos": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kos": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kpe",
             "description": "language  width code: kpe",
             "examples": ["eng", "ita"],
-            "properties": { "kpe": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kpe": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "krc",
             "description": "language  width code: krc",
             "examples": ["eng", "ita"],
-            "properties": { "krc": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "krc": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "krl",
             "description": "language  width code: krl",
             "examples": ["eng", "ita"],
-            "properties": { "krl": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "krl": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kro",
             "description": "language  width code: kro",
             "examples": ["eng", "ita"],
-            "properties": { "kro": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kro": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kru",
             "description": "language  width code: kru",
             "examples": ["eng", "ita"],
-            "properties": { "kru": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kru": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kua",
             "description": "language  width code: kua",
             "examples": ["eng", "ita"],
-            "properties": { "kua": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kua": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kum",
             "description": "language  width code: kum",
             "examples": ["eng", "ita"],
-            "properties": { "kum": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kum": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kur",
             "description": "language  width code: kur",
             "examples": ["eng", "ita"],
-            "properties": { "kur": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kur": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "kut",
             "description": "language  width code: kut",
             "examples": ["eng", "ita"],
-            "properties": { "kut": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "kut": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lad",
             "description": "language  width code: lad",
             "examples": ["eng", "ita"],
-            "properties": { "lad": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lad": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lah",
             "description": "language  width code: lah",
             "examples": ["eng", "ita"],
-            "properties": { "lah": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lah": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lam",
             "description": "language  width code: lam",
             "examples": ["eng", "ita"],
-            "properties": { "lam": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lam": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lao",
             "description": "language  width code: lao",
             "examples": ["eng", "ita"],
-            "properties": { "lao": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lao": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lat",
             "description": "language  width code: lat",
             "examples": ["eng", "ita"],
-            "properties": { "lat": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lat": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lav",
             "description": "language  width code: lav",
             "examples": ["eng", "ita"],
-            "properties": { "lav": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lav": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lez",
             "description": "language  width code: lez",
             "examples": ["eng", "ita"],
-            "properties": { "lez": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lez": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lim",
             "description": "language  width code: lim",
             "examples": ["eng", "ita"],
-            "properties": { "lim": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lim": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lin",
             "description": "language  width code: lin",
             "examples": ["eng", "ita"],
-            "properties": { "lin": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lin": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lit",
             "description": "language  width code: lit",
             "examples": ["eng", "ita"],
-            "properties": { "lit": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lit": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lol",
             "description": "language  width code: lol",
             "examples": ["eng", "ita"],
-            "properties": { "lol": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lol": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "loz",
             "description": "language  width code: loz",
             "examples": ["eng", "ita"],
-            "properties": { "loz": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "loz": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ltz",
             "description": "language  width code: ltz",
             "examples": ["eng", "ita"],
-            "properties": { "ltz": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ltz": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lua",
             "description": "language  width code: lua",
             "examples": ["eng", "ita"],
-            "properties": { "lua": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lua": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lub",
             "description": "language  width code: lub",
             "examples": ["eng", "ita"],
-            "properties": { "lub": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lub": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lug",
             "description": "language  width code: lug",
             "examples": ["eng", "ita"],
-            "properties": { "lug": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lug": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lui",
             "description": "language  width code: lui",
             "examples": ["eng", "ita"],
-            "properties": { "lui": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lui": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lun",
             "description": "language  width code: lun",
             "examples": ["eng", "ita"],
-            "properties": { "lun": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lun": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "luo",
             "description": "language  width code: luo",
             "examples": ["eng", "ita"],
-            "properties": { "luo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "luo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "lus",
             "description": "language  width code: lus",
             "examples": ["eng", "ita"],
-            "properties": { "lus": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "lus": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mac",
             "description": "language  width code: mac",
             "examples": ["eng", "ita"],
-            "properties": { "mac": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mac": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mad",
             "description": "language  width code: mad",
             "examples": ["eng", "ita"],
-            "properties": { "mad": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mad": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mag",
             "description": "language  width code: mag",
             "examples": ["eng", "ita"],
-            "properties": { "mag": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mag": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mah",
             "description": "language  width code: mah",
             "examples": ["eng", "ita"],
-            "properties": { "mah": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mah": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mai",
             "description": "language  width code: mai",
             "examples": ["eng", "ita"],
-            "properties": { "mai": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mai": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mak",
             "description": "language  width code: mak",
             "examples": ["eng", "ita"],
-            "properties": { "mak": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mak": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mal",
             "description": "language  width code: mal",
             "examples": ["eng", "ita"],
-            "properties": { "mal": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mal": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "man",
             "description": "language  width code: man",
             "examples": ["eng", "ita"],
-            "properties": { "man": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "man": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mao",
             "description": "language  width code: mao",
             "examples": ["eng", "ita"],
-            "properties": { "mao": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mao": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "map",
             "description": "language  width code: map",
             "examples": ["eng", "ita"],
-            "properties": { "map": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "map": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mar",
             "description": "language  width code: mar",
             "examples": ["eng", "ita"],
-            "properties": { "mar": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mar": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mas",
             "description": "language  width code: mas",
             "examples": ["eng", "ita"],
-            "properties": { "mas": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mas": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "may",
             "description": "language  width code: may",
             "examples": ["eng", "ita"],
-            "properties": { "may": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "may": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mdf",
             "description": "language  width code: mdf",
             "examples": ["eng", "ita"],
-            "properties": { "mdf": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mdf": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mdr",
             "description": "language  width code: mdr",
             "examples": ["eng", "ita"],
-            "properties": { "mdr": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mdr": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "men",
             "description": "language  width code: men",
             "examples": ["eng", "ita"],
-            "properties": { "men": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "men": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mga",
             "description": "language  width code: mga",
             "examples": ["eng", "ita"],
-            "properties": { "mga": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mga": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mic",
             "description": "language  width code: mic",
             "examples": ["eng", "ita"],
-            "properties": { "mic": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mic": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "min",
             "description": "language  width code: min",
             "examples": ["eng", "ita"],
-            "properties": { "min": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "min": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mis",
             "description": "language  width code: mis",
             "examples": ["eng", "ita"],
-            "properties": { "mis": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mis": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mkd",
             "description": "language  width code: mkd",
             "examples": ["eng", "ita"],
-            "properties": { "mkd": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mkd": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mkh",
             "description": "language  width code: mkh",
             "examples": ["eng", "ita"],
-            "properties": { "mkh": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mkh": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mlg",
             "description": "language  width code: mlg",
             "examples": ["eng", "ita"],
-            "properties": { "mlg": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mlg": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mlt",
             "description": "language  width code: mlt",
             "examples": ["eng", "ita"],
-            "properties": { "mlt": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mlt": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mnc",
             "description": "language  width code: mnc",
             "examples": ["eng", "ita"],
-            "properties": { "mnc": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mnc": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mni",
             "description": "language  width code: mni",
             "examples": ["eng", "ita"],
-            "properties": { "mni": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mni": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mno",
             "description": "language  width code: mno",
             "examples": ["eng", "ita"],
-            "properties": { "mno": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mno": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "moh",
             "description": "language  width code: moh",
             "examples": ["eng", "ita"],
-            "properties": { "moh": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "moh": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mon",
             "description": "language  width code: mon",
             "examples": ["eng", "ita"],
-            "properties": { "mon": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mon": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mos",
             "description": "language  width code: mos",
             "examples": ["eng", "ita"],
-            "properties": { "mos": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mos": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mri",
             "description": "language  width code: mri",
             "examples": ["eng", "ita"],
-            "properties": { "mri": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mri": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "msa",
             "description": "language  width code: msa",
             "examples": ["eng", "ita"],
-            "properties": { "msa": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "msa": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mul",
             "description": "language  width code: mul",
             "examples": ["eng", "ita"],
-            "properties": { "mul": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mul": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mun",
             "description": "language  width code: mun",
             "examples": ["eng", "ita"],
-            "properties": { "mun": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mun": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mus",
             "description": "language  width code: mus",
             "examples": ["eng", "ita"],
-            "properties": { "mus": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mus": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mwl",
             "description": "language  width code: mwl",
             "examples": ["eng", "ita"],
-            "properties": { "mwl": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mwl": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mwr",
             "description": "language  width code: mwr",
             "examples": ["eng", "ita"],
-            "properties": { "mwr": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mwr": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "mya",
             "description": "language  width code: mya",
             "examples": ["eng", "ita"],
-            "properties": { "mya": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "mya": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "myn",
             "description": "language  width code: myn",
             "examples": ["eng", "ita"],
-            "properties": { "myn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "myn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "myv",
             "description": "language  width code: myv",
             "examples": ["eng", "ita"],
-            "properties": { "myv": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "myv": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nah",
             "description": "language  width code: nah",
             "examples": ["eng", "ita"],
-            "properties": { "nah": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nah": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nai",
             "description": "language  width code: nai",
             "examples": ["eng", "ita"],
-            "properties": { "nai": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nai": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nap",
             "description": "language  width code: nap",
             "examples": ["eng", "ita"],
-            "properties": { "nap": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nap": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nau",
             "description": "language  width code: nau",
             "examples": ["eng", "ita"],
-            "properties": { "nau": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nau": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nav",
             "description": "language  width code: nav",
             "examples": ["eng", "ita"],
-            "properties": { "nav": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nav": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nbl",
             "description": "language  width code: nbl",
             "examples": ["eng", "ita"],
-            "properties": { "nbl": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nbl": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nde",
             "description": "language  width code: nde",
             "examples": ["eng", "ita"],
-            "properties": { "nde": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nde": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ndo",
             "description": "language  width code: ndo",
             "examples": ["eng", "ita"],
-            "properties": { "ndo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ndo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nds",
             "description": "language  width code: nds",
             "examples": ["eng", "ita"],
-            "properties": { "nds": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nds": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nep",
             "description": "language  width code: nep",
             "examples": ["eng", "ita"],
-            "properties": { "nep": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nep": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "new",
             "description": "language  width code: new",
             "examples": ["eng", "ita"],
-            "properties": { "new": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "new": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nia",
             "description": "language  width code: nia",
             "examples": ["eng", "ita"],
-            "properties": { "nia": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nia": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nic",
             "description": "language  width code: nic",
             "examples": ["eng", "ita"],
-            "properties": { "nic": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nic": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "niu",
             "description": "language  width code: niu",
             "examples": ["eng", "ita"],
-            "properties": { "niu": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "niu": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nld",
             "description": "language  width code: nld",
             "examples": ["eng", "ita"],
-            "properties": { "nld": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nld": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nno",
             "description": "language  width code: nno",
             "examples": ["eng", "ita"],
-            "properties": { "nno": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nno": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nob",
             "description": "language  width code: nob",
             "examples": ["eng", "ita"],
-            "properties": { "nob": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nob": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nog",
             "description": "language  width code: nog",
             "examples": ["eng", "ita"],
-            "properties": { "nog": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nog": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "non",
             "description": "language  width code: non",
             "examples": ["eng", "ita"],
-            "properties": { "non": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "non": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nor",
             "description": "language  width code: nor",
             "examples": ["eng", "ita"],
-            "properties": { "nor": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nor": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nqo",
             "description": "language  width code: nqo",
             "examples": ["eng", "ita"],
-            "properties": { "nqo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nqo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nso",
             "description": "language  width code: nso",
             "examples": ["eng", "ita"],
-            "properties": { "nso": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nso": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nub",
             "description": "language  width code: nub",
             "examples": ["eng", "ita"],
-            "properties": { "nub": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nub": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nwc",
             "description": "language  width code: nwc",
             "examples": ["eng", "ita"],
-            "properties": { "nwc": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nwc": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nya",
             "description": "language  width code: nya",
             "examples": ["eng", "ita"],
-            "properties": { "nya": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nya": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nym",
             "description": "language  width code: nym",
             "examples": ["eng", "ita"],
-            "properties": { "nym": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nym": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nyn",
             "description": "language  width code: nyn",
             "examples": ["eng", "ita"],
-            "properties": { "nyn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nyn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nyo",
             "description": "language  width code: nyo",
             "examples": ["eng", "ita"],
-            "properties": { "nyo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nyo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "nzi",
             "description": "language  width code: nzi",
             "examples": ["eng", "ita"],
-            "properties": { "nzi": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "nzi": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "oci",
             "description": "language  width code: oci",
             "examples": ["eng", "ita"],
-            "properties": { "oci": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "oci": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "oji",
             "description": "language  width code: oji",
             "examples": ["eng", "ita"],
-            "properties": { "oji": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "oji": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ori",
             "description": "language  width code: ori",
             "examples": ["eng", "ita"],
-            "properties": { "ori": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ori": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "orm",
             "description": "language  width code: orm",
             "examples": ["eng", "ita"],
-            "properties": { "orm": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "orm": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "osa",
             "description": "language  width code: osa",
             "examples": ["eng", "ita"],
-            "properties": { "osa": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "osa": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "oss",
             "description": "language  width code: oss",
             "examples": ["eng", "ita"],
-            "properties": { "oss": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "oss": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ota",
             "description": "language  width code: ota",
             "examples": ["eng", "ita"],
-            "properties": { "ota": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ota": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "oto",
             "description": "language  width code: oto",
             "examples": ["eng", "ita"],
-            "properties": { "oto": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "oto": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "paa",
             "description": "language  width code: paa",
             "examples": ["eng", "ita"],
-            "properties": { "paa": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "paa": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "pag",
             "description": "language  width code: pag",
             "examples": ["eng", "ita"],
-            "properties": { "pag": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "pag": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "pal",
             "description": "language  width code: pal",
             "examples": ["eng", "ita"],
-            "properties": { "pal": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "pal": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "pam",
             "description": "language  width code: pam",
             "examples": ["eng", "ita"],
-            "properties": { "pam": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "pam": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "pan",
             "description": "language  width code: pan",
             "examples": ["eng", "ita"],
-            "properties": { "pan": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "pan": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "pap",
             "description": "language  width code: pap",
             "examples": ["eng", "ita"],
-            "properties": { "pap": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "pap": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "pau",
             "description": "language  width code: pau",
             "examples": ["eng", "ita"],
-            "properties": { "pau": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "pau": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "peo",
             "description": "language  width code: peo",
             "examples": ["eng", "ita"],
-            "properties": { "peo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "peo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "per",
             "description": "language  width code: per",
             "examples": ["eng", "ita"],
-            "properties": { "per": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "per": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "phi",
             "description": "language  width code: phi",
             "examples": ["eng", "ita"],
-            "properties": { "phi": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "phi": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "phn",
             "description": "language  width code: phn",
             "examples": ["eng", "ita"],
-            "properties": { "phn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "phn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "pli",
             "description": "language  width code: pli",
             "examples": ["eng", "ita"],
-            "properties": { "pli": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "pli": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "pol",
             "description": "language  width code: pol",
             "examples": ["eng", "ita"],
-            "properties": { "pol": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "pol": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "pon",
             "description": "language  width code: pon",
             "examples": ["eng", "ita"],
-            "properties": { "pon": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "pon": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "por",
             "description": "language  width code: por",
             "examples": ["eng", "ita"],
-            "properties": { "por": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "por": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "pra",
             "description": "language  width code: pra",
             "examples": ["eng", "ita"],
-            "properties": { "pra": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "pra": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "pro",
             "description": "language  width code: pro",
             "examples": ["eng", "ita"],
-            "properties": { "pro": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "pro": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "pus",
             "description": "language  width code: pus",
             "examples": ["eng", "ita"],
-            "properties": { "pus": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "pus": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
@@ -2650,7 +2649,7 @@
             "description": "language  width code: qaa-",
             "examples": ["eng", "ita"],
             "properties": {
-              "qaa-": { "$ref": "#/definitions/swDescription" }
+              "qaa-": { "$ref": "#/definitions/summary" }
             }
           },
           {
@@ -2658,966 +2657,966 @@
             "title": "que",
             "description": "language  width code: que",
             "examples": ["eng", "ita"],
-            "properties": { "que": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "que": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "raj",
             "description": "language  width code: raj",
             "examples": ["eng", "ita"],
-            "properties": { "raj": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "raj": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "rap",
             "description": "language  width code: rap",
             "examples": ["eng", "ita"],
-            "properties": { "rap": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "rap": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "rar",
             "description": "language  width code: rar",
             "examples": ["eng", "ita"],
-            "properties": { "rar": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "rar": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "roa",
             "description": "language  width code: roa",
             "examples": ["eng", "ita"],
-            "properties": { "roa": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "roa": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "roh",
             "description": "language  width code: roh",
             "examples": ["eng", "ita"],
-            "properties": { "roh": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "roh": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "rom",
             "description": "language  width code: rom",
             "examples": ["eng", "ita"],
-            "properties": { "rom": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "rom": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ron",
             "description": "language  width code: ron",
             "examples": ["eng", "ita"],
-            "properties": { "ron": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ron": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "rum",
             "description": "language  width code: rum",
             "examples": ["eng", "ita"],
-            "properties": { "rum": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "rum": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "run",
             "description": "language  width code: run",
             "examples": ["eng", "ita"],
-            "properties": { "run": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "run": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "rup",
             "description": "language  width code: rup",
             "examples": ["eng", "ita"],
-            "properties": { "rup": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "rup": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "rus",
             "description": "language  width code: rus",
             "examples": ["eng", "ita"],
-            "properties": { "rus": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "rus": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sad",
             "description": "language  width code: sad",
             "examples": ["eng", "ita"],
-            "properties": { "sad": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sad": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sag",
             "description": "language  width code: sag",
             "examples": ["eng", "ita"],
-            "properties": { "sag": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sag": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sah",
             "description": "language  width code: sah",
             "examples": ["eng", "ita"],
-            "properties": { "sah": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sah": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sai",
             "description": "language  width code: sai",
             "examples": ["eng", "ita"],
-            "properties": { "sai": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sai": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sal",
             "description": "language  width code: sal",
             "examples": ["eng", "ita"],
-            "properties": { "sal": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sal": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sam",
             "description": "language  width code: sam",
             "examples": ["eng", "ita"],
-            "properties": { "sam": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sam": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "san",
             "description": "language  width code: san",
             "examples": ["eng", "ita"],
-            "properties": { "san": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "san": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sas",
             "description": "language  width code: sas",
             "examples": ["eng", "ita"],
-            "properties": { "sas": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sas": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sat",
             "description": "language  width code: sat",
             "examples": ["eng", "ita"],
-            "properties": { "sat": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sat": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "scn",
             "description": "language  width code: scn",
             "examples": ["eng", "ita"],
-            "properties": { "scn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "scn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sco",
             "description": "language  width code: sco",
             "examples": ["eng", "ita"],
-            "properties": { "sco": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sco": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sel",
             "description": "language  width code: sel",
             "examples": ["eng", "ita"],
-            "properties": { "sel": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sel": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sem",
             "description": "language  width code: sem",
             "examples": ["eng", "ita"],
-            "properties": { "sem": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sem": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sga",
             "description": "language  width code: sga",
             "examples": ["eng", "ita"],
-            "properties": { "sga": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sga": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sgn",
             "description": "language  width code: sgn",
             "examples": ["eng", "ita"],
-            "properties": { "sgn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sgn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "shn",
             "description": "language  width code: shn",
             "examples": ["eng", "ita"],
-            "properties": { "shn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "shn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sid",
             "description": "language  width code: sid",
             "examples": ["eng", "ita"],
-            "properties": { "sid": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sid": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sin",
             "description": "language  width code: sin",
             "examples": ["eng", "ita"],
-            "properties": { "sin": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sin": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sio",
             "description": "language  width code: sio",
             "examples": ["eng", "ita"],
-            "properties": { "sio": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sio": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sit",
             "description": "language  width code: sit",
             "examples": ["eng", "ita"],
-            "properties": { "sit": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sit": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sla",
             "description": "language  width code: sla",
             "examples": ["eng", "ita"],
-            "properties": { "sla": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sla": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "slo",
             "description": "language  width code: slo",
             "examples": ["eng", "ita"],
-            "properties": { "slo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "slo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "slk",
             "description": "language  width code: slk",
             "examples": ["eng", "ita"],
-            "properties": { "slk": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "slk": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "slv",
             "description": "language  width code: slv",
             "examples": ["eng", "ita"],
-            "properties": { "slv": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "slv": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sma",
             "description": "language  width code: sma",
             "examples": ["eng", "ita"],
-            "properties": { "sma": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sma": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sme",
             "description": "language  width code: sme",
             "examples": ["eng", "ita"],
-            "properties": { "sme": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sme": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "smi",
             "description": "language  width code: smi",
             "examples": ["eng", "ita"],
-            "properties": { "smi": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "smi": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "smj",
             "description": "language  width code: smj",
             "examples": ["eng", "ita"],
-            "properties": { "smj": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "smj": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "smn",
             "description": "language  width code: smn",
             "examples": ["eng", "ita"],
-            "properties": { "smn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "smn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "smo",
             "description": "language  width code: smo",
             "examples": ["eng", "ita"],
-            "properties": { "smo": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "smo": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sms",
             "description": "language  width code: sms",
             "examples": ["eng", "ita"],
-            "properties": { "sms": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sms": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sna",
             "description": "language  width code: sna",
             "examples": ["eng", "ita"],
-            "properties": { "sna": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sna": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "snd",
             "description": "language  width code: snd",
             "examples": ["eng", "ita"],
-            "properties": { "snd": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "snd": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "snk",
             "description": "language  width code: snk",
             "examples": ["eng", "ita"],
-            "properties": { "snk": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "snk": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sog",
             "description": "language  width code: sog",
             "examples": ["eng", "ita"],
-            "properties": { "sog": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sog": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "som",
             "description": "language  width code: som",
             "examples": ["eng", "ita"],
-            "properties": { "som": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "som": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "son",
             "description": "language  width code: son",
             "examples": ["eng", "ita"],
-            "properties": { "son": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "son": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sot",
             "description": "language  width code: sot",
             "examples": ["eng", "ita"],
-            "properties": { "sot": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sot": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "spa",
             "description": "language  width code: spa",
             "examples": ["eng", "ita"],
-            "properties": { "spa": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "spa": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sqi",
             "description": "language  width code: sqi",
             "examples": ["eng", "ita"],
-            "properties": { "sqi": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sqi": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "srd",
             "description": "language  width code: srd",
             "examples": ["eng", "ita"],
-            "properties": { "srd": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "srd": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "srn",
             "description": "language  width code: srn",
             "examples": ["eng", "ita"],
-            "properties": { "srn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "srn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "srp",
             "description": "language  width code: srp",
             "examples": ["eng", "ita"],
-            "properties": { "srp": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "srp": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "srr",
             "description": "language  width code: srr",
             "examples": ["eng", "ita"],
-            "properties": { "srr": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "srr": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ssa",
             "description": "language  width code: ssa",
             "examples": ["eng", "ita"],
-            "properties": { "ssa": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ssa": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ssw",
             "description": "language  width code: ssw",
             "examples": ["eng", "ita"],
-            "properties": { "ssw": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ssw": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "suk",
             "description": "language  width code: suk",
             "examples": ["eng", "ita"],
-            "properties": { "suk": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "suk": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sun",
             "description": "language  width code: sun",
             "examples": ["eng", "ita"],
-            "properties": { "sun": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sun": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sus",
             "description": "language  width code: sus",
             "examples": ["eng", "ita"],
-            "properties": { "sus": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sus": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "sux",
             "description": "language  width code: sux",
             "examples": ["eng", "ita"],
-            "properties": { "sux": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "sux": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "swa",
             "description": "language  width code: swa",
             "examples": ["eng", "ita"],
-            "properties": { "swa": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "swa": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "swe",
             "description": "language  width code: swe",
             "examples": ["eng", "ita"],
-            "properties": { "swe": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "swe": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "syc",
             "description": "language  width code: syc",
             "examples": ["eng", "ita"],
-            "properties": { "syc": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "syc": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "syr",
             "description": "language  width code: syr",
             "examples": ["eng", "ita"],
-            "properties": { "syr": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "syr": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tah",
             "description": "language  width code: tah",
             "examples": ["eng", "ita"],
-            "properties": { "tah": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tah": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tai",
             "description": "language  width code: tai",
             "examples": ["eng", "ita"],
-            "properties": { "tai": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tai": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tam",
             "description": "language  width code: tam",
             "examples": ["eng", "ita"],
-            "properties": { "tam": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tam": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tat",
             "description": "language  width code: tat",
             "examples": ["eng", "ita"],
-            "properties": { "tat": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tat": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tel",
             "description": "language  width code: tel",
             "examples": ["eng", "ita"],
-            "properties": { "tel": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tel": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tem",
             "description": "language  width code: tem",
             "examples": ["eng", "ita"],
-            "properties": { "tem": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tem": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ter",
             "description": "language  width code: ter",
             "examples": ["eng", "ita"],
-            "properties": { "ter": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ter": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tet",
             "description": "language  width code: tet",
             "examples": ["eng", "ita"],
-            "properties": { "tet": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tet": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tgk",
             "description": "language  width code: tgk",
             "examples": ["eng", "ita"],
-            "properties": { "tgk": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tgk": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tgl",
             "description": "language  width code: tgl",
             "examples": ["eng", "ita"],
-            "properties": { "tgl": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tgl": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tha",
             "description": "language  width code: tha",
             "examples": ["eng", "ita"],
-            "properties": { "tha": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tha": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tib",
             "description": "language  width code: tib",
             "examples": ["eng", "ita"],
-            "properties": { "tib": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tib": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tig",
             "description": "language  width code: tig",
             "examples": ["eng", "ita"],
-            "properties": { "tig": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tig": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tir",
             "description": "language  width code: tir",
             "examples": ["eng", "ita"],
-            "properties": { "tir": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tir": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tiv",
             "description": "language  width code: tiv",
             "examples": ["eng", "ita"],
-            "properties": { "tiv": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tiv": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tkl",
             "description": "language  width code: tkl",
             "examples": ["eng", "ita"],
-            "properties": { "tkl": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tkl": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tlh",
             "description": "language  width code: tlh",
             "examples": ["eng", "ita"],
-            "properties": { "tlh": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tlh": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tli",
             "description": "language  width code: tli",
             "examples": ["eng", "ita"],
-            "properties": { "tli": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tli": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tmh",
             "description": "language  width code: tmh",
             "examples": ["eng", "ita"],
-            "properties": { "tmh": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tmh": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tog",
             "description": "language  width code: tog",
             "examples": ["eng", "ita"],
-            "properties": { "tog": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tog": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ton",
             "description": "language  width code: ton",
             "examples": ["eng", "ita"],
-            "properties": { "ton": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ton": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tpi",
             "description": "language  width code: tpi",
             "examples": ["eng", "ita"],
-            "properties": { "tpi": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tpi": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tsi",
             "description": "language  width code: tsi",
             "examples": ["eng", "ita"],
-            "properties": { "tsi": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tsi": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tsn",
             "description": "language  width code: tsn",
             "examples": ["eng", "ita"],
-            "properties": { "tsn": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tsn": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tso",
             "description": "language  width code: tso",
             "examples": ["eng", "ita"],
-            "properties": { "tso": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tso": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tuk",
             "description": "language  width code: tuk",
             "examples": ["eng", "ita"],
-            "properties": { "tuk": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tuk": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tum",
             "description": "language  width code: tum",
             "examples": ["eng", "ita"],
-            "properties": { "tum": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tum": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tup",
             "description": "language  width code: tup",
             "examples": ["eng", "ita"],
-            "properties": { "tup": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tup": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tur",
             "description": "language  width code: tur",
             "examples": ["eng", "ita"],
-            "properties": { "tur": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tur": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tut",
             "description": "language  width code: tut",
             "examples": ["eng", "ita"],
-            "properties": { "tut": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tut": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tvl",
             "description": "language  width code: tvl",
             "examples": ["eng", "ita"],
-            "properties": { "tvl": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tvl": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "twi",
             "description": "language  width code: twi",
             "examples": ["eng", "ita"],
-            "properties": { "twi": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "twi": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "tyv",
             "description": "language  width code: tyv",
             "examples": ["eng", "ita"],
-            "properties": { "tyv": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "tyv": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "udm",
             "description": "language  width code: udm",
             "examples": ["eng", "ita"],
-            "properties": { "udm": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "udm": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "uga",
             "description": "language  width code: uga",
             "examples": ["eng", "ita"],
-            "properties": { "uga": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "uga": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "uig",
             "description": "language  width code: uig",
             "examples": ["eng", "ita"],
-            "properties": { "uig": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "uig": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ukr",
             "description": "language  width code: ukr",
             "examples": ["eng", "ita"],
-            "properties": { "ukr": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ukr": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "umb",
             "description": "language  width code: umb",
             "examples": ["eng", "ita"],
-            "properties": { "umb": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "umb": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "und",
             "description": "language  width code: und",
             "examples": ["eng", "ita"],
-            "properties": { "und": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "und": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "urd",
             "description": "language  width code: urd",
             "examples": ["eng", "ita"],
-            "properties": { "urd": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "urd": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "uzb",
             "description": "language  width code: uzb",
             "examples": ["eng", "ita"],
-            "properties": { "uzb": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "uzb": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "vai",
             "description": "language  width code: vai",
             "examples": ["eng", "ita"],
-            "properties": { "vai": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "vai": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ven",
             "description": "language  width code: ven",
             "examples": ["eng", "ita"],
-            "properties": { "ven": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ven": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "vie",
             "description": "language  width code: vie",
             "examples": ["eng", "ita"],
-            "properties": { "vie": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "vie": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "vol",
             "description": "language  width code: vol",
             "examples": ["eng", "ita"],
-            "properties": { "vol": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "vol": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "vot",
             "description": "language  width code: vot",
             "examples": ["eng", "ita"],
-            "properties": { "vot": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "vot": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "wak",
             "description": "language  width code: wak",
             "examples": ["eng", "ita"],
-            "properties": { "wak": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "wak": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "wal",
             "description": "language  width code: wal",
             "examples": ["eng", "ita"],
-            "properties": { "wal": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "wal": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "war",
             "description": "language  width code: war",
             "examples": ["eng", "ita"],
-            "properties": { "war": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "war": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "was",
             "description": "language  width code: was",
             "examples": ["eng", "ita"],
-            "properties": { "was": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "was": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "wel",
             "description": "language  width code: wel",
             "examples": ["eng", "ita"],
-            "properties": { "wel": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "wel": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "wen",
             "description": "language  width code: wen",
             "examples": ["eng", "ita"],
-            "properties": { "wen": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "wen": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "wln",
             "description": "language  width code: wln",
             "examples": ["eng", "ita"],
-            "properties": { "wln": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "wln": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "wol",
             "description": "language  width code: wol",
             "examples": ["eng", "ita"],
-            "properties": { "wol": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "wol": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "xal",
             "description": "language  width code: xal",
             "examples": ["eng", "ita"],
-            "properties": { "xal": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "xal": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "xho",
             "description": "language  width code: xho",
             "examples": ["eng", "ita"],
-            "properties": { "xho": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "xho": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "yao",
             "description": "language  width code: yao",
             "examples": ["eng", "ita"],
-            "properties": { "yao": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "yao": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "yap",
             "description": "language  width code: yap",
             "examples": ["eng", "ita"],
-            "properties": { "yap": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "yap": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "yid",
             "description": "language  width code: yid",
             "examples": ["eng", "ita"],
-            "properties": { "yid": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "yid": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "yor",
             "description": "language  width code: yor",
             "examples": ["eng", "ita"],
-            "properties": { "yor": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "yor": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "ypk",
             "description": "language  width code: ypk",
             "examples": ["eng", "ita"],
-            "properties": { "ypk": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "ypk": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "zap",
             "description": "language  width code: zap",
             "examples": ["eng", "ita"],
-            "properties": { "zap": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "zap": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "zbl",
             "description": "language  width code: zbl",
             "examples": ["eng", "ita"],
-            "properties": { "zbl": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "zbl": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "zen",
             "description": "language  width code: zen",
             "examples": ["eng", "ita"],
-            "properties": { "zen": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "zen": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "zgh",
             "description": "language  width code: zgh",
             "examples": ["eng", "ita"],
-            "properties": { "zgh": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "zgh": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "zha",
             "description": "language  width code: zha",
             "examples": ["eng", "ita"],
-            "properties": { "zha": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "zha": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "zho",
             "description": "language  width code: zho",
             "examples": ["eng", "ita"],
-            "properties": { "zho": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "zho": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "znd",
             "description": "language  width code: znd",
             "examples": ["eng", "ita"],
-            "properties": { "znd": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "znd": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "zul",
             "description": "language  width code: zul",
             "examples": ["eng", "ita"],
-            "properties": { "zul": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "zul": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "zun",
             "description": "language  width code: zun",
             "examples": ["eng", "ita"],
-            "properties": { "zun": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "zun": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "zxx",
             "description": "language  width code: zxx",
             "examples": ["eng", "ita"],
-            "properties": { "zxx": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "zxx": { "$ref": "#/definitions/summary" } }
           },
           {
             "type": "object",
             "title": "zza",
             "description": "language  width code: zza",
             "examples": ["eng", "ita"],
-            "properties": { "zza": { "$ref": "#/definitions/swDescription" } }
+            "properties": { "zza": { "$ref": "#/definitions/summary" } }
           }
         ]
       }
@@ -3643,7 +3642,7 @@
     "tags",
     "developmentStatus",
     "softwareType",
-    "swDescription"
+    "summary"
   ],
   "definitions": {
     "publicodeYamlVersion": {
@@ -3919,9 +3918,9 @@
           "description":
             " mandatory - This is a date (YYYY-MM-DD). This key must contain the date at which the maintenance is going to end. In case of community maintenance, the value should not be more than 2 years in the future, and thus will need to be regularly updated as the community continues working on the project."
         },
-        "website": {
+        "url": {
           "type": "string",
-          "title": "website",
+          "title": "url",
           "description":
             "This key points to the maintainer website. It can either point to the main institutional website, or to a more project-specific page or website."
         }
@@ -4051,7 +4050,7 @@
       }
     },
 
-    "swDescription": {
+    "summary": {
       "title": "Description",
       "description": "",
       "examples": "",
