@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cantierecreativo.github.io/bemo/stylesheets/application.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/aahan/pygments-github-style/master/github.css">
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero__body">
+        <div class="hero__body__inner">
+          <div class="hero__heading">
+            Schema API
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="space--both-5 wrap">
+      <div class="grid--wide">
+        <div class="grid__item desk-4-12">
+          <div class="formatted-content">
+            <ul>
+<li>
+<a href="#applicationsuite"><a name="resource-applicationSuite">applicationSuite</a></a>
+</li>
+<li>
+<a href="#dependson"><a name="resource-dependsOn">dependsOn</a></a>
+<ul>
+<li>
+<a href="#attributes">Attributes</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#developmentstatus"><a name="resource-developmentStatus">developmentStatus</a></a>
+</li>
+<li>
+<a href="#inputtypes"><a name="resource-inputTypes">inputTypes</a></a>
+</li>
+<li>
+<a href="#intended-audience"><a name="resource-intendedAudience">intended audience</a></a>
+<ul>
+<li>
+<a href="#attributes">Attributes</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#isbasedon"><a name="resource-isBasedOn">isBasedOn</a></a>
+</li>
+<li>
+<a href="#landingurl"><a name="resource-landingURL">landingURL</a></a>
+</li>
+<li>
+<a href="#legal"><a name="resource-legal">legal</a></a>
+<ul>
+<li>
+<a href="#attributes">Attributes</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#localisation"><a name="resource-localisation">localisation</a></a>
+<ul>
+<li>
+<a href="#attributes">Attributes</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#logo"><a name="resource-logo">logo</a></a>
+</li>
+<li>
+<a href="#maintenance"><a name="resource-maintenance">maintenance</a></a>
+<ul>
+<li>
+<a href="#attributes">Attributes</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#monochromelogo"><a name="resource-monochromeLogo">monochromeLogo</a></a>
+</li>
+<li>
+<a href="#the-name"><a name="resource-name">The Name</a></a>
+</li>
+<li>
+<a href="#outputtypes"><a name="resource-outputTypes">outputTypes</a></a>
+</li>
+<li>
+<a href="#platforms"><a name="resource-platforms">platforms</a></a>
+</li>
+<li>
+<a href="#publicodeyamlversion"><a name="resource-publiccodeYamlVersion">publicodeYamlVersion</a></a>
+</li>
+<li>
+<a href="#releasedate"><a name="resource-releaseDate">releaseDate</a></a>
+</li>
+<li>
+<a href="#roadmap"><a name="resource-roadmap">roadmap</a></a>
+</li>
+<li>
+<a href="#softwaretype"><a name="resource-softwareType">softwareType</a></a>
+</li>
+<li>
+<a href="#softwareversion"><a name="resource-softwareVersion">softwareVersion</a></a>
+</li>
+<li>
+<a href="#swdescription"><a name="resource-swDescription">swDescription</a></a>
+</li>
+<li>
+<a href="#tags"><a name="resource-tags">tags</a></a>
+</li>
+<li>
+<a href="#url"><a name="resource-url">url</a></a>
+</li>
+<li>
+<a href="#usedby"><a name="resource-usedBy">usedBy</a></a>
+</li>
+</ul>
+
+          </div>
+        </div>
+        <div class="grid__item desk-8-12">
+          <div class="markdown-body">
+            <h2 id="applicationsuite"><a name="resource-applicationSuite">applicationSuite</a></h2>
+
+<p>This key contains the name of the &#39;suite&#39; to which the software belongs.</p>
+
+<h2 id="dependson"><a name="resource-dependsOn">dependsOn</a></h2>
+
+<p>This section provides an overview on the system-level dependencies required to install and use this software.</p>
+
+<h3 id="attributes">Attributes</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>hardware</strong></td>
+<td><em>array</em></td>
+<td>This key contains a list of hardware dependencies that must be owned to use the software.</td>
+<td><code>[{&quot;name&quot;:&quot;example&quot;,&quot;versionMin&quot;:&quot;example&quot;,&quot;versionMax&quot;:&quot;example&quot;,&quot;version&quot;:&quot;example&quot;,&quot;optional&quot;:true}]</code></td>
+</tr>
+<tr>
+<td><strong>open</strong></td>
+<td><em>array</em></td>
+<td>This key contains a list of runtime dependencies that are distributed under an open-source license.</td>
+<td><code>[{&quot;name&quot;:&quot;example&quot;,&quot;versionMin&quot;:&quot;example&quot;,&quot;versionMax&quot;:&quot;example&quot;,&quot;version&quot;:&quot;example&quot;,&quot;optional&quot;:true}]</code></td>
+</tr>
+<tr>
+<td><strong>proprietary</strong></td>
+<td><em>array</em></td>
+<td>TThis key contains a list of runtime dependencies that are distributed under a proprietary license.</td>
+<td><code>[{&quot;name&quot;:&quot;example&quot;,&quot;versionMin&quot;:&quot;example&quot;,&quot;versionMax&quot;:&quot;example&quot;,&quot;version&quot;:&quot;example&quot;,&quot;optional&quot;:true}]</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="developmentstatus"><a name="resource-developmentStatus">developmentStatus</a></h2>
+
+<p>Allowed values: concept, development, beta, stable, obsolete</p>
+
+<h2 id="inputtypes"><a name="resource-inputTypes">inputTypes</a></h2>
+
+<p>A list of Media Types (MIME Types) as mandated in RFC 6838 which the application can handle as output. In case the software does not support any input, you can skip this field or use application/x.empty.</p>
+
+<h2 id="intended-audience"><a name="resource-intendedAudience">intended audience</a></h2>
+
+<h3 id="attributes">Attributes</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>countries</strong></td>
+<td><em>array</em></td>
+<td>This key explicitly includes certain countries in the intended audience, i.e. the software explicitly claims compliance with specific processes, technologies or laws. All countries are specified using lowercase ISO 3166-1 alpha-2 two-letter country codes.</td>
+<td><code>[null]</code></td>
+</tr>
+<tr>
+<td><strong>onlyFor</strong></td>
+<td><em>array</em></td>
+<td>Public software could be very specific in scope because there is a large set of tasks that are specific to each type of administration. For instance, many softwares that are used in schools are probably not useful in hospitals. If you want to explicitly mark some software as only useful to certain types of administrations, you should add them to this key.The list of allowed values is defined in pa-types.md, and can be country-specific. This list can evolve at any time, separately from the version of this specification.</td>
+<td><code>[null]</code></td>
+</tr>
+<tr>
+<td><strong>unsupportedCountries</strong></td>
+<td><em>array</em></td>
+<td>This key explicitly marks countries as NOT supported. This might be the case if there is a conflict between how software is working and a specific law, process or technology. All countries are specified using lowercase ISO 3166-1 alpha-2 two-letter country codes.</td>
+<td><code>[null]</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="isbasedon"><a name="resource-isBasedOn">isBasedOn</a></h2>
+
+<p>In case this software is a variant or a fork of another software, which might or might not contain a publiccode.yml file, this key will contain the url of the original project(s). The existence of this key identifies the fork as a software variant, descending from the specified repositories.</p>
+
+<h2 id="landingurl"><a name="resource-landingURL">landingURL</a></h2>
+
+<p>If the url parameter does not serve a human readable or browsable page, but only serves source code to a source control client, with this key you have an option to specify a landing page. This page, ideally, is where your users will land when they will click a button labeled something like &#39;Go to the application source code&#39;. In case the product provides an automated graphical installer, this URL can point to a page which contains a reference to the source code but also offers the download of such an installer.</p>
+
+<h2 id="legal"><a name="resource-legal">legal</a></h2>
+
+<p>This section provides an overview of the legal info of the software.</p>
+
+<h3 id="attributes">Attributes</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>authorsFile</strong></td>
+<td><em>string</em></td>
+<td>Some open-source softwares adopt a convention of identify the copyright holders through a file that lists all the entities that own the copyright. This is common in projects strongly backed by a community where there are many external contributors and no clear single/main copyright owner. In such cases, this key can be used to refer to the authors file, using a path relative to the root of the repository.</td>
+<td><code>&quot;example&quot;</code></td>
+</tr>
+<tr>
+<td><strong>license</strong></td>
+<td><em>string</em></td>
+<td>This string describes the license under which the software is distributed. The string must contain a valid SPDX expression, referring to one (or multiple) open-source license. Please refer to the SPDX documentation for further information.</td>
+<td><code>&quot;example&quot;</code></td>
+</tr>
+<tr>
+<td><strong>mainCopyrightOwner</strong></td>
+<td><em>string</em></td>
+<td>This string describes the entity that owns the copyright on &#39;most&#39; of the code in the repository. Normally, this is the line that is reported with the copyright symbol at the top of most files in the repo.</td>
+<td><code>&quot;example&quot;</code></td>
+</tr>
+<tr>
+<td><strong>repoOwner</strong></td>
+<td><em>string</em></td>
+<td>This string describes the entity that owns this repository; this might or might not be the same entity who owns the copyright on the code itself. For instance, in case of a fork of the original software, the repoOwner is probably different from the mainCopyrightOwner.</td>
+<td><code>&quot;example&quot;</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="localisation"><a name="resource-localisation">localisation</a></h2>
+
+<p>This section provides an overview of the localization features of the software.</p>
+
+<h3 id="attributes">Attributes</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>availableLanguages</strong></td>
+<td><em>array</em></td>
+<td>If present, this is the list of languages in which the software is available. Of course, this list will contain at least one language. See also: https://en.wikipedia.org/wiki/ISO_639-2</td>
+<td><code>[null]</code></td>
+</tr>
+<tr>
+<td><strong>localisationReady</strong></td>
+<td><em>boolean</em></td>
+<td>If yes, the software has infrastructure in place or is otherwise designed to be multilingual. It does not need to be available in more than one language.</td>
+<td><code>true</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="logo"><a name="resource-logo">logo</a></h2>
+
+<p>This key contains the logo of the software. Logos should be in vector format; raster formats are only allowed as a fallback. In this case, they should be transparent PNGs, minimum 1000px of width. Acceptable formats: SVG, SVGZ, PNG</p>
+
+<h2 id="maintenance"><a name="resource-maintenance">maintenance</a></h2>
+
+<h3 id="attributes">Attributes</h3>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>contacts</strong></td>
+<td><em>array</em></td>
+<td>One or more contacts maintaining this software. This key describes the technical people currently responsible for maintaining the software. All contacts need to be a physical person, not a company or an organisation. if somebody is acting as a representative of an institution, it must be listed within the affiliation of the contact. In case of a commercial agreement (or a chain of such agreements), specify the final entities actually contracted to deliver the maintenance. Do not specify the software owner unless it is technically involved with the maintenance of the product as well.</td>
+<td><code>[{&quot;name&quot;:&quot;example&quot;,&quot;email&quot;:&quot;example&quot;,&quot;phone&quot;:&quot;example&quot;,&quot;affiliation&quot;:&quot;example&quot;}]</code></td>
+</tr>
+<tr>
+<td><strong>contractors</strong></td>
+<td><em>array</em></td>
+<td>This key describes the entity or entities, if any, that are currently contracted for maintaining the software. They can be companies, organizations, or other collective names.</td>
+<td><code>[{&quot;name&quot;:&quot;example&quot;,&quot;until&quot;:&quot;example&quot;,&quot;website&quot;:&quot;example&quot;}]</code></td>
+</tr>
+<tr>
+<td><strong>type</strong></td>
+<td><em>array</em></td>
+<td>This key describes how the software is currently maintained. &#39;internal&#39; means that the software is internally maintained by the repository owner. &#39;contract&#39; means that there is a commercial contract that binds an entity to the maintenance of the software; &#39;community&#39; means that the software is currently maintained by one or more people that donate their time to the project; &#39;none&#39; means that the software is not actively maintained.</td>
+<td><code>[null]</code></td>
+</tr>
+</tbody></table>
+
+<h2 id="monochromelogo"><a name="resource-monochromeLogo">monochromeLogo</a></h2>
+
+<p>A monochromatic (black) logo. The logo should be in vector format; raster formats are only allowed as a fallback. In this case, they should be transparent PNGs, minimum 1000px of width. Acceptable formats: SVG, SVGZ, PNG</p>
+
+<h2 id="the-name"><a name="resource-name">The Name</a></h2>
+
+<h2 id="outputtypes"><a name="resource-outputTypes">outputTypes</a></h2>
+
+<p>A list of Media Types (MIME Types) as mandated in RFC 6838 which the application can handle as output. In case the software does not support any output, you can skip this field or use application/x.empty.</p>
+
+<h2 id="platforms"><a name="resource-platforms">platforms</a></h2>
+
+<p>Values: web, windows, mac, linux, ios, android. Human readable values outside this list are allowed</p>
+
+<h2 id="publicodeyamlversion"><a name="resource-publiccodeYamlVersion">publicodeYamlVersion</a></h2>
+
+<p>This key contains the name of the software. It contains the (short) public name of the product, which can be localised in the specific localisation section. It should be the name most people usually refer to the software. In case the software has both an internal &#39;code&#39; name and a commercial name, use the commercial name.</p>
+
+<h2 id="releasedate"><a name="resource-releaseDate">releaseDate</a></h2>
+
+<p>This key contains the date at which the latest version was released. This date is mandatory if the software has been released at least once and thus the version number is present.</p>
+
+<h2 id="roadmap"><a name="resource-roadmap">roadmap</a></h2>
+
+<p>A link to a public roadmap of the software.</p>
+
+<h2 id="softwaretype"><a name="resource-softwareType">softwareType</a></h2>
+
+<p>Allowed values: standalone, addon, library, configurationFiles</p>
+
+<h2 id="softwareversion"><a name="resource-softwareVersion">softwareVersion</a></h2>
+
+<p>This key contains the latest stable version number of the software. The version number is a string that is not meant to be interpreted and parsed but just displayed; parsers should not assume semantic versioning or any other specific version format.</p>
+
+<h2 id="swdescription"><a name="resource-swDescription">swDescription</a></h2>
+
+<h2 id="tags"><a name="resource-tags">tags</a></h2>
+
+<p>A list of words that can be used to describe the software and can help building catalogs of open software. Each tag must be in Unicode lowercase, and should not contain any Unicode whitespace character. The suggested character to separate multiple words is - (single dash). See also: description/[lang]/freeTags/</p>
+
+<h2 id="url"><a name="resource-url">url</a></h2>
+
+<p>A unique identifier for this software. This string must be a URL to the source code repository (git, svn, ...) in which the software is published. If the repository is available under multiple protocols, prefer HTTP/HTTPS URLs which don&#39;t require user authentication.</p>
+
+<h2 id="usedby"><a name="resource-usedBy">usedBy</a></h2>
+
+<p>A list of the names of prominent public administrations (that will serve as testimonials) that are currently known to the software maintainer to be using this software. Parsers are encouraged to enhance this list also with other information that can obtain independently; for instance, a fork of a software, owned by an administration, could be used as a signal of usage of the software.</p>
+
+          </div>
+        </div>
+    </div>
+  </body>
+</head>
+
